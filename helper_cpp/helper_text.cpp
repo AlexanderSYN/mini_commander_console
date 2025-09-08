@@ -2,7 +2,7 @@
 // Created by AlexanderSYN on 08.09.2025.
 //
 
-#include "../help_header/helper_text.h"
+#include "../helper_header/helper_text.h"
 
 std::string to_lower(std::string text)
 {
