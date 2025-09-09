@@ -3,6 +3,7 @@
 
 #include <iostream>
 
+#include "helper_header/console/color_console.h"
 #include "helper_header/console/debug_some_command.h"
 
 int main() {
@@ -35,6 +36,7 @@ int main() {
             std::cout << "clear / cls - clearing the console" << std::endl;
             std::cout << "info - information about this program" << std::endl;
             std::cout << "color ... <- (here name of color) - for change color in console" << std::endl;
+            std::cout << "color help - to check the available colors" << std::endl;
             std::cout << "exit / ex - for exit from console" << std::endl;
             std::cout << std::endl;
             std::cout << "cd - the command to change the working directory" << std::endl;
@@ -59,12 +61,11 @@ int main() {
 
         else if (user_input.substr(0, 5) == "help ")
         {
-            if (user_input.substr(5) == "color") {
-                std::cout << "_____helper for color_____" << std::endl;
-                std::cout << "color ... <- (here name of color) - for change color in console" << std::endl;
-                std::cout << "_____allows colors________" << std::endl;
-                std::cout << " dark_green \n green \n red \n white \n purple" << std::endl;
-            }
+            if (user_input.substr(5) == "color")
+                ColorConsole::choice_color("color help");
+            else
+                std::cout << "you entered it incorrectly, look here by writing -> help" << std::endl;
+
         }
 
         //
@@ -102,10 +103,10 @@ int main() {
         //
         else if (user_input.substr(0, 6) == "color ")
         {
-
+            std::cout << ColorConsole::choice_color(user_input) << std::endl;
         }
         else if (user_input == "color")
-            std::cout << "you need write like so -> color ... <- (name of color)" << std::endl;
+            std::cout << "you need to write like this -> color ... <- (color name)" << std::endl;
 
 
 

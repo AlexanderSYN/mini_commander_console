@@ -7,4 +7,5 @@
 
 void debug_some_command(bool & isRunDebug, std::string user_input);
 
+
 #endif //DEBUG_SOME_COMMAND_H

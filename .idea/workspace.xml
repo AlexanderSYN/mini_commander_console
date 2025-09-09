@@ -29,13 +29,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="679b3039-96c5-437d-a301-866c9d6d4f07" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helper_cpp/console/color_console.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper_cpp/console/debug_some_command.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/helper_cpp/console/debug_some_command.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper_cpp/console/helper_clear_console.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/helper_cpp/console/helper_clear_console.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper_header/console/color_console.h" beforeDir="false" afterPath="$PROJECT_DIR$/helper_header/console/color_console.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helper_header/console/debug_some_command.h" beforeDir="false" afterPath="$PROJECT_DIR$/helper_header/console/debug_some_command.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper_header/console/helper_clear_console.h" beforeDir="false" afterPath="$PROJECT_DIR$/helper_header/console/helper_clear_console.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,11 +113,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="mini_commander_console" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="mini_commander_console" TARGET_NAME="mini_commander_console" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="mini_commander_console" RUN_TARGET_NAME="mini_commander_console">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -135,7 +128,8 @@
       <updated>1757359609799</updated>
       <workItem from="1757359611494" duration="4203000" />
       <workItem from="1757364253782" duration="1121000" />
-      <workItem from="1757431305147" duration="4605000" />
+      <workItem from="1757431305147" duration="6306000" />
+      <workItem from="1757437913275" duration="4837000" />
     </task>
     <servers />
   </component>
