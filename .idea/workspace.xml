@@ -28,13 +28,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="679b3039-96c5-437d-a301-866c9d6d4f07" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/helper_cpp/open_files/helper_open_file.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper_header/helper_open_file.h" beforeDir="false" afterPath="$PROJECT_DIR$/helper_header/open_files/helper_open_file.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="679b3039-96c5-437d-a301-866c9d6d4f07" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -281,7 +275,7 @@
       <workItem from="1757364253782" duration="1121000" />
       <workItem from="1757431305147" duration="6306000" />
       <workItem from="1757437913275" duration="5131000" />
-      <workItem from="1757446458645" duration="8276000" />
+      <workItem from="1757446458645" duration="9126000" />
     </task>
     <servers />
   </component>
