@@ -1,5 +1,6 @@
 #include "helper_header/helper_text.h"
 #include "helper_header/console/helper_clear_console.h"
+#include "helper_header/open_files/helper_open_file.h"
 
 #include <iostream>
 
@@ -41,12 +42,12 @@ int main() {
             std::cout << std::endl;
             std::cout << "cd - the command to change the working directory" << std::endl;
             std::cout << "dir - allows you to display a list of files and subdirectories "
-                         "for the specified directory" << std::endl;
+                         "for the specified directory (for windows)" << std::endl;
             std::cout << std::endl;
             std::cout << "openf ... <- (path with file or just folder) - "
-                         "opening a file or folder through OS programs" << std::endl;
+                         "opening a file or folder through OS programs (for all OS)" << std::endl;
             std::cout << "open ... <- (path) - allows you to display "
-                         "a list of files and subdirectories for the specified directory" << std::endl;
+                         "a list of files and subdirectories for the specified directory (for all OS)" << std::endl;
             std::cout << std::endl;
             std::cout << "find ... <- (name file / folder) - first you need to specify "
                          "the path via cd, then you can search for a file / folder" << std::endl;
@@ -76,9 +77,8 @@ int main() {
         // for debug
         //
         else if (user_input == "debug")
-        {
             debug_some_command(isRunDebug, user_input);
-        }
+
         //
         // End for debug
         //
@@ -91,7 +91,7 @@ int main() {
             std::cout << "___MINI_COMMANDER_CONSOLE___" << std::endl;
             std::cout << "_________VERSION_1__________" << std::endl;
             std::cout << "______AUTHOR: ALEXANDER_____" << std::endl;
-            std::cout << "_____GIT-HUB: SYNEATION_____" << std::endl;
+            std::cout << "_____GIT-HUB: ALEXANDERSYN_____" << std::endl;
             std::cout << "_________JUST FUN ;)________" << std::endl;
         }
         //
@@ -107,16 +107,50 @@ int main() {
         }
         else if (user_input == "color")
             std::cout << "you need to write like this -> color ... <- (color name)" << std::endl;
-
-
-
-
+        //
+        // End color
+        //
 
         //
         // clear / cls
         //
         else if (user_input == "clear" || user_input == "cls")
             clear_console();
+        //
+        // End clear / cls
+        //
+
+        //
+        // cd
+        //
+        else if (user_input.substr(0, 3) == "cd ")
+            FILEO::set_path_in_cd(user_input, path);
+        //
+        // End cd
+        //
+
+        //
+        // dir
+        // only for windows
+        //
+        else if (user_input == "dir")
+            FILEO::open_folder_use_dir(path);
+        //
+        // End dir
+        //
+
+        //
+        // open && openf
+        // for all OS
+        //
+        else if (user_input.substr(0, 5) == "open ")
+            FILEO::open_file(user_input.substr(5));
+
+        else if (user_input.substr(0, 6) == "openf ")
+            FILEO::open_file(user_input.substr(6));
+        //
+        // End open && openf
+        //
 
         else
             std::cout << "for help type help" << std::endl;
