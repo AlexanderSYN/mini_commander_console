@@ -1,4 +1,15 @@
 # EN
+
+you can write 
+cd (full path)
+cd (name folder (if you write path before))
+cd .. <- this means exit their current folder and go to the previous one.
+
+//
+// ColCons - Color Console (file color_console)
+// FILEO - File Open (file help_open_file)
+// 
+
 # Folder Structure Description
 ## helper_cpp folder
 1) Contains .cpp helper files for the Commander module
