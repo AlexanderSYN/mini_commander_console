@@ -1,0 +1,15 @@
+# EN
+# Folder Structure Description
+## helper_cpp folder
+1) Contains .cpp helper files for the Commander module
+2)These files provide utility functions and support functionality
+## helper_header folder
+1) Contains .h header files for the corresponding .cpp files
+2) These headers are required to include the helper functions in main()
+
+# INCLUDED MODULES
+## FOLDER: CONSOLE
+1) debug_some_command -> for debuging some commands in console
+2) helper_clear_console -> code for clean console
+3) color_console -> for change color in console
+
