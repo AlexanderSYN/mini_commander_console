@@ -4,12 +4,13 @@
 #ifndef HELPER_CLEAR_H
 #define HELPER_CLEAR_H
 
+#include <conio.h>
+
 #ifdef _WIN32 // for windows
     #include <Windows.h>
 #else // if Mac OS / Linux
     #include <stdlib.h>
 #endif
-
 
 void clear_console();
 

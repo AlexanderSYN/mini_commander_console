@@ -1,20 +1,23 @@
-#include "help_header/helper_text.h"
+#include "helper_header/helper_text.h"
+#include "helper_header/console/helper_clear_console.h"
 
 #include <iostream>
+
+#include "helper_header/console/debug_some_command.h"
 
 int main() {
     setlocale(LC_ALL, "ru");
 
     bool isRun = true;
+    bool isRunDebug = true;
 
     std::string path = "/", user_input;
+    std::cout << "for help type help" << std::endl;
 
     while (isRun)
     {
         std::cout << path << " >>";
         std::getline(std::cin, user_input);
-
-        std::cout << "for help type help" << std::endl;
 
         if (user_input == "exit" || user_input == "ex")
         {
@@ -60,7 +63,7 @@ int main() {
                 std::cout << "_____helper for color_____" << std::endl;
                 std::cout << "color ... <- (here name of color) - for change color in console" << std::endl;
                 std::cout << "_____allows colors________" << std::endl;
-                std::cout << "dark_green \n green \n red \n white \n purple" << std::endl;
+                std::cout << " dark_green \n green \n red \n white \n purple" << std::endl;
             }
         }
 
@@ -69,12 +72,53 @@ int main() {
         //
 
         //
+        // for debug
+        //
+        else if (user_input == "debug")
+        {
+            debug_some_command(isRunDebug, user_input);
+        }
+        //
+        // End for debug
+        //
+
+        //
+        // Info
+        //
+        else if (user_input == "info")
+        {
+            std::cout << "___MINI_COMMANDER_CONSOLE___" << std::endl;
+            std::cout << "_________VERSION_1__________" << std::endl;
+            std::cout << "______AUTHOR: ALEXANDER_____" << std::endl;
+            std::cout << "_____GIT-HUB: SYNEATION_____" << std::endl;
+            std::cout << "_________JUST FUN ;)________" << std::endl;
+        }
+        //
+        // End info
+        //
+
+        //
+        // color
+        //
+        else if (user_input.substr(0, 6) == "color ")
+        {
+
+        }
+        else if (user_input == "color")
+            std::cout << "you need write like so -> color ... <- (name of color)" << std::endl;
+
+
+
+
+
+        //
         // clear / cls
         //
-        else if (to_lower(user_input) == "clear")
+        else if (user_input == "clear" || user_input == "cls")
+            clear_console();
 
-
-
+        else
+            std::cout << "for help type help" << std::endl;
 
 
     }
