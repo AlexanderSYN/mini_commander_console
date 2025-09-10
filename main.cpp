@@ -1,11 +1,11 @@
-#include "helper_header/helper_text.h"
-#include "helper_header/console/helper_clear_console.h"
-#include "helper_header/open_files/helper_open_file.h"
-
 #include <iostream>
 
+#include "helper_header/helper_text.h"
+#include "helper_header/console/helper_clear_console.h"
+#include "helper_header/work_with_files/helper_open_file.h"
 #include "helper_header/console/color_console.h"
 #include "helper_header/console/debug_some_command.h"
+#include "helper_header/work_with_files/helper_create_file.h"
 
 int main() {
     setlocale(LC_ALL, "ru");
@@ -145,15 +145,30 @@ int main() {
         //
         else if (user_input.substr(0, 5) == "open ")
             FILEO::open_file(user_input.substr(5));
+        else if (user_input == "open")
+            FILEO::open_file(path);
 
         else if (user_input.substr(0, 6) == "openf ")
             FILEO::open_file(user_input.substr(6));
+        else if (user_input == "openf")
+            FILEO::open_file(path);
         //
         // End open && openf
         //
 
+        //
+        // create / cr
+        //
+
+        else if (user_input.substr(0, 7) == "create " || user_input.substr(0, 3) == "cr ")
+            FILEC::create_file(user_input, path);
+        else if (user_input == "create" || user_input == "cr")
+            std::cout << "it's not the correct command. You need to write like this -> create ... <-(path) ... <- (file or folder) ... (name file/folder)" <<
+                "\nor \ncr ... <-(path) ... <- (file or folder) ... (name file/folder)" << std::endl;
+
         else
-            std::cout << "for help type help" << std::endl;
+            std::cout << "Command not found! \n"
+                         "for help type help" << std::endl;
 
 
     }

@@ -8,8 +8,10 @@
 2) These headers are required to include the helper functions in main()
 
 # INCLUDED MODULES
-## FOLDER: CONSOLE
+## FOLDER: console
 1) debug_some_command -> for debuging some commands in console
 2) helper_clear_console -> code for clean console
 3) color_console -> for change color in console
-
+## FOLDER: work_with_files
+1) helper_open_file -> for opens files, commands: cd, dir, open, openf
+2) helper_create_file -> for create files, commands: public -> create_file ; private -> get_path_for_create

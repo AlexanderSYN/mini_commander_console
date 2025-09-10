@@ -31,10 +31,11 @@
 
 namespace fs = std::filesystem;
 
-namespace FILEO {
-    void set_path_in_cd(std::string user_input, std::string & path);
-    void open_folder_use_dir(const std::string path);
-    void open_file(const std::string path);
-}
+class FILEO {
+public:
+    static void set_path_in_cd(std::string user_input, std::string & path);
+    static void open_folder_use_dir(const std::string path);
+    static void open_file(const std::string path);
+};
 
 #endif //HELPER_OPEN_FILE_H
