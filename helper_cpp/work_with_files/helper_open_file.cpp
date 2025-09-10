@@ -2,7 +2,7 @@
 // Created by AlexanderSYN on 09.09.2025.
 //
 
-#include "../../helper_header/open_files/helper_open_file.h"
+#include "../../helper_header/work_with_files/helper_open_file.h"
 
 //
 // for cd to check path before writing
@@ -12,7 +12,7 @@ void FILEO::set_path_in_cd(std::string user_input, std::string & path)
     std::string tmp_path;
     std::string path_f = user_input.substr(3);
 
-    if (user_input[user_input.size()] != '\\')
+    if (user_input[user_input.size()] != '\\' && !path.ends_with("\\"))
         tmp_path = path + '\\' + path_f;
     else
         tmp_path = path + path_f;
