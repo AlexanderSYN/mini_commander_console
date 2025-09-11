@@ -7,7 +7,8 @@
 //
 // create / cr ... <- (path) ... <- (file/folder) ... <- (name file/folder)
 //
-void FILEC::create_file(std::string user_input, std::string path) {
+void FILEC::create_file(std::string user_input, std::string path)
+{
     try {
         std::string path_tmp = FILEC::get_path_for_create(user_input);
         std::string file_or_folder = FILEC::check_isFile_for_create(user_input);
@@ -19,12 +20,12 @@ void FILEC::create_file(std::string user_input, std::string path) {
             return;
         }
         if (file_or_folder == "ERROR") {
-            std::cerr << "[ERROR] you may have entered the command incorrectly, check the command by writing help"
+            std::cerr << "[ERROR][file or folder] you may have entered the command incorrectly, check the command by writing help"
                     << std::endl;
             return;
         }
         if (name_file_folder == "ERROR") {
-            std::cerr << "[ERROR] you may have entered the command incorrectly, check the command by writing help"
+            std::cerr << "[ERROR][name file folder] you may have entered the command incorrectly, check the command by writing help"
                     << std::endl;
             return;
         }
@@ -39,14 +40,17 @@ void FILEC::create_file(std::string user_input, std::string path) {
             path_tmp = path;
         }
 
+
+
         // create file / folder
         // create folder
         if (file_or_folder == "folder") {
-            std::cout << name_file_folder << std::endl;
+            FILEC::createFF(path, file_or_folder, name_file_folder);
             return;
         }
         else if (file_or_folder == "file") {
-            //
+            FILEC::createFF(path, file_or_folder, name_file_folder);
+            return;
         }
 
     } catch (std::exception e) {
@@ -86,7 +90,8 @@ std::string FILEC::get_path_for_create(std::string user_input) {
 //
 // check file or folder ( create path ... <- (file/folder) ) if true - file otherwise false - folder
 //
-std::string FILEC::check_isFile_for_create(std::string user_input) {
+std::string FILEC::check_isFile_for_create(std::string user_input)
+{
     try {
         int tmp_index_path = 0;
         std::string tmp_path, folder_or_file;
@@ -112,7 +117,7 @@ std::string FILEC::check_isFile_for_create(std::string user_input) {
         }
         // cr
         else if (user_input.substr(0, 3) == "cr ") {
-            tmp_path = user_input.substr(7);
+            tmp_path = user_input.substr(3);
 
             for (int i = 0; tmp_path[i] != ' '; i++, tmp_index_path++);
 
@@ -174,5 +179,90 @@ std::string FILEC::get_name_file_folder_for_create(std::string user_input) {
     } catch (std::exception e) {
         std::cout << "[ERROR] " << e.what() << std::endl;
         return "ERROR";
+    }
+}
+
+//
+// createFF - create FF
+// create folder (nameFF - name file folder)
+//
+void FILEC::createFF(std::string path, std::string file_or_folder, std::string nameFF) {
+
+    // create file
+    if (file_or_folder == "file")
+    {
+        std::string tmp_full_path_with_file;
+
+        // checking for the validity of the file name
+        if (nameFF.find(".") == std::string::npos) {
+            std::cerr << "ERROR: This is not a valid file name. Please add a file extension!" << std::endl;
+            return;
+        }
+
+        // checking for the validation of the file name
+        if (nameFF.empty() || nameFF.find_first_of("\\/:*?\"<>|") != std::string::npos) {
+            std::cerr << "ERROR: Invalid file name characters detected" << std::endl;
+            return;
+        }
+
+        try {
+            tmp_full_path_with_file += path;
+
+            if (tmp_full_path_with_file.ends_with("\\"))
+                tmp_full_path_with_file += nameFF;
+            else {
+                tmp_full_path_with_file += "\\";
+                tmp_full_path_with_file += nameFF;
+            }
+
+            //
+            // check file in folder, if has then just do nothing
+            //
+            if (fs::exists(tmp_full_path_with_file)) {
+                std::cerr << "ERROR: the file already exists!" << std::endl;
+                return;
+            }
+
+            // create file
+            std::ofstream file(tmp_full_path_with_file);
+
+            // checking file creation
+            if (!fs::exists(tmp_full_path_with_file)) {
+                std::cerr << "ERROR: failed to create file!" << std::endl;
+                return;
+            }
+
+            file.close();
+
+            std::cout << "FILE: " << nameFF << " created successfully!" << std::endl;
+            std::cout << "THE FILE IS LOCATED: " << path << " !" << std::endl;
+        } catch (const std::exception& e) {
+            std::cerr << "ERROR creating file: " << e.what() << std::endl;
+        }
+    }
+
+    // create folder
+    else if (file_or_folder == "folder") {
+        fs::path full_path_folder = fs::path("L") / path / nameFF;
+
+        if (!fs::exists(full_path_folder))
+        {
+            if (fs::create_directory(full_path_folder)) {
+                std::cout << "Folder created successfully!" << std::endl;
+                return;
+            }
+            else
+            {
+                std::cerr << "ERROR: the folder already exists!" << std::endl;
+                return;
+            }
+        }
+        else {
+            std::cerr << "ERROR: the folder is not created!" << std::endl;
+        }
+    }
+    else {
+        std::cerr << "ERROR: you need choice: file or folder!" << std::endl;
+        return;
     }
 }

@@ -29,9 +29,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="679b3039-96c5-437d-a301-866c9d6d4f07" name="Changes" comment="">
+    <list default="true" id="679b3039-96c5-437d-a301-866c9d6d4f07" name="Changes" comment="fix errors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/mini_commander_console/v17/.wsuo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/mini_commander_console/v17/.wsuo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/mini_commander_console/v17/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/mini_commander_console/v17/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/mini_commander_console/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/mini_commander_console/v17/DocumentLayout.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/slnx.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/slnx.sqlite" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helper_cpp/work_with_files/helper_create_file.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/helper_cpp/work_with_files/helper_create_file.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helper_header/work_with_files/helper_create_file.h" beforeDir="false" afterPath="$PROJECT_DIR$/helper_header/work_with_files/helper_create_file.h" afterDir="false" />
@@ -48,6 +50,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "AlexanderSYN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/AlexanderSYN/mini_commander_console.git",
+    "accountId": "e33c430d-9044-4c3e-86ec-5e9f87ad68e3"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
@@ -391,8 +405,33 @@
       <workItem from="1757437913275" duration="5131000" />
       <workItem from="1757446458645" duration="9500000" />
       <workItem from="1757535217385" duration="4866000" />
-      <workItem from="1757599423518" duration="12167000" />
+      <workItem from="1757599423518" duration="19519000" />
     </task>
+    <task id="LOCAL-00001" summary="add get_name_file_folder_for_create">
+      <option name="closed" value="true" />
+      <created>1757614406232</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1757614406232</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fix errors">
+      <option name="closed" value="true" />
+      <created>1757614624339</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1757614624339</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix errors">
+      <option name="closed" value="true" />
+      <created>1757614641643</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1757614641643</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,5 +441,10 @@
     <isAutomaticCheckingOnLaunch value="false" />
     <isAutomaticFoundErrors value="true" />
     <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add get_name_file_folder_for_create" />
+    <MESSAGE value="fix errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix errors" />
   </component>
 </project>

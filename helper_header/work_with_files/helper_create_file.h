@@ -27,7 +27,7 @@
 #endif
 
 #include <filesystem>
-#include <vector>
+#include <fstream>
 
 namespace fs = std::filesystem;
 
@@ -40,6 +40,7 @@ private:
     static std::string get_path_for_create(std::string user_input);
     static std::string check_isFile_for_create(std::string user_input);
     static std::string get_name_file_folder_for_create(std::string user_input);
+    static void createFF(std::string path, std::string file_or_folder, std::string nameFF);
 };
 
 #endif //HELPER_CREATE_FILE_H
