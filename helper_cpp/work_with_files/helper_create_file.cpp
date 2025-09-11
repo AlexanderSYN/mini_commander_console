@@ -170,7 +170,7 @@ std::string FILEC::get_name_file_folder_for_create(std::string user_input) {
             for (int i = 0; tmp_path[i] != ' '; i++, tmp_index_path++); // here find a space after path
             for (int j = 1; tmp_path[tmp_index_path + j] != ' '; j++, tmp_index_path++); // here find a space after file / folder
 
-            tmp_index_path += 5;
+            tmp_index_path += 4;
 
             return tmp_path.substr(tmp_index_path);
         }

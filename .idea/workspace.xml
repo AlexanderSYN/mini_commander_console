@@ -30,15 +30,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="679b3039-96c5-437d-a301-866c9d6d4f07" name="Changes" comment="finished create and cr">
-      <change afterPath="$PROJECT_DIR$/helper_cpp/work_with_files/for_time.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helper_header/work_with_files/for_time.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/cmake.db" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/cmake.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/mini_commander_console/v17/.wsuo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/mini_commander_console/v17/.wsuo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/mini_commander_console/v17/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/mini_commander_console/v17/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/mini_commander_console/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/mini_commander_console/v17/DocumentLayout.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/slnx.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/slnx.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper_cpp/work_with_files/helper_open_file.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/helper_cpp/work_with_files/helper_open_file.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper_header/work_with_files/helper_open_file.h" beforeDir="false" afterPath="$PROJECT_DIR$/helper_header/work_with_files/helper_open_file.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper_cpp/work_with_files/helper_create_file.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/helper_cpp/work_with_files/helper_create_file.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -407,7 +405,7 @@
       <workItem from="1757437913275" duration="5131000" />
       <workItem from="1757446458645" duration="9500000" />
       <workItem from="1757535217385" duration="4866000" />
-      <workItem from="1757599423518" duration="21029000" />
+      <workItem from="1757599423518" duration="23074000" />
     </task>
     <task id="LOCAL-00001" summary="add get_name_file_folder_for_create">
       <option name="closed" value="true" />
