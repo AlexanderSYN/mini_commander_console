@@ -14,13 +14,17 @@ void FILEC::create_file(std::string user_input, std::string path) {
         std::string name_file_folder = FILEC::get_name_file_folder_for_create(user_input);
 
         // check for error
+        if (!fs::exists(path_tmp)) {
+            std::cerr << "ERROR Folder not found!" << std::endl;
+            return;
+        }
         if (file_or_folder == "ERROR") {
-            std::cout << "[ERROR] you may have entered the command incorrectly, check the command by writing help"
+            std::cerr << "[ERROR] you may have entered the command incorrectly, check the command by writing help"
                     << std::endl;
             return;
         }
         if (name_file_folder == "ERROR") {
-            std::cout << "[ERROR] you may have entered the command incorrectly, check the command by writing help"
+            std::cerr << "[ERROR] you may have entered the command incorrectly, check the command by writing help"
                     << std::endl;
             return;
         }
@@ -29,7 +33,7 @@ void FILEC::create_file(std::string user_input, std::string path) {
 
         if (path_tmp == "path") {
             if (!fs::exists(path)) {
-                std::cout << "ERROR Folder not found!" << std::endl;
+                std::cerr << "ERROR Folder not found!" << std::endl;
                 return;
             }
             path_tmp = path;
@@ -41,9 +45,12 @@ void FILEC::create_file(std::string user_input, std::string path) {
             std::cout << name_file_folder << std::endl;
             return;
         }
+        else if (file_or_folder == "file") {
+            //
+        }
 
     } catch (std::exception e) {
-        std::cout << "[ERROR] you may have entered the command incorrectly, check the command by writing help"
+        std::cerr << "[ERROR] you may have entered the command incorrectly, check the command by writing help"
                 "[ERROR: " << e.what() << "]" << std::endl;
         return;
     }
@@ -100,8 +107,6 @@ std::string FILEC::check_isFile_for_create(std::string user_input) {
             else
                 return "ERROR";
 
-            std::cout << folder_or_file;
-
             return folder_or_file;
 
         }
@@ -128,7 +133,7 @@ std::string FILEC::check_isFile_for_create(std::string user_input) {
 
         return "ERROR";
     } catch (std::exception e) {
-        std::cout << "[ERROR] you may have entered the command incorrectly, check the command by writing help"
+        std::cerr << "[ERROR] you may have entered the command incorrectly, check the command by writing help"
                 "[ERROR: " << e.what() << "]" << std::endl;
         return "ERROR";
     }
