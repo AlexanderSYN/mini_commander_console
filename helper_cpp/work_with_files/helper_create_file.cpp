@@ -175,5 +175,4 @@ std::string FILEC::get_name_file_folder_for_create(std::string user_input) {
         std::cout << "[ERROR] " << e.what() << std::endl;
         return "ERROR";
     }
-
 }
