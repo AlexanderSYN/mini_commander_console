@@ -9,6 +9,7 @@
 
 int main() {
     setlocale(LC_ALL, "ru");
+    SetConsoleOutputCP(CP_UTF8);
 
     bool isRun = true;
     bool isRunDebug = true;
@@ -144,9 +145,9 @@ int main() {
         // for all OS
         //
         else if (user_input.substr(0, 5) == "open ")
-            FILEO::open_file(user_input.substr(5));
+            FILEO::output_all_files_command_open(user_input.substr(5));
         else if (user_input == "open")
-            FILEO::open_file(path);
+            FILEO::output_all_files_command_open(path);
 
         else if (user_input.substr(0, 6) == "openf ")
             FILEO::open_file(user_input.substr(6));

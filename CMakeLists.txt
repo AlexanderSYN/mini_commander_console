@@ -15,4 +15,6 @@ add_executable(mini_commander_console main.cpp
         helper_cpp/console/color_console.cpp
         helper_cpp/work_with_files/helper_open_file.cpp
         helper_header/work_with_files/helper_create_file.h
-        helper_cpp/work_with_files/helper_create_file.cpp)
+        helper_cpp/work_with_files/helper_create_file.cpp
+        helper_header/work_with_files/for_time.h
+        helper_cpp/work_with_files/for_time.cpp)
