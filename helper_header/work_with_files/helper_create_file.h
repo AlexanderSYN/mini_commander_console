@@ -38,7 +38,7 @@ public:
 
 private:
     static std::string get_path_for_create(std::string user_input);
-
+    static std::string check_isFile_for_create(std::string user_input);
 };
 
 #endif //HELPER_CREATE_FILE_H
