@@ -31,17 +31,10 @@
   <component name="ChangeListManager">
     <list default="true" id="679b3039-96c5-437d-a301-866c9d6d4f07" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/cmake.db" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/cmake.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/mini_commander_console/FileContentIndex/0d59b46f-503f-44d8-a2fc-112f75e5d542.vsidx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/mini_commander_console/v17/.wsuo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/mini_commander_console/v17/.wsuo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/mini_commander_console/v17/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/mini_commander_console/v17/Browse.VC.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/mini_commander_console/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/mini_commander_console/v17/DocumentLayout.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/mini_commander_console/v17/ipch/AutoPCH/3329dad8d9536503/MAIN.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/mini_commander_console/v17/ipch/AutoPCH/3329dad8d9536503/MAIN.ipch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/slnx.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/slnx.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helper_cpp/work_with_files/helper_create_file.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/helper_cpp/work_with_files/helper_create_file.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helper_header/work_with_files/helper_create_file.h" beforeDir="false" afterPath="$PROJECT_DIR$/helper_header/work_with_files/helper_create_file.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeCache.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -398,7 +391,7 @@
       <workItem from="1757437913275" duration="5131000" />
       <workItem from="1757446458645" duration="9500000" />
       <workItem from="1757535217385" duration="4866000" />
-      <workItem from="1757599423518" duration="7787000" />
+      <workItem from="1757599423518" duration="12167000" />
     </task>
     <servers />
   </component>
