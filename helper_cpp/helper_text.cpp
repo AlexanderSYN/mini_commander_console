@@ -12,3 +12,8 @@ std::string to_lower(std::string text)
     return text;
 }
 
+std::string get_current_path(std::string path) {
+    return path;
+}
+
+

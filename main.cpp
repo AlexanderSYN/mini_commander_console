@@ -78,7 +78,7 @@ int main() {
         // for debug
         //
         else if (user_input == "debug")
-            debug_some_command(isRunDebug, user_input);
+            debug_some_command(isRunDebug, user_input, path);
 
         //
         // End for debug
@@ -168,7 +168,7 @@ int main() {
                 "\nor \ncr ... <-(path) ... <- (file or folder) ... (name file/folder)" << std::endl;
 
         else
-            std::cout << "Command not found! \n"
+            std::cout << "The command was not found! \n"
                          "for help type help" << std::endl;
 
 

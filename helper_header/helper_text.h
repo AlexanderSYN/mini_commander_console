@@ -7,5 +7,6 @@
 #include  <string>
 
 std::string to_lower(std::string text);
+std::string get_current_path(std::string path);
 
 #endif //HELPER_TEXT_H

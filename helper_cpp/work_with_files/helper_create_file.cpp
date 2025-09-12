@@ -14,6 +14,15 @@ void FILEC::create_file(std::string user_input, std::string path)
         std::string file_or_folder = FILEC::check_isFile_for_create(user_input);
         std::string name_file_folder = FILEC::get_name_file_folder_for_create(user_input);
 
+        if (path_tmp == "path") {
+            std::cout << path << std::endl;
+            if (!fs::exists(path)) {
+                std::cerr << "ERROR Folder not found!" << std::endl;
+                return;
+            }
+            path_tmp = path;
+        }
+
         // check for error
         if (!fs::exists(path_tmp)) {
             std::cerr << "ERROR Folder not found!" << std::endl;
@@ -31,25 +40,14 @@ void FILEC::create_file(std::string user_input, std::string path)
         }
         // End check
 
-
-        if (path_tmp == "path") {
-            if (!fs::exists(path)) {
-                std::cerr << "ERROR Folder not found!" << std::endl;
-                return;
-            }
-            path_tmp = path;
-        }
-
-
-
         // create file / folder
         // create folder
         if (file_or_folder == "folder") {
-            FILEC::createFF(path, file_or_folder, name_file_folder);
+            FILEC::createFF(path_tmp, file_or_folder, name_file_folder);
             return;
         }
         else if (file_or_folder == "file") {
-            FILEC::createFF(path, file_or_folder, name_file_folder);
+            FILEC::createFF(path_tmp, file_or_folder, name_file_folder);
             return;
         }
 
@@ -75,7 +73,8 @@ std::string FILEC::get_path_for_create(std::string user_input) {
         }
 
         return result;
-    } else if (user_input.substr(0, 3) == "cr ") {
+    }
+    else if (user_input.substr(0, 3) == "cr ") {
         tmp_path = user_input.substr(3);
         for (int i = 0; tmp_path[i] != ' '; i++) {
             result += tmp_path[i];
