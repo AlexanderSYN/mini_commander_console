@@ -5,6 +5,7 @@
 #include "helper_header/work_with_files/helper_open_file.h"
 #include "helper_header/console/color_console.h"
 #include "helper_header/console/debug_some_command.h"
+#include "helper_header/helper_for_find_folder_file/helper_for_find_FF.h"
 #include "helper_header/work_with_files/helper_create_file.h"
 #include "helper_header/work_with_files/helper_delete_file.h"
 
@@ -93,7 +94,8 @@ int main() {
             std::cout << "___MINI_COMMANDER_CONSOLE___" << std::endl;
             std::cout << "_________VERSION_1__________" << std::endl;
             std::cout << "______AUTHOR: ALEXANDER_____" << std::endl;
-            std::cout << "_____GIT-HUB: ALEXANDERSYN_____" << std::endl;
+            std::cout << "_____GIT_HUB: SYNEATION_____" << std::endl;
+            std::cout << "____GIT-HUB: ALEXANDERSYN___" << std::endl;
             std::cout << "_________JUST FUN ;)________" << std::endl;
         }
         //
@@ -157,6 +159,12 @@ int main() {
         //
         // End open && openf
         //
+
+        //
+        // find
+        //
+        else if (user_input.substr(0, 5) == "find ")
+            FILEF::findFF(user_input, path);
 
         //
         // create / cr
