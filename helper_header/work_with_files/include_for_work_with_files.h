@@ -1,0 +1,8 @@
+//
+// Created by 00077 on 12.09.2025.
+//
+
+#ifndef INCLUDE_FOR_WORK_WITH_FILES_H
+#define INCLUDE_FOR_WORK_WITH_FILES_H
+
+#endif //INCLUDE_FOR_WORK_WITH_FILES_H
