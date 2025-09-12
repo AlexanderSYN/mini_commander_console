@@ -57,7 +57,7 @@ int main() {
             std::cout << "create / cr ... <- (path) ... <- (file or folder) ... <- "
                          "(name file / folder) - the command to create a file or folder" << std::endl;
             std::cout << std::endl;
-            std::cout << "delete ... <- (1 option: name file / folder or 2 option: "
+            std::cout << "delete / del ... <- (1 option: name file / folder or 2 option: "
                          "first you need to specify the path via cd, then just write delete) - "
                          "delete file / folder" << std::endl;
         }
@@ -174,7 +174,8 @@ int main() {
         //
         // delete
         //
-        else if (user_input == "delete" || user_input.substr(0, 7) == "delete ")
+        else if (user_input == "delete" || user_input.substr(0, 7) == "delete "
+            || user_input == "del" || user_input.substr(0, 4) == "del ")
             FILED::delete_file_or_folder(user_input, path);
         //
         // End delete
