@@ -24,6 +24,7 @@ std::string FILEF::get_nameFF_for_find(std::string user_input) {
     }
     catch (std::exception e) {
         return "ERROR";
+
     }
 
     return result;
