@@ -5,26 +5,7 @@
 #ifndef COLOR_CONSOLE_H
 #define COLOR_CONSOLE_H
 
-#ifdef _WINDOWS_
-    #define WINDOWS_INCLUDED 1
-#else
-    #include <Windows.h>
-    #define WINDOWS_INCLUDED 0
-#endif
-
-#ifdef __STRINGIFY__
-    #define STRING_INCLUDED 1
-#else
-    #include <string>
-    #define STRING_INCLUDED 0
-#endif
-
-#ifdef _IOSTREAM_
-    #define IOSTREAM_INCLUDED 1
-#else
-    #include <iostream>
-    #define IOSTREAM_INCLUDED 0
-#endif
+#include "../work_with_files/include_for_work_with_files.h"
 
 enum color_console
 {

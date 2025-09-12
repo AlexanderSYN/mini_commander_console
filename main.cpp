@@ -6,6 +6,7 @@
 #include "helper_header/console/color_console.h"
 #include "helper_header/console/debug_some_command.h"
 #include "helper_header/work_with_files/helper_create_file.h"
+#include "helper_header/work_with_files/helper_delete_file.h"
 
 int main() {
     setlocale(LC_ALL, "ru");
@@ -166,10 +167,24 @@ int main() {
         else if (user_input == "create" || user_input == "cr")
             std::cout << "it's not the correct command. You need to write like this -> create ... <-(path) ... <- (file or folder) ... (name file/folder)" <<
                 "\nor \ncr ... <-(path) ... <- (file or folder) ... (name file/folder)" << std::endl;
+        //
+        // End create / cr
+        //
+
+        //
+        // delete
+        //
+        else if (user_input == "delete" || user_input.substr(0, 7) == "delete ")
+            FILED::delete_file_or_folder(user_input, path);
+        //
+        // End delete
+        //
 
         else
             std::cout << "The command was not found! \n"
                          "for help type help" << std::endl;
+
+
 
 
     }

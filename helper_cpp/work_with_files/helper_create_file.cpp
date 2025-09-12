@@ -147,6 +147,8 @@ std::string FILEC::check_isFile_for_create(std::string user_input)
 // find name (create path  file / folder (get) -> name <- )
 //
 std::string FILEC::get_name_file_folder_for_create(std::string user_input) {
+    std::string result;
+
     try {
         int tmp_index_path = 0;
         std::string tmp_path;
@@ -160,7 +162,11 @@ std::string FILEC::get_name_file_folder_for_create(std::string user_input) {
 
             tmp_index_path += 5;
 
-            return tmp_path.substr(tmp_index_path);
+            result = tmp_path.substr(tmp_index_path);
+            // delete all spaces in name file or folder
+            result.erase(std::remove(result.begin(), result.end(), ' '), result.end());
+
+            return result;
 
         }
         else if (user_input.substr(0, 3) == "cr ") {
@@ -171,7 +177,11 @@ std::string FILEC::get_name_file_folder_for_create(std::string user_input) {
 
             tmp_index_path += 4;
 
-            return tmp_path.substr(tmp_index_path);
+            result = tmp_path.substr(tmp_index_path);
+            // delete all spaces in name file or folder
+            result.erase(std::remove(result.begin(), result.end(), ' '), result.end());
+
+            return result;
         }
 
         return "ERROR";

@@ -5,32 +5,7 @@
 #ifndef HELPER_CREATE_FILE_H
 #define HELPER_CREATE_FILE_H
 
-#ifdef _IOSTREAM_
-    #define IOSTREAM_INCLUDED 1
-#else
-#include <iostream>
-#define IOSTREAM_INCLUDED 0
-#endif
-
-#ifdef _WINDOWS_
-    #define WINDOWS_INCLUDED 1
-#else
-#include <Windows.h>
-#define WINDOWS_INCLUDED 0
-#endif
-
-#ifdef __STRINGIFY__
-    #define STRING_INCLUDED 1
-#else
-#include <string>
-#define STRING_INCLUDED 0
-#endif
-
-#include <filesystem>
-#include <fstream>
-
-namespace fs = std::filesystem;
-
+#include "include_for_work_with_files.h"
 
 class FILEC {
 public:

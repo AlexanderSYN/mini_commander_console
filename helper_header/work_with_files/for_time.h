@@ -5,10 +5,7 @@
 #ifndef FOR_TIME_H
 #define FOR_TIME_H
 
-#include <filesystem>
-#include <ctime>
-
-namespace fs = std::filesystem;
+#include "include_for_work_with_files.h"
 
 namespace timeff {
     std::time_t to_time_t(const fs::file_time_type& ftime);
