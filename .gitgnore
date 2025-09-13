@@ -1,6 +1,0 @@
-.idea/
-*.iml
-
-# Build files
-build/
-cmake-build-*/
