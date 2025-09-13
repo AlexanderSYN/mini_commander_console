@@ -1,0 +1,21 @@
+ninja_dyndep_version = 1.0
+build CMakeFiles\mini_commander_console.dir\main.cpp.obj: dyndep
+
+build CMakeFiles\mini_commander_console.dir\helper_cpp\helper_text.cpp.obj: dyndep
+
+build CMakeFiles\mini_commander_console.dir\helper_cpp\console\helper_clear_console.cpp.obj: dyndep
+
+build CMakeFiles\mini_commander_console.dir\helper_cpp\console\debug_some_command.cpp.obj: dyndep
+
+build CMakeFiles\mini_commander_console.dir\helper_cpp\console\color_console.cpp.obj: dyndep
+
+build CMakeFiles\mini_commander_console.dir\helper_cpp\work_with_files\helper_open_file.cpp.obj: dyndep
+
+build CMakeFiles\mini_commander_console.dir\helper_cpp\work_with_files\helper_create_file.cpp.obj: dyndep
+
+build CMakeFiles\mini_commander_console.dir\helper_cpp\work_with_files\for_time.cpp.obj: dyndep
+
+build CMakeFiles\mini_commander_console.dir\helper_cpp\work_with_files\helper_delete_file.cpp.obj: dyndep
+
+build CMakeFiles\mini_commander_console.dir\helper_cpp\helper_for_find_folder_file\helper_for_find_FF.cpp.obj: dyndep
+

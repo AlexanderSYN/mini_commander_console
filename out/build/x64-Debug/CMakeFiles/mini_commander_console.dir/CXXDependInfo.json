@@ -1,0 +1,18 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "MSVC",
+	"compiler-id" : "MSVC",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : {},
+	"dir-cur-bld" : "D:/mini_commander_console/out/build/x64-Debug",
+	"dir-cur-src" : "D:/mini_commander_console",
+	"dir-top-bld" : "D:/mini_commander_console/out/build/x64-Debug",
+	"dir-top-src" : "D:/mini_commander_console",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : [],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "D:/mini_commander_console/out/build/x64-Debug/CMakeFiles/mini_commander_console.dir"
+}

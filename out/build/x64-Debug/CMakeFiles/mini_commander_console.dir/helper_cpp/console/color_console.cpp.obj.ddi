@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "CMakeFiles\\mini_commander_console.dir\\helper_cpp\\console\\color_console.cpp.obj",
+            "outputs": [
+                "D:\\mini_commander_console\\out\\build\\x64-Debug\\vc140.pdb",
+                "CMakeFiles\\mini_commander_console.dir\\helper_cpp\\console\\color_console.cpp.obj.ddi"
+            ],
+            "requires": []
+        }
+    ]
+}
