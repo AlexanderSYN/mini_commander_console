@@ -165,8 +165,8 @@ int main() {
         //
         else if (user_input.substr(0, 5) == "find ")
             FILEF::findFF(user_input, path);
-	else if (user_input == "find")
-	    std::cout << "you need to write like this find ... <- here name file or find (name file) (path)!" << std::endl;
+	    else if (user_input == "find")
+	        std::cout << "you need to write like this find ... <- here name file \nor find (name file) (path)!" << std::endl;
 
         //
         // create / cr
@@ -192,9 +192,7 @@ int main() {
         //
 
         else
-            std::cout << "The command was not found! \n"
-
-
+            std::cout << "The command was not found! \nfor help type help! \n";
 
     }
 

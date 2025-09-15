@@ -10,10 +10,13 @@
 class FILEF {
 public:
     // findFF - find File Folder
-    static void findFF(std::string user_input, std::string path);
+    static void findFF(std::string user_input, std::string path_f);
+
 private:
     static std::string get_nameFF_for_find(std::string user_input);
-    static std::string get_path_for_find(std::string user_input);
+    static bool find_file( const fs::path & dir_path,         // in this directory,
+                const std::string & file_name, // search for this name,
+                fs::path & path_found );
 };
 
 
