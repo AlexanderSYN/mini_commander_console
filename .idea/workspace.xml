@@ -30,9 +30,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="679b3039-96c5-437d-a301-866c9d6d4f07" name="Changes" comment="fixed some bugs">
+      <change afterPath="$PROJECT_DIR$/helper_cpp/work_with_txt/helper_txt.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/helper_header/work_with_txt/helper_txt.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper_cpp/helper_for_find_folder_file/helper_for_find_FF.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/helper_cpp/helper_for_find_folder_file/helper_for_find_FF.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper_header/helper_for_find_folder_file/helper_for_find_FF.h" beforeDir="false" afterPath="$PROJECT_DIR$/helper_header/helper_for_find_folder_file/helper_for_find_FF.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -221,6 +222,11 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="mini_commander_console" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="mini_commander_console" TARGET_NAME="mini_commander_console" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="mini_commander_console" RUN_TARGET_NAME="mini_commander_console">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -244,7 +250,9 @@
       <workItem from="1757666613547" duration="14989000" />
       <workItem from="1757704101416" duration="2269000" />
       <workItem from="1757795630014" duration="3657000" />
-      <workItem from="1757931906431" duration="3723000" />
+      <workItem from="1757931906431" duration="4104000" />
+      <workItem from="1758043407984" duration="682000" />
+      <workItem from="1758044175595" duration="1406000" />
     </task>
     <task id="LOCAL-00001" summary="add get_name_file_folder_for_create">
       <option name="closed" value="true" />

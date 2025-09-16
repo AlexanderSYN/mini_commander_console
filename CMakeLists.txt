@@ -22,4 +22,7 @@ add_executable(mini_commander_console main.cpp
         helper_header/work_with_files/include_for_work_with_files.h
         helper_cpp/work_with_files/helper_delete_file.cpp
         helper_header/helper_for_find_folder_file/helper_for_find_FF.h
-        helper_cpp/helper_for_find_folder_file/helper_for_find_FF.cpp)
+        helper_cpp/helper_for_find_folder_file/helper_for_find_FF.cpp
+        helper_header/work_with_txt/helper_txt.h
+        helper_cpp/work_with_txt/helper_txt.cpp
+)

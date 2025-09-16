@@ -5,6 +5,7 @@
 #include "helper_header/work_with_files/helper_open_file.h"
 #include "helper_header/console/color_console.h"
 #include "helper_header/console/debug_some_command.h"
+#include "helper_header/work_with_txt/helper_txt.h"
 #include "helper_header/helper_for_find_folder_file/helper_for_find_FF.h"
 #include "helper_header/work_with_files/helper_create_file.h"
 #include "helper_header/work_with_files/helper_delete_file.h"
@@ -40,6 +41,7 @@ int main() {
             std::cout << "clear / cls - clearing the console" << std::endl;
             std::cout << "info - information about this program" << std::endl;
             std::cout << "color ... <- (here name of color) - for change color in console" << std::endl;
+            std::cout << "txt ... <- (here path your txt file or you can to write txt (but the path will be taken from the cd command)) - for write text in txt file" << std::endl;
             std::cout << "color help - to check the available colors" << std::endl;
             std::cout << "exit / ex - for exit from console" << std::endl;
             std::cout << std::endl;
@@ -113,6 +115,29 @@ int main() {
             std::cout << "you need to write like this -> color ... <- (color name)" << std::endl;
         //
         // End color
+        //
+
+        //
+        // txt
+        //
+        else if (user_input == "txt") {
+
+        }
+        //
+        // End txt
+        //
+
+        //
+        // echo
+        //
+        else if (user_input.substr(0, 5) == "echo ") {
+            FILETxt::save_text_in_file(user_input.substr(5), path);
+        }
+        else if (user_input == "echo") {
+            std::cout << "you need to write so echo ..." << std::endl;
+        }
+        //
+        // End echo
         //
 
         //
