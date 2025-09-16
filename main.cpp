@@ -121,14 +121,14 @@ int main() {
         // txt
         //
         else if (user_input == "txt") {
-
+            FILETxt::work_with_txt(user_input, path);
         }
         //
         // End txt
         //
 
         //
-        // echo
+        // echo and read
         //
         else if (user_input.substr(0, 5) == "echo ") {
             FILETxt::save_text_in_file(user_input.substr(5), path);
@@ -136,6 +136,8 @@ int main() {
         else if (user_input == "echo") {
             std::cout << "you need to write so echo ..." << std::endl;
         }
+        else if (user_input == "read")
+            FILETxt::Read_txt(user_input, path);
         //
         // End echo
         //
