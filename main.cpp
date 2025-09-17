@@ -41,7 +41,6 @@ int main() {
             std::cout << "clear / cls - clearing the console" << std::endl;
             std::cout << "info - information about this program" << std::endl;
             std::cout << "color ... <- (here name of color) - for change color in console" << std::endl;
-            std::cout << "txt ... <- (here path your txt file or you can to write txt (but the path will be taken from the cd command)) - for write text in txt file" << std::endl;
             std::cout << "color help - to check the available colors" << std::endl;
             std::cout << "exit / ex - for exit from console" << std::endl;
             std::cout << std::endl;
@@ -49,6 +48,11 @@ int main() {
             std::cout << "dir - allows you to display a list of files and subdirectories "
                          "for the specified directory (for windows)" << std::endl;
             std::cout << std::endl;
+            std::cout << "echo ... <- (here text to you want to write) - first you need to write path in cd ..." << std::endl;
+            std::cout << "echo clear - for clear text in text file" << std::endl;
+            std::cout << "read - for read txt file (first you need to write path in cd ...)" << std::endl;
+            std::cout << std::endl;
+
             std::cout << "openf ... <- (path with file or just folder) - "
                          "opening a file or folder through OS programs (for all OS)" << std::endl;
             std::cout << "open ... <- (path) - allows you to display "
@@ -118,24 +122,14 @@ int main() {
         //
 
         //
-        // txt
-        //
-        else if (user_input == "txt") {
-            FILETxt::work_with_txt(user_input, path);
-        }
-        //
-        // End txt
-        //
-
-        //
         // echo and read
         //
-        else if (user_input.substr(0, 5) == "echo ") {
+        else if (user_input.substr(0, 5) == "echo ")
             FILETxt::save_text_in_file(user_input.substr(5), path);
-        }
-        else if (user_input == "echo") {
+
+        else if (user_input == "echo")
             std::cout << "you need to write so echo ..." << std::endl;
-        }
+
         else if (user_input == "read")
             FILETxt::Read_txt(user_input, path);
         //

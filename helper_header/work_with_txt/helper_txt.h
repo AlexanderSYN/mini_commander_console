@@ -9,12 +9,9 @@
 
 class FILETxt {
 public:
-    static void work_with_txt(std::string user_input, std::string & path);
     static void Read_txt(std::string user_input, std::string path);
-
     static void save_text_in_file(std::string text, std::string path);
-private:
-    static void get_help_for_txt();
+
 };
 
 
