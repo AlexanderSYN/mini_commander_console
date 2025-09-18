@@ -6,10 +6,12 @@
     ]
   },
   "ExpandedNodes": [
+    "",
+    "\\.idea",
     "\\helper_cpp",
     "\\helper_cpp\\work_with_files",
-    "\\helper_header",
-    "\\out"
+    "\\helper_header"
   ],
+  "SelectedNode": "\\CMakeLists.txt",
   "PreviewInSolutionExplorer": false
 }

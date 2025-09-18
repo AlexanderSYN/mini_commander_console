@@ -29,7 +29,34 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="679b3039-96c5-437d-a301-866c9d6d4f07" name="Changes" comment="fixed some bugs" />
+    <list default="true" id="679b3039-96c5-437d-a301-866c9d6d4f07" name="Changes" comment="fixed some bugs">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/VSWorkspaceState.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/VSWorkspaceState.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/mini_commander_console/v17/.wsuo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/mini_commander_console/v17/.wsuo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/mini_commander_console/v17/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/mini_commander_console/v17/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/mini_commander_console/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/mini_commander_console/v17/DocumentLayout.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/slnx.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/slnx.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/reply/codemodel-v2-f4591f590cdb6f13a0c9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/reply/index-2025-09-12T19-34-43-0130.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/reply/target-mini_commander_console-Debug-62d78c1fa9eae39425b5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/mini_commander_console.dir/CXX.dd" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/mini_commander_console.dir/CXX.dd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/mini_commander_console.dir/helper_cpp/console/color_console.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/mini_commander_console.dir/helper_cpp/console/color_console.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/mini_commander_console.dir/helper_cpp/console/debug_some_command.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/mini_commander_console.dir/helper_cpp/console/debug_some_command.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/mini_commander_console.dir/helper_cpp/console/helper_clear_console.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/mini_commander_console.dir/helper_cpp/console/helper_clear_console.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/mini_commander_console.dir/helper_cpp/helper_for_find_folder_file/helper_for_find_FF.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/mini_commander_console.dir/helper_cpp/helper_text.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/mini_commander_console.dir/helper_cpp/helper_text.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/mini_commander_console.dir/helper_cpp/work_with_files/for_time.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/mini_commander_console.dir/helper_cpp/work_with_files/for_time.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/mini_commander_console.dir/helper_cpp/work_with_files/helper_create_file.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/mini_commander_console.dir/helper_cpp/work_with_files/helper_create_file.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/mini_commander_console.dir/helper_cpp/work_with_files/helper_delete_file.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/mini_commander_console.dir/helper_cpp/work_with_files/helper_open_file.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/mini_commander_console.dir/helper_cpp/work_with_files/helper_open_file.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/mini_commander_console.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/mini_commander_console.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/mini_commander_console.dir/vc140.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/mini_commander_console.dir/vc140.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/out/build/x64-Debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/mini_commander_console.exe" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -132,11 +159,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="mini_commander_console" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="mini_commander_console" TARGET_NAME="mini_commander_console" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="mini_commander_console" RUN_TARGET_NAME="mini_commander_console">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -163,6 +185,7 @@
       <workItem from="1757931906431" duration="4104000" />
       <workItem from="1758043407984" duration="682000" />
       <workItem from="1758044175595" duration="5575000" />
+      <workItem from="1758140282413" duration="3091000" />
     </task>
     <task id="LOCAL-00001" summary="add get_name_file_folder_for_create">
       <option name="closed" value="true" />

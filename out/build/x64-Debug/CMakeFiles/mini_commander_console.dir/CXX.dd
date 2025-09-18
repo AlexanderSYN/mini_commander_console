@@ -19,3 +19,5 @@ build CMakeFiles\mini_commander_console.dir\helper_cpp\work_with_files\helper_de
 
 build CMakeFiles\mini_commander_console.dir\helper_cpp\helper_for_find_folder_file\helper_for_find_FF.cpp.obj: dyndep
 
+build CMakeFiles\mini_commander_console.dir\helper_cpp\work_with_txt\helper_txt.cpp.obj: dyndep
+
