@@ -155,10 +155,10 @@ int main() {
         //
 
         //
-        // dir
-        // only for windows
+        // dir or ls
+        // it's seem only for windows
         //
-        else if (user_input == "dir")
+        else if (user_input == "dir" || user_input == "ls")
             FILEO::open_folder_use_dir(path);
         //
         // End dir

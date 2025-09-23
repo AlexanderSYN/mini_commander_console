@@ -23,6 +23,8 @@
 2) helper_create_file -> for create files, commands: public -> create_file ; 
 private -> get_path_for_create, check_isFile_for_create, get_name_file_folder_for_create, createFF
 3) for_time -> for use in command open: namespace -> to_time_t, format_time
+4) helper_delete_file -> delete_file_or_folder(string user_input, string path) (for delete file)
+5) include_for_work_with_files -> all libraries necessary for faster inclusion in the file are included.
 
 commands:
 cd (full path)
@@ -59,9 +61,17 @@ color ... <- (here write a color) -> the command to change the color in console
 color ...
 ```
 
-dir -> to display all files and folders (but first you need to specify the path use command cd ...) (for windows)
+dir / ls-> to display all files and folders (but first you need to specify the path use command cd ...) (for windows)
 ```
 dir
+```
+```
+ls
+```
+
+find ... <- (name file / folder) - first you need to specify the path via cd, then you can search for a file / folder
+```
+find ...
 ```
 
 open ... <- (here path) or open -> to display all files and folders, but in the 2nd example, you need to specify the path to the cd ...
@@ -80,6 +90,36 @@ openf ...
 openf 
 ```
 
+create / cr ... <- (path) ... <- (file or folder) ... <- (name file / folder) - the command to create a file or folder
+```
+create ... ... ...
+```
+```
+cr ... ... ...
+```
+
+delete / del ... <- (1 option: name file / folder or 2 option: first you need to specify the path via cd, then just write delete) - delete file / folder
+```
+delete ...
+```
+```
+del ...
+```
+
+echo ... <- (here text to you want to write) - first you need to write path in cd ...
+echo clear - for clear text in text file
+```
+echo ...
+```
+```
+echo clear
+```
+
+read - for read txt file (first you need to write path in cd ...)
+```
+read
+```
+
 exit / ex -> to exit the program
 ```
 exit
@@ -87,4 +127,4 @@ exit
 ```
 ex
 ```
-# site_for_zmk
+

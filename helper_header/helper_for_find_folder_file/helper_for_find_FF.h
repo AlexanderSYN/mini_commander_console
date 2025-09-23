@@ -13,10 +13,9 @@ public:
     static void findFF(std::string user_input, std::string path_f);
 
 private:
-    static std::string get_nameFF_for_find(std::string user_input);
-    static bool find_file( const fs::path & dir_path,         // in this directory,
-                const std::string & file_name, // search for this name,
-                fs::path & path_found );
+    static std::string find_FileFolder(const fs::path &directory, const std::string &NameFolderFile);
+    static std::string is_File_Or_Folder(const fs::path path, const std::string nameFF);
+
 };
 
 
