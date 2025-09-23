@@ -30,10 +30,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="679b3039-96c5-437d-a301-866c9d6d4f07" name="Changes" comment="fixed some bugs">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper_cpp/helper_for_find_folder_file/helper_for_find_FF.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/helper_cpp/helper_for_find_folder_file/helper_for_find_FF.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper_header/helper_for_find_folder_file/helper_for_find_FF.h" beforeDir="false" afterPath="$PROJECT_DIR$/helper_header/helper_for_find_folder_file/helper_for_find_FF.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DOCUMENTATION_CODE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DOCUMENTATION_CODE.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +164,7 @@
       <workItem from="1758228705786" duration="320000" />
       <workItem from="1758405741135" duration="4650000" />
       <workItem from="1758486521687" duration="2037000" />
-      <workItem from="1758660379639" duration="605000" />
+      <workItem from="1758660379639" duration="922000" />
     </task>
     <task id="LOCAL-00001" summary="add get_name_file_folder_for_create">
       <option name="closed" value="true" />
