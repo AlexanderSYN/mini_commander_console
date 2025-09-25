@@ -33,6 +33,14 @@ cd .. <- this means exit their current folder and go to the previous one.
 ```
 cd ...
 ```
+```
+cd
+```
+
+pwd - get path
+```
+pwd
+```
 
 help -> for show all commands
 help color -> for show commands color

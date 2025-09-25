@@ -29,7 +29,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="679b3039-96c5-437d-a301-866c9d6d4f07" name="Changes" comment="fixed some bugs" />
+    <list default="true" id="679b3039-96c5-437d-a301-866c9d6d4f07" name="Changes" comment="fixed some bugs">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -163,6 +165,7 @@
       <workItem from="1758405741135" duration="4650000" />
       <workItem from="1758486521687" duration="2037000" />
       <workItem from="1758660379639" duration="1059000" />
+      <workItem from="1758827801507" duration="1020000" />
     </task>
     <task id="LOCAL-00001" summary="add get_name_file_folder_for_create">
       <option name="closed" value="true" />

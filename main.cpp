@@ -40,6 +40,7 @@ int main() {
             std::cout << "help color - help for change color" << std::endl;
             std::cout << "clear / cls - clearing the console" << std::endl;
             std::cout << "info - information about this program" << std::endl;
+            std::cout << "pwd - get path" << std::endl;
             std::cout << "color ... <- (here name of color) - for change color in console" << std::endl;
             std::cout << "color help - to check the available colors" << std::endl;
             std::cout << "exit / ex - for exit from console" << std::endl;
@@ -150,6 +151,8 @@ int main() {
         //
         else if (user_input.substr(0, 3) == "cd ")
             FILEO::set_path_in_cd(user_input, path);
+        else if (user_input == "cd")
+            std::cout << path << std::endl;
         //
         // End cd
         //
@@ -163,6 +166,12 @@ int main() {
         //
         // End dir
         //
+
+        //
+        // pwd
+        //
+        else if (user_input == "pwd")
+            std::cout << path << std::endl;
 
         //
         // open && openf
