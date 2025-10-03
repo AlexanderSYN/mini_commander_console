@@ -1,31 +1,5 @@
 # EN
 
-//
-// ColCons - Color Console (file color_console)
-// FILEO - File Open (file help_open_file)
-// 
-
-# Folder Structure Description
-## helper_cpp folder
-1) Contains .cpp helper files for the Commander module
-2)These files provide utility functions and support functionality
-## helper_header folder
-1) Contains .h header files for the corresponding .cpp files
-2) These headers are required to include the helper functions in main()
-
-# INCLUDED MODULES
-## FOLDER: console
-1) debug_some_command -> for debuging some commands in console
-2) helper_clear_console -> code for clean console
-3) color_console -> for change color in console
-## FOLDER: work_with_files
-1) helper_open_file -> for opens files, commands: cd, dir, open, openf
-2) helper_create_file -> for create files, commands: public -> create_file ; 
-private -> get_path_for_create, check_isFile_for_create, get_name_file_folder_for_create, createFF
-3) for_time -> for use in command open: namespace -> to_time_t, format_time
-4) helper_delete_file -> delete_file_or_folder(string user_input, string path) (for delete file)
-5) include_for_work_with_files -> all libraries necessary for faster inclusion in the file are included.
-
 commands:
 cd (full path)
 cd (name folder (if you write path before))
