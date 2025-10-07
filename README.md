@@ -1,31 +1,5 @@
 # EN
 
-//
-// ColCons - Color Console (file color_console)
-// FILEO - File Open (file help_open_file)
-// 
-
-# Folder Structure Description
-## helper_cpp folder
-1) Contains .cpp helper files for the Commander module
-2)These files provide utility functions and support functionality
-## helper_header folder
-1) Contains .h header files for the corresponding .cpp files
-2) These headers are required to include the helper functions in main()
-
-# INCLUDED MODULES
-## FOLDER: console
-1) debug_some_command -> for debuging some commands in console
-2) helper_clear_console -> code for clean console
-3) color_console -> for change color in console
-## FOLDER: work_with_files
-1) helper_open_file -> for opens files, commands: cd, dir, open, openf
-2) helper_create_file -> for create files, commands: public -> create_file ; 
-private -> get_path_for_create, check_isFile_for_create, get_name_file_folder_for_create, createFF
-3) for_time -> for use in command open: namespace -> to_time_t, format_time
-4) helper_delete_file -> delete_file_or_folder(string user_input, string path) (for delete file)
-5) include_for_work_with_files -> all libraries necessary for faster inclusion in the file are included.
-
 commands:
 cd (full path)
 cd (name folder (if you write path before))
@@ -135,4 +109,114 @@ exit
 ```
 ex
 ```
+#RU
+команды:
+cd (полный путь)
+cd (название папки (если вы уже указывали путь ранее))
+cd .. <- это означает выход из текущей папки и переход к предыдущей.
+```
+cd ...
+```
+```
+cd
+```
 
+pwd -> вывести путь на которым вы сейчас находитесь
+```
+pwd
+```
+
+help -> отображения всех команд
+help color -> для отображения цвета команд
+```
+help
+```
+```
+help color
+```
+
+cls / cls -> для очистки консоли
+```
+понятно
+```
+```
+cls
+```
+
+info - > информация об этой программе
+```
+info
+```
+
+
+color ... < - (укажите цвет здесь) - > команда для изменения цвета в консоли
+```
+color ...
+```
+
+dir / ls -> для отображения всех файлов и папок (но сначала вам нужно указать путь в команде) используйте cd ...
+```
+dir
+```
+```
+ls
+```
+
+find ... < - (имя / папка) - сначала вам нужно указать путь к компакт-диску, затем вы можете выполнить поиск файла / папки 
+```
+find ...
+```
+
+open ... < - (здесь путь) или открыть - >, чтобы отобразить все файлы и папки, но во втором примере вам нужно указать путь в cd ..
+```
+open ...
+```
+```
+open
+```
+
+openf ... <- (здесь путь) вы также можете просто использовать openf. Только путь папки будет использоваться из команды cd ... -> команды для открытия файлов или папок
+```
+openf ...
+```
+```
+openf
+```
+
+создать / cr ... <- (путь) ... <- (файл или папка) ... < - (имя файла / папки) - команда для создания файла или папки
+```
+create ... ... ...
+```
+```
+cr ... ... ...
+```
+
+удалить / del ... < - (1 вариант: введите файл/папку или 2 вариант: сначала нужно указать путь через cd, затем просто удалите его) - удалить файл / папку
+```
+delete ...
+```
+```
+del ...
+```
+
+echo ... < - (тут текст, который вы хотите записать) - сначала вам нужно написать путь в cd ...
+echo clear -> для очистки текстового файла
+```
+echo ...
+```
+```
+echo clear
+```
+
+текстовый файл для чтения (сначала вам нужно написать путь в cd ...)
+```
+read
+```
+
+exit / ex - > для выхода из программы
+```
+exit
+```
+```
+ex
+```
