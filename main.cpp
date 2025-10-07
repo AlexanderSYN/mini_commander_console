@@ -1,4 +1,5 @@
 #include <iostream>
+#include <random>
 
 #include "helper_header/helper_text.h"
 #include "helper_header/console/helper_clear_console.h"
@@ -16,13 +17,18 @@ int main() {
 
     bool isRun = true;
     bool isRunDebug = true;
+    bool isShowPathWhenStartLoop = true;
 
     std::string path = "/", user_input;
     std::cout << "for help type help" << std::endl;
 
     while (isRun)
     {
-        std::cout << path << " >>";
+        if (isShowPathWhenStartLoop)
+            std::cout << path << " >>";
+        else
+            std::cout << "$ ";
+
         std::getline(std::cin, user_input);
 
         if (user_input == "exit" || user_input == "ex")
@@ -32,14 +38,24 @@ int main() {
         }
 
         //
+        // hide path and show
+        //
+        else if (user_input == "hide path" || user_input == "-h -p" || user_input == "--hide --path")
+            isShowPathWhenStartLoop = false;
+        else if (user_input == "show path" || user_input == "-s -p" || user_input == "--show --path")
+            isShowPathWhenStartLoop = true;
+
+        //
         // help
         //
-        else if (user_input == "help")
+        else if (user_input == "help" || user_input == "-h" || user_input == "--help")
         {
-            std::cout << "help - just help" << std::endl;
+            std::cout << "help / -h / --help - just help" << std::endl;
             std::cout << "help color - help for change color" << std::endl;
             std::cout << "clear / cls - clearing the console" << std::endl;
             std::cout << "info - information about this program" << std::endl;
+            std::cout << "show path / -s -p / --show --path - to display the path in the console" << std::endl;
+            std::cout << "show path / -s -p / --show --path - to display the path in the console" << std::endl;
             std::cout << "pwd - get path" << std::endl;
             std::cout << "color ... <- (here name of color) - for change color in console" << std::endl;
             std::cout << "color help - to check the available colors" << std::endl;
