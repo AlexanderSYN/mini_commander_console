@@ -115,7 +115,7 @@ int main() {
         else if (user_input == "info")
         {
             std::cout << "___MINI_COMMANDER_CONSOLE___" << std::endl;
-            std::cout << "_________VERSION_1__________" << std::endl;
+            std::cout << "_________VERSION_2__________" << std::endl;
             std::cout << "______AUTHOR: ALEXANDER_____" << std::endl;
             std::cout << "_____GIT_HUB: SYNEATION_____" << std::endl;
             std::cout << "____GIT-HUB: ALEXANDERSYN___" << std::endl;
@@ -210,7 +210,7 @@ int main() {
         // find
         //
         else if (user_input.substr(0, 5) == "find ")
-            FILEF::findFF(user_input, path);
+            FILEF::findFF(user_input.substr(5), path);
 	    else if (user_input == "find")
 	        std::cout << "you need to write like this find ... <- here name file \nor find (name file) (path)!" << std::endl;
 

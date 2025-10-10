@@ -3,6 +3,16 @@ project(mini_commander_console)
 
 set(CMAKE_CXX_STANDARD 20)
 
+if(MSVC)
+    add_compile_options(/utf-8)
+else()
+    add_compile_options(-finput-charset=UTF-8 -fexec-charset=UTF-8)
+endif()
+
+
+# Убедитесь, что используете правильный стандарт C++
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17")
+
 add_executable(mini_commander_console main.cpp
         helper_header/work_with_files/helper_open_file.h
         helper_header/helper_text.h
