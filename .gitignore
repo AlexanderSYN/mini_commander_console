@@ -1,9 +1,0 @@
-# IDE files
-.vs
-.idea\
-*.iml
-
-# Build Files
-build/
-cmake-build-*/
-
