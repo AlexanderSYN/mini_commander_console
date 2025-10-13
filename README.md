@@ -50,7 +50,7 @@ dir
 ```
 ls
 ```
-
+## I do not recommend using the search in a regular disk, because the search will take longer. I advise you to look for a file or folders in at least one folder.
 find ... <- (name file / folder) - first you need to specify the path via cd, then you can search for a file / folder
 ```
 find ...
@@ -172,8 +172,13 @@ dir
 ls
 ```
 
+<<<<<<< HEAD
 
 find ... < - (имя / папка) - сначала вам нужно указать путь к компакт-диску, затем вы можете выполнить поиск файла / папки
+=======
+## Я не рекомендую использовать поиск на обычном диске, так как поиск займет больше времени. Я советую вам искать файл или папки хотя бы в одной папке.
+find ... < - (имя / папка) - сначала вам нужно указать путь к компакт-диску, затем вы можете выполнить поиск файла / папки 
+>>>>>>> 60141aef404522d0d5718e8329d77ded9490cf9c
 ```
 find ...
 ```
