@@ -27,4 +27,6 @@ add_executable(MiniCommanderConsole main.cpp
         helper_cpp/helper_for_find_folder_file/helper_for_find_FF.cpp
         helper_header/work_with_txt/helper_txt.h
         helper_cpp/work_with_txt/helper_txt.cpp
+        helper_header/work_with_files/helper_rename_files.h
+        helper_cpp/work_with_files/helper_rename_files.cpp
 )

@@ -55,6 +55,16 @@ find ... <- (name file / folder) - first you need to specify the path via cd, th
 ```
 find ...
 ```
+## I do not recommend using the search in a regular disk, because the search will take longer. I advise you to look for a file or folders in at least one folder.
+## The search skips
+### folders
+1) "System32", "System64", "Windows", "Program Files", "ProgramData",
+2) "AppData", "Temp", "tmp", "Recycle.Bin", "Recovery",
+3) "$Recycle.Bin", "System Volume Information", "Windows.old"
+### files
+5) ".drv", ".vxd", ".386", ".ocx",".cpl", ".msc", ".scr",
+6) ".com", ".tmp",".inf", ".cat", ".mui"
+
 
 open ... <- (here path) or open -> to display all files and folders, but in the 2nd example, you need to specify the path to the cd ...
 ```
@@ -109,7 +119,7 @@ exit
 ```
 ex
 ```
-#RU
+# RU
 команды:
 cd (полный путь)
 cd (название папки (если вы уже указывали путь ранее))
@@ -162,10 +172,20 @@ dir
 ls
 ```
 
-find ... < - (имя / папка) - сначала вам нужно указать путь к компакт-диску, затем вы можете выполнить поиск файла / папки 
+
+find ... < - (имя / папка) - сначала вам нужно указать путь к компакт-диску, затем вы можете выполнить поиск файла / папки
 ```
 find ...
 ```
+## Я не рекомендую использовать поиск на обычном диске, потому что поиск займет больше времени. Я советую вам искать файл или папки хотя бы в одной папке.
+## поиск пропускает
+### папки
+1) "System32", "System64", "Windows", "Program Files", "ProgramData",
+2) "AppData", "Temp", "tmp", "Recycle.Bin", "Recovery",
+3) "$Recycle.Bin", "System Volume Information",
+### файлы
+5) ".drv", ".vxd", ".386", ".ocx",".cpl", ".msc", ".scr",
+6) ".com", ".tmp",".inf", ".cat", ".mui"
 
 open ... < - (здесь путь) или открыть - >, чтобы отобразить все файлы и папки, но во втором примере вам нужно указать путь в cd ..
 ```
@@ -183,7 +203,7 @@ openf ...
 openf
 ```
 
-создать / cr ... <- (путь) ... <- (файл или папка) ... < - (имя файла / папки) - команда для создания файла или папки
+create / cr ... <- (путь) ... <- (файл или папка) ... < - (имя файла / папки) - команда для создания файла или папки
 ```
 create ... ... ...
 ```
@@ -191,7 +211,7 @@ create ... ... ...
 cr ... ... ...
 ```
 
-удалить / del ... < - (1 вариант: введите файл/папку или 2 вариант: сначала нужно указать путь через cd, затем просто удалите его) - удалить файл / папку
+delete / del ... < - (1 вариант: введите файл/папку или 2 вариант: сначала нужно указать путь через cd, затем просто удалите его) - удалить файл / папку
 ```
 delete ...
 ```

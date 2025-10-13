@@ -7,6 +7,8 @@
 
 #include "../work_with_files/include_for_work_with_files.h"
 
+#include <conio.h>
+
 
 #include <stack>
 #include <algorithm>
