@@ -50,7 +50,7 @@ void helper_for_help::get_help_console() {
     std::cout << "info - information about this program" << std::endl;
     std::cout << std::endl;
     std::cout << "show path / -s -p / --show --path - to display the path in the console" << std::endl;
-    std::cout << "show path / -s -p / --show --path - to display the path in the console" << std::endl;
+    std::cout << "hide path / -h -p / --hide --path - to hide the path in the console" << std::endl;
     std::cout << "pwd - get path" << std::endl;
     std::cout << std::endl;
     std::cout << "color ... <- (here name of color) - for change color in console" << std::endl;

@@ -16,6 +16,14 @@ pwd - get path
 pwd
 ```
 
+show path or hide path - choose between showing the full path or just $
+```
+show path / -s -p / --show --path 
+```
+```
+hide path / -h -p / --hide --path
+```
+
 help -> for show all commands
 help color -> for show commands color
 ```
