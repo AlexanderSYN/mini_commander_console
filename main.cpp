@@ -1,6 +1,12 @@
 #include <iostream>
 #include <random>
 
+// date
+#include <ctime>
+#include <chrono>
+#include <format>
+#include <iomanip>
+
 #include <locale>
 #include <codecvt>
 
@@ -190,6 +196,46 @@ int main()
         //
         else if (user_input == "pwd")
             std::cout << path << std::endl;
+
+        //==============
+        // date
+        //==============
+        else if (user_input == "date") {
+            try {
+                auto now = std::chrono::system_clock::now();
+                // convert to UTC
+                auto utc_now = std::chrono::time_point_cast<std::chrono::days>(now);
+
+                std::cout << std::format("{:%Y-%m-%d}", utc_now) << std::endl;
+            } catch (const std::exception& e) {
+                std::cerr << "[ERROR] " << e.what() << std::endl;
+            }
+        }
+        else if (user_input == "date -f" || user_input == "date --full") {
+            try {
+                std::time_t now = std::time(nullptr);
+                std::tm* ptm = std::localtime(&now);
+
+                std::cout << std::put_time(ptm, "%Y-%m-%d %H:%M:%S") << std::endl;
+            } catch (const std::exception& e) {
+                std::cerr << "[ERROR] " << e.what() << std::endl;
+            }
+        }
+        // time
+        else if (user_input == "time") {
+            try {
+                std::time_t now = std::time(nullptr);
+                std::tm* ptm = std::localtime(&now);
+
+                std::cout << std::put_time(ptm, "%H:%M:%S") << std::endl;
+            } catch (const std::exception& e) {
+                std::cerr << "[ERROR] " << e.what() << std::endl;
+            }
+        }
+
+        //
+        // history
+        //
 
         //
         // open && openf
