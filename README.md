@@ -51,6 +51,14 @@ color ... <- (here write a color) -> the command to change the color in console
 color ...
 ```
 
+date / date -f / date --full -> for date
+```
+date
+```
+```
+date --full
+```
+
 dir / ls-> to display all files and folders (but first you need to specify the path use command cd ...) (for windows)
 ```
 dir
