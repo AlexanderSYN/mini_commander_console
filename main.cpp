@@ -6,17 +6,28 @@
 #include <chrono>
 #include <format>
 #include <iomanip>
+#include <ctime>
 
 #include <locale>
 #include <codecvt>
 
 #include "helper_header/helper_text.h"
+
+
+//
+// console
+//
 #include "helper_header/console/helper_clear_console.h"
 #include "helper_header/console/helper_clear_console.h"
-#include "helper_header/work_with_files/helper_open_file.h"
 #include "helper_header/console/color_console.h"
 #include "helper_header/console/debug_some_command.h"
 #include "helper_header/console/helper_for_help.h"
+#include "helper_header/console/date_and_time.h"
+
+//
+// files
+//
+#include "helper_header/work_with_files/helper_open_file.h"
 #include "helper_header/work_with_txt/helper_txt.h"
 #include "helper_header/work_with_files/helper_rename_files.h"
 #include "helper_header/helper_for_find_folder_file/helper_for_find_FF.h"
@@ -65,6 +76,7 @@ int main()
         else if (user_input == "help" || user_input == "-h" || user_input == "--help")
         {
             std::cout << "help / -h / --help - just help" << std::endl;
+            std::cout << "help -d / help --date" << std::endl;
             std::cout << "help full / -fll / --full - for advanced help" << std::endl;
             std::cout << "help color / col / -col / --color - help for change color" << std::endl;
             std::cout << "help file / -f / --file - help for command file" << std::endl;
@@ -79,6 +91,9 @@ int main()
                 || user_input.substr(5) == "--full") {
                 helper_for_help::get_help_full();
             }
+
+            else if (user_input.substr(5) == "-d" || user_input.substr(5) == "--date")
+                helper_for_help::get_help_date();
 
             else if (user_input.substr(5) == "color" || user_input.substr(5) == "--color"
                 || user_input.substr(5) == "-col" || user_input.substr(5) == "col")
@@ -123,7 +138,7 @@ int main()
         else if (user_input == "info")
         {
             std::cout << "___MINI_COMMANDER_CONSOLE___" << std::endl;
-            std::cout << "_________VERSION_4__________" << std::endl;
+            std::cout << "_________VERSION_5__________" << std::endl;
             std::cout << "______AUTHOR: ALEXANDER_____" << std::endl;
             std::cout << "_____GIT_HUB: SYNEATION_____" << std::endl;
             std::cout << "____GIT-HUB: ALEXANDERSYN___" << std::endl;
@@ -197,41 +212,15 @@ int main()
         else if (user_input == "pwd")
             std::cout << path << std::endl;
 
-        //==============
-        // date
-        //==============
-        else if (user_input == "date") {
-            try {
-                auto now = std::chrono::system_clock::now();
-                // convert to UTC
-                auto utc_now = std::chrono::time_point_cast<std::chrono::days>(now);
+        //================
+        // date and time
+        //================
+        else if (user_input == "date")
+            time_and_date::output_local_date_and_time();
 
-                std::cout << std::format("{:%Y-%m-%d}", utc_now) << std::endl;
-            } catch (const std::exception& e) {
-                std::cerr << "[ERROR] " << e.what() << std::endl;
-            }
-        }
-        else if (user_input == "date -f" || user_input == "date --full") {
-            try {
-                std::time_t now = std::time(nullptr);
-                std::tm* ptm = std::localtime(&now);
-
-                std::cout << std::put_time(ptm, "%Y-%m-%d %H:%M:%S") << std::endl;
-            } catch (const std::exception& e) {
-                std::cerr << "[ERROR] " << e.what() << std::endl;
-            }
-        }
         // time
-        else if (user_input == "time") {
-            try {
-                std::time_t now = std::time(nullptr);
-                std::tm* ptm = std::localtime(&now);
-
-                std::cout << std::put_time(ptm, "%H:%M:%S") << std::endl;
-            } catch (const std::exception& e) {
-                std::cerr << "[ERROR] " << e.what() << std::endl;
-            }
-        }
+        else if (user_input == "time")
+            time_and_date::output_time();
 
         //
         // history

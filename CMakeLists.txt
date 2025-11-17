@@ -31,4 +31,6 @@ add_executable(MiniCommanderConsole main.cpp
         helper_cpp/work_with_files/helper_rename_files.cpp
         helper_header/console/helper_for_help.h
         helper_cpp/console/helper_for_help.cpp
+        helper_header/console/date_and_time.h
+        helper_cpp/console/date_and_time.cpp
 )
