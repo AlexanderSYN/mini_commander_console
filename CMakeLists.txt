@@ -33,4 +33,6 @@ add_executable(MiniCommanderConsole main.cpp
         helper_cpp/console/helper_for_help.cpp
         helper_header/console/date_and_time.h
         helper_cpp/console/date_and_time.cpp
+        helper_header/console/CMDCOMMAND.h
+        helper_cpp/console/CMDCOMMAND.cpp
 )

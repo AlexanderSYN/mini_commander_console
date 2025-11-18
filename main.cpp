@@ -2,27 +2,22 @@
 #include <random>
 
 // date
-#include <ctime>
 #include <chrono>
 #include <format>
 #include <iomanip>
-#include <ctime>
 
 #include <locale>
 #include <codecvt>
-
-#include "helper_header/helper_text.h"
-
 
 //
 // console
 //
 #include "helper_header/console/helper_clear_console.h"
-#include "helper_header/console/helper_clear_console.h"
 #include "helper_header/console/color_console.h"
 #include "helper_header/console/debug_some_command.h"
 #include "helper_header/console/helper_for_help.h"
 #include "helper_header/console/date_and_time.h"
+#include "helper_header/console/CMDCOMMAND.h"
 
 //
 // files
@@ -44,17 +39,20 @@ int main()
     bool isRunDebug = true;
     bool isShowPathWhenStartLoop = true;
 
+    std::vector<std::string> history {};
+
     std::string path = "/", user_input;
     std::cout << "for help type help" << std::endl;
 
-    while (isRun)
-    {
+    while (isRun) {
         if (isShowPathWhenStartLoop)
             std::cout << path << " >>";
         else
             std::cout << "$ ";
 
         std::getline(std::cin, user_input);
+
+        history.push_back(user_input);
 
         if (user_input == "exit" || user_input == "ex")
         {
@@ -82,7 +80,6 @@ int main()
             std::cout << "help file / -f / --file - help for command file" << std::endl;
             std::cout << "help txt / text / -t / --txt - help for command txt" << std::endl;
             std::cout << "help console / cons / -cons / --console - help for command console" << std::endl;
-            std::cout << "help console / cons / -cons / --console - help for command console" << std::endl;
         }
 
         else if (user_input.substr(0, 5) == "help ")
@@ -90,7 +87,7 @@ int main()
             if (user_input.substr(5) == "full" || user_input.substr(5) == "-fll"
                 || user_input.substr(5) == "--full") {
                 helper_for_help::get_help_full();
-            }
+                }
 
             else if (user_input.substr(5) == "-d" || user_input.substr(5) == "--date")
                 helper_for_help::get_help_date();
@@ -102,16 +99,16 @@ int main()
             else if (user_input.substr(5) == "file" || user_input.substr(5) == "-f"
                 || user_input.substr(5) == "--file") {
                 helper_for_help::get_help_file();
-            }
+                }
             else if (user_input.substr(5) == "txt" || user_input.substr(5) == "text"
                 || user_input.substr(5) == "-t" || user_input.substr(5) == "--txt") {
                 helper_for_help::get_help_txt();
-            }
+                }
             else if (user_input.substr(5) == "console" || user_input.substr(5) == "cons"
                 || user_input.substr(5) == "-cons" || user_input.substr(5) == "--console") {
                 helper_for_help::get_help_console();
 
-            }
+                }
 
             else
                 std::cout << "you entered it incorrectly, look here by writing -> help" << std::endl;
@@ -186,6 +183,15 @@ int main()
         //
 
         //
+        // command -> cmd (command from cmd)
+        //
+        else if (user_input.substr(0, 4) == "cmd ")
+            CMDCOMMAND::start_cmd_commands(user_input.substr(4));
+        else if (user_input == "cmd")
+            std::cout << "You need to write -> cmd (command from cmd)" << std::endl;
+
+
+        //
         // cd
         //
         else if (user_input.substr(0, 3) == "cd ")
@@ -225,6 +231,16 @@ int main()
         //
         // history
         //
+        else if (user_input == "history" || user_input == "hist") {
+            int tmp_count_commands = 0;
+
+            std::cout << "Your history: " << std::endl;
+
+            for (std::string command : history) {
+                tmp_count_commands++;
+                std::cout << tmp_count_commands << ") " << command << std::endl;
+            }
+        }
 
         //
         // open && openf

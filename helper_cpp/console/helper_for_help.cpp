@@ -57,6 +57,8 @@ void helper_for_help::get_help_console() {
     std::cout << "cd - the command to change the working directory" << std::endl;
     std::cout << "dir - allows you to display a list of files and subdirectories "
                  "for the specified directory (for windows)" << std::endl;
+    std::cout << "cmd (command from cmd) - after cmd you need to write command from cmd" << std::endl;
+    std::cout << "history / hist - output your history" << std::endl;
     std::cout << "clear / cls - clearing the console" << std::endl;
     std::cout << "info - information about this program" << std::endl;
     std::cout << std::endl;
@@ -87,9 +89,14 @@ void helper_for_help::get_help_full() {
     std::cout << std::endl;
     std::cout << "exit / ex - for exit from console" << std::endl;
     std::cout << std::endl;
+    std::cout << "date -> output current date" << std::endl;
+    std::cout << "time -> output current time" << std::endl;
+    std::cout << std::endl;
     std::cout << "cd - the command to change the working directory" << std::endl;
     std::cout << "dir - allows you to display a list of files and subdirectories "
              "for the specified directory (for windows)" << std::endl;
+    std::cout << "history / hist - output your history" << std::endl;
+    std::cout << "cmd (command from cmd) - after cmd you need to write command from cmd" << std::endl;
     std::cout << std::endl;
     std::cout << "echo ... <- (here text to you want to write) - first you need to write path in cd ..." << std::endl;
     std::cout << "echo clear - for clear text in text file" << std::endl;
