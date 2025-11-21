@@ -18,6 +18,12 @@
 1) debug_some_command -> for debuging some commands in console
 2) helper_clear_console -> code for clean console
 3) color_console -> for change color in console
+4) CMDCOMMAND -> for work with cmd commands
+5) date_and_time -> for date and time
+
+## FOLDER: helper_for_find_folder_file
+1) helper_for_find_FF -> for work with command -> find
+
 ## FOLDER: work_with_files
 1) helper_open_file -> for opens files, commands: cd, dir, open, openf
 2) helper_create_file -> for create files, commands: public -> create_file ; 
@@ -25,6 +31,9 @@ private -> get_path_for_create, check_isFile_for_create, get_name_file_folder_fo
 3) for_time -> for use in command open: namespace -> to_time_t, format_time
 4) helper_delete_file -> delete_file_or_folder(string user_input, string path) (for delete file)
 5) include_for_work_with_files -> all libraries necessary for faster inclusion in the file are included.
+
+## FOLDER: work_with_txt
+1) helper_txt -> for work with txt files
 
 commands:
 # EN
@@ -43,6 +52,25 @@ cd
 pwd - get path
 ```
 pwd
+```
+
+cmd (cmd command) - for using cmd commands
+```
+cmd (command)
+```
+
+history - show your history commands
+```
+history
+```
+
+date - output date in console
+```
+date
+```
+time - output time in console
+```
+time
 ```
 
 show path or hide path - choose between showing the full path or just $
@@ -173,13 +201,32 @@ pwd -> вывести путь на которым вы сейчас наход�
 pwd
 ```
 
-help -> отображения всех команд
-help color -> для отображения цвета команд
+cmd (cmd command) - для использования cmd комманд
 ```
-help
+cmd (command)
+```
+
+history - показать вашу историю команд
+```
+history
+```
+
+date - вывести дату в консоль
+```
+date
+```
+time - вывести в консоль
+```
+time
+```
+
+help --full -> отображения всех команд
+help --color -> для отображения цвета команд
+```
+help --full
 ```
 ```
-help color
+help --color
 ```
 
 cls / cls -> для очистки консоли
