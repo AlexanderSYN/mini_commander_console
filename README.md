@@ -16,6 +16,21 @@ pwd - get path
 pwd
 ```
 
+cmd (cmd command) - for using cmd commands
+```
+cmd (command)
+```
+
+history - show your history commands
+```
+history
+```
+
+date - output date
+```
+date
+```
+
 show path or hide path - choose between showing the full path or just $
 ```
 show path / -s -p / --show --path 
