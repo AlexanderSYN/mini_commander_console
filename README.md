@@ -26,9 +26,13 @@ history - show your history commands
 history
 ```
 
-date - output date
+date - output date in console
 ```
 date
+```
+time - output time in console
+```
+time
 ```
 
 show path or hide path - choose between showing the full path or just $
@@ -159,13 +163,32 @@ pwd -> вывести путь на которым вы сейчас наход�
 pwd
 ```
 
-help -> отображения всех команд
-help color -> для отображения цвета команд
+cmd (cmd command) - для использования cmd комманд
 ```
-help
+cmd (command)
+```
+
+history - показать вашу историю команд
+```
+history
+```
+
+date - вывести дату в консоль
+```
+date
+```
+time - вывести в консоль
+```
+time
+```
+
+help --full -> отображения всех команд
+help --color -> для отображения цвета команд
+```
+help --full
 ```
 ```
-help color
+help --color
 ```
 
 cls / cls -> для очистки консоли
