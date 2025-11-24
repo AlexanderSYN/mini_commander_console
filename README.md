@@ -30,6 +30,7 @@ date - output date in console
 ```
 date
 ```
+
 time - output time in console
 ```
 time
