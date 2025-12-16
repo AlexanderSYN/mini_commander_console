@@ -35,12 +35,10 @@ private -> get_path_for_create, check_isFile_for_create, get_name_file_folder_fo
 ## FOLDER: work_with_txt
 1) helper_txt -> for work with txt files
 
-<<<<<<< HEAD
 =======
 commands:
 # EN
 
->>>>>>> 4005090146f3526f03a91f114f0d49e362f36b17
 commands:
 # EN
 
