@@ -16,9 +16,9 @@ pwd - get path
 pwd
 ```
 
-cmd (cmd command) - for using cmd commands
+cmd ... <- (cmd command) - for using cmd commands
 ```
-cmd (command)
+cmd ... <- (command)
 ```
 
 history - show your history commands
@@ -164,9 +164,9 @@ pwd -> вывести путь на которым вы сейчас наход�
 pwd
 ```
 
-cmd (cmd command) - для использования cmd комманд
+cmd ... <- (cmd command) - для использования cmd комманд
 ```
-cmd (command)
+cmd ... <- (command)
 ```
 
 history - показать вашу историю команд
