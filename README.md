@@ -1,6 +1,5 @@
 # EN
 
-commands:
 cd (full path)
 cd (name folder (if you write path before))
 cd .. <- this means exit their current folder and go to the previous one.
@@ -70,7 +69,7 @@ color ... <- (here write a color) -> the command to change the color in console
 color ...
 ```
 
-dir / ls-> to display all files and folders (but first you need to specify the path use command cd ...) 
+dir / ls-> to display all files and folders (but first you need to specify the path use command cd ...)
 ```
 dir
 ```
@@ -92,6 +91,12 @@ find ...
 5) ".drv", ".vxd", ".386", ".ocx",".cpl", ".msc", ".scr",
 6) ".com", ".tmp",".inf", ".cat", ".mui"
 
+>[!TIP]
+> to get started, you need to specify the disk via cd (or directory)
+free - outputs the free space on your disk
+```
+free
+```
 
 open ... <- (here path) or open -> to display all files and folders, but in the 2nd example, you need to specify the path to the cd ...
 ```
@@ -191,9 +196,9 @@ help --full
 help --color
 ```
 
-cls / cls -> для очистки консоли
+clear / cls -> для очистки консоли
 ```
-понятно
+clear
 ```
 ```
 cls
@@ -218,10 +223,10 @@ dir
 ls
 ```
 
-
 find ... < - (имя / папка) - сначала вам нужно указать путь к компакт-диску, затем вы можете выполнить поиск файла / папки
 
-## Я не рекомендую использовать поиск на обычном диске, так как поиск займет больше времени. Я советую вам искать файл или папки хотя бы в одной папке.
+>[!TIP]
+> Я не рекомендую использовать поиск на обычном диске, так как поиск займет больше времени. Я советую вам искать файл или папки хотя бы в одной папке.
 find ... < - (имя / папка) - сначала вам нужно указать путь к компакт-диску, затем вы можете выполнить поиск файла / папки
 
 ```
@@ -236,6 +241,13 @@ find ...
 ### файлы
 5) ".drv", ".vxd", ".386", ".ocx",".cpl", ".msc", ".scr",
 6) ".com", ".tmp",".inf", ".cat", ".mui"
+
+>[!TIP]
+> для начала вам необходимо указать диск через cd (или каталог)
+free - выводит количество свободного места на вашем диске
+```
+free
+```
 
 open ... < - (здесь путь) или открыть - >, чтобы отобразить все файлы и папки, но во втором примере вам нужно указать путь в cd ..
 ```
@@ -278,7 +290,7 @@ echo ...
 echo clear
 ```
 
-текстовый файл для чтения (сначала вам нужно написать путь в cd ...)
+read - чтения текстового файла (сначала вам нужно написать путь в cd ...)
 ```
 read
 ```
