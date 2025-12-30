@@ -10,6 +10,7 @@ public:
     static void get_help_full();
     static void get_help_date();
     static void get_help_file();
+    static void get_help_disk();
     static void get_help_txt();
     static void get_help_console();
 };

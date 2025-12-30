@@ -32,6 +32,7 @@
 #include <vector>
 #include <fstream>
 #include <cstdlib>
+#include <cstdint>
 #include <iomanip>
 #include <system_error>
 

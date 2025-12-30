@@ -30,7 +30,6 @@ date - output date in console
 ```
 date
 ```
-
 time - output time in console
 ```
 time
@@ -178,8 +177,7 @@ date - вывести дату в консоль
 ```
 date
 ```
-
-time - вывести время в консоль
+time - вывести в консоль
 ```
 time
 ```

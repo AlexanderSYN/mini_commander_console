@@ -24,6 +24,7 @@
 //
 #include "helper_header/work_with_files/helper_open_file.h"
 #include "helper_header/work_with_txt/helper_txt.h"
+#include "helper_header/work_with_files/free_space.h"
 #include "helper_header/work_with_files/helper_rename_files.h"
 #include "helper_header/helper_for_find_folder_file/helper_for_find_FF.h"
 #include "helper_header/work_with_files/helper_create_file.h"
@@ -74,42 +75,50 @@ int main()
         else if (user_input == "help" || user_input == "-h" || user_input == "--help")
         {
             std::cout << "help / -h / --help - just help" << std::endl;
-            std::cout << "help -d / help --date" << std::endl;
+            std::cout << "help date / -d / help --date" << std::endl;
             std::cout << "help full / -fll / --full - for advanced help" << std::endl;
             std::cout << "help color / col / -col / --color - help for change color" << std::endl;
-            std::cout << "help file / -f / --file - help for command file" << std::endl;
-            std::cout << "help txt / text / -t / --txt - help for command txt" << std::endl;
-            std::cout << "help console / cons / -cons / --console - help for command console" << std::endl;
+            std::cout << "help file / -f / --file - help for file command" << std::endl;
+            std::cout << "help disk / -ds / --disk - help for disk command" << std::endl;
+            std::cout << "help txt / text / -t / --txt - help for text command" << std::endl;
+            std::cout << "help console / cons / -cons / --console - help for console command" << std::endl;
         }
 
         else if (user_input.substr(0, 5) == "help ")
         {
+            //full
             if (user_input.substr(5) == "full" || user_input.substr(5) == "-fll"
                 || user_input.substr(5) == "--full") {
                 helper_for_help::get_help_full();
                 }
-
-            else if (user_input.substr(5) == "-d" || user_input.substr(5) == "--date")
+            //date
+            else if (user_input.substr(5) == "date"
+                || user_input.substr(5) == "-d" || user_input.substr(5) == "--date")
                 helper_for_help::get_help_date();
-
+            //disk
+            else if (user_input.substr(5) == "disk"
+                || user_input.substr(5) == "-ds" || user_input.substr(5) == "--disk")
+                helper_for_help::get_help_disk();
+            //color
             else if (user_input.substr(5) == "color" || user_input.substr(5) == "--color"
                 || user_input.substr(5) == "-col" || user_input.substr(5) == "col")
                 ColorConsole::choice_color("color help");
-
+            //file
             else if (user_input.substr(5) == "file" || user_input.substr(5) == "-f"
                 || user_input.substr(5) == "--file") {
                 helper_for_help::get_help_file();
                 }
+            //txt
             else if (user_input.substr(5) == "txt" || user_input.substr(5) == "text"
                 || user_input.substr(5) == "-t" || user_input.substr(5) == "--txt") {
                 helper_for_help::get_help_txt();
                 }
+            //console
             else if (user_input.substr(5) == "console" || user_input.substr(5) == "cons"
                 || user_input.substr(5) == "-cons" || user_input.substr(5) == "--console") {
                 helper_for_help::get_help_console();
-
                 }
-
+            //error
             else
                 std::cout << "you entered it incorrectly, look here by writing -> help" << std::endl;
 
@@ -134,8 +143,9 @@ int main()
         //
         else if (user_input == "info")
         {
+            std::cout << "_____Happy New Year 2026____" << std::endl;
             std::cout << "___MINI_COMMANDER_CONSOLE___" << std::endl;
-            std::cout << "_________VERSION_5__________" << std::endl;
+            std::cout << "_________VERSION_6__________" << std::endl;
             std::cout << "______AUTHOR: ALEXANDER_____" << std::endl;
             std::cout << "_____GIT_HUB: SYNEATION_____" << std::endl;
             std::cout << "____GIT-HUB: ALEXANDERSYN___" << std::endl;
@@ -144,6 +154,12 @@ int main()
         //
         // End info
         //
+
+        //
+        // free
+        //
+        else if (user_input == "free")
+            free_space::get_info_free_disk_space(path);
 
         //
         // color

@@ -29,15 +29,12 @@
 2) helper_create_file -> for create files, commands: public -> create_file ; 
 private -> get_path_for_create, check_isFile_for_create, get_name_file_folder_for_create, createFF
 3) for_time -> for use in command open: namespace -> to_time_t, format_time
-4) helper_delete_file -> delete_file_or_folder(string user_input, string path) (for delete file)
-5) include_for_work_with_files -> all libraries necessary for faster inclusion in the file are included.
+4) free_space -> get_info_free_disk_space
+5) helper_delete_file -> delete_file_or_folder(string user_input, string path) (for delete file)
+6) include_for_work_with_files -> all libraries necessary for faster inclusion in the file are included.
 
 ## FOLDER: work_with_txt
 1) helper_txt -> for work with txt files
-
-=======
-commands:
-# EN
 
 commands:
 # EN
@@ -133,6 +130,12 @@ find ...
 5) ".drv", ".vxd", ".386", ".ocx",".cpl", ".msc", ".scr",
 6) ".com", ".tmp",".inf", ".cat", ".mui"
 
+>[!TIP]
+> to get started, you need to specify the disk via cd (or directory)
+free - outputs the free space on your disk
+```
+free
+```
 
 open ... <- (here path) or open -> to display all files and folders, but in the 2nd example, you need to specify the path to the cd ...
 ```
@@ -232,9 +235,9 @@ help --full
 help --color
 ```
 
-cls / cls -> для очистки консоли
+clear / cls -> для очистки консоли
 ```
-понятно
+clear
 ```
 ```
 cls
@@ -259,10 +262,10 @@ dir
 ls
 ```
 
-
 find ... < - (имя / папка) - сначала вам нужно указать путь к компакт-диску, затем вы можете выполнить поиск файла / папки
 
-## Я не рекомендую использовать поиск на обычном диске, так как поиск займет больше времени. Я советую вам искать файл или папки хотя бы в одной папке.
+>[!TIP]
+> Я не рекомендую использовать поиск на обычном диске, так как поиск займет больше времени. Я советую вам искать файл или папки хотя бы в одной папке.
 find ... < - (имя / папка) - сначала вам нужно указать путь к компакт-диску, затем вы можете выполнить поиск файла / папки
 
 ```
@@ -277,6 +280,13 @@ find ...
 ### файлы
 5) ".drv", ".vxd", ".386", ".ocx",".cpl", ".msc", ".scr",
 6) ".com", ".tmp",".inf", ".cat", ".mui"
+
+>[!TIP]
+> для начала вам необходимо указать диск через cd (или каталог)
+free - выводит количество свободного места на вашем диске
+```
+free
+```
 
 open ... < - (здесь путь) или открыть - >, чтобы отобразить все файлы и папки, но во втором примере вам нужно указать путь в cd ..
 ```
@@ -319,7 +329,7 @@ echo ...
 echo clear
 ```
 
-текстовый файл для чтения (сначала вам нужно написать путь в cd ...)
+read - чтения текстового файла (сначала вам нужно написать путь в cd ...)
 ```
 read
 ```
@@ -330,8 +340,6 @@ exit
 ```
 ```
 ex
-<<<<<<< HEAD
 ```
-=======
-```
->>>>>>> 4005090146f3526f03a91f114f0d49e362f36b17
+
+

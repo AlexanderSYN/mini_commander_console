@@ -16,9 +16,9 @@ pwd - get path
 pwd
 ```
 
-cmd ... <- (cmd command) - for using cmd commands
+cmd (cmd command) - for using cmd commands
 ```
-cmd ... <- (command)
+cmd (command)
 ```
 
 history - show your history commands
@@ -30,7 +30,6 @@ date - output date in console
 ```
 date
 ```
-
 time - output time in console
 ```
 time
@@ -164,9 +163,9 @@ pwd -> вывести путь на которым вы сейчас наход�
 pwd
 ```
 
-cmd ... <- (cmd command) - для использования cmd комманд
+cmd (cmd command) - для использования cmd комманд
 ```
-cmd ... <- (command)
+cmd (command)
 ```
 
 history - показать вашу историю команд
@@ -178,8 +177,7 @@ date - вывести дату в консоль
 ```
 date
 ```
-
-time - вывести время в консоль
+time - вывести в консоль
 ```
 time
 ```
@@ -193,9 +191,9 @@ help --full
 help --color
 ```
 
-clear / cls -> для очистки консоли
+cls / cls -> для очистки консоли
 ```
-clear
+понятно
 ```
 ```
 cls
@@ -229,7 +227,7 @@ find ... < - (имя / папка) - сначала вам нужно указа
 ```
 find ...
 ```
-## Я не рекомендую использовать поиск на обычном диске, потому что поиск займет больше времени. Я советую вам искать файл или папки хотя бы перейдя в одну папке.
+## Я не рекомендую использовать поиск на обычном диске, потому что поиск займет больше времени. Я советую вам искать файл или папки хотя бы в одной папке.
 ## поиск пропускает
 ### папки
 1) "System32", "System64", "Windows", "Program Files", "ProgramData",
