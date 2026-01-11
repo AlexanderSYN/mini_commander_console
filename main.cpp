@@ -32,8 +32,6 @@
 
 int main()
 {
-    std::locale::global(std::locale(""));
-    setlocale(LC_ALL, "ru");
     SetConsoleOutputCP(CP_UTF8);
 
     bool isRun = true;
@@ -42,7 +40,8 @@ int main()
 
     std::vector<std::string> history {};
 
-    std::string path = "/", user_input;
+    std::string path = "/";
+    std::string user_input;
     std::cout << "for help type help" << std::endl;
 
     while (isRun) {
@@ -143,9 +142,8 @@ int main()
         //
         else if (user_input == "info")
         {
-            std::cout << "_____Happy New Year 2026____" << std::endl;
             std::cout << "___MINI_COMMANDER_CONSOLE___" << std::endl;
-            std::cout << "_________VERSION_6__________" << std::endl;
+            std::cout << "_________VERSION_7__________" << std::endl;
             std::cout << "______AUTHOR: ALEXANDER_____" << std::endl;
             std::cout << "_____GIT_HUB: SYNEATION_____" << std::endl;
             std::cout << "____GIT-HUB: ALEXANDERSYN___" << std::endl;
@@ -210,8 +208,11 @@ int main()
         //
         // cd
         //
-        else if (user_input.substr(0, 3) == "cd ")
+        else if (user_input.substr(0, 3) == "cd ") {
+            // fs::path tmp_path = path;
+            // path = tmp_path.string();
             FILEO::set_path_in_cd(user_input, path);
+        }
         else if (user_input == "cd")
             std::cout << path << std::endl;
         //

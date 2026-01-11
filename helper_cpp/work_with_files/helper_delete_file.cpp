@@ -6,7 +6,8 @@
 #include "../../helper_header/work_with_files/helper_delete_file.h"
 
 void FILED::delete_file_or_folder(std::string user_input, std::string &path) {
-    char choice;
+    try {
+        char choice;
 
 	std::string tmp_full_path_path_plus_user_input = path;
     //
@@ -21,7 +22,6 @@ void FILED::delete_file_or_folder(std::string user_input, std::string &path) {
 
 		else
 			input_path = user_input.substr(4);
-
 
 
 		if (input_path.ends_with('\\'))
@@ -53,9 +53,9 @@ void FILED::delete_file_or_folder(std::string user_input, std::string &path) {
 			if (fs::is_regular_file(input_path))
 			{
 
-				if (std::remove(input_path.c_str()) == 0)
+				if (fs::remove(input_path.c_str()) == 0)
 				{
-					std::cout << "File deleted successfully!" << std::endl;
+					std::cout << "File or Empty folder deleted successfully!" << std::endl;
 
 					if (input_path == input_path) {
 						if (!input_path.empty() && input_path != "/") {
@@ -64,15 +64,26 @@ void FILED::delete_file_or_folder(std::string user_input, std::string &path) {
 							return;
 						}
 					}
-
-
 				}
 				else
 				{
-					std::cerr << "Error: failed to delete file (" << errno << ") - "
+					if  (fs::remove_all(input_path.c_str()) == 0) {
+						std::cout << "Folder deleted successfully!" << std::endl;
+						if (input_path == input_path) {
+							if (!input_path.empty() && input_path != "/") {
+								fs::path current_path(input_path);
+								input_path = current_path.parent_path().string();
+								return;
+							}
+						}
+					}
+					else {
+						std::cerr << "Error: failed to delete file (" << errno << ") - "
 						<< input_path << std::endl;
-					perror("Reason");
-					return;
+						perror("Reason");
+						return;
+					}
+
 				}
 			}
 			else if (fs::is_directory(input_path))
@@ -222,12 +233,13 @@ void FILED::delete_file_or_folder(std::string user_input, std::string &path) {
 		catch (const fs::filesystem_error& e)
 		{
 			std::cerr << "FILESYSTEM ERROR: " << e.what() << std::endl;
-			return;
 		}
 		catch (const std::exception& e)
 		{
 			std::cerr << "[ERROR] " << e.what() << std::endl;
-			return;
 		}
 	}
+    } catch (const std::exception & e) {
+    	std::cerr << "[ERROR] " << e.what() << std::endl;
+    }
 }
