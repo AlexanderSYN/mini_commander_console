@@ -6,10 +6,9 @@
 #include "../../helper_header/work_with_files/helper_delete_file.h"
 
 void FILED::delete_file_or_folder(std::string user_input, std::string &path) {
-    try {
-        char choice;
+    char choice;
 
-	std::string tmp_full_path_path_plus_user_input = path;
+	std::string tmp_full_path_plus_usr_inp = path;
     //
 	// check for option 1 - delete (path) or 2 - delete or del
 	//
@@ -24,22 +23,23 @@ void FILED::delete_file_or_folder(std::string user_input, std::string &path) {
 			input_path = user_input.substr(4);
 
 
+
 		if (input_path.ends_with('\\'))
-			tmp_full_path_path_plus_user_input += input_path;
+			tmp_full_path_plus_usr_inp += input_path;
 		else {
-			tmp_full_path_path_plus_user_input += "\\";
-			tmp_full_path_path_plus_user_input += input_path;
+			tmp_full_path_plus_usr_inp += "\\";
+			tmp_full_path_plus_usr_inp += input_path;
 		}
 
-		if (!fs::exists(input_path) && !fs::exists(tmp_full_path_path_plus_user_input))
+		if (!fs::exists(input_path) && !fs::exists(tmp_full_path_plus_usr_inp))
 		{
 			std::cout << "ERROR: File / Folder is not found!" << std::endl;
 			return;
 		}
 
 		// if you just to write name of folder but is not full path
-		if (fs::exists(tmp_full_path_path_plus_user_input))
-			input_path = tmp_full_path_path_plus_user_input;
+		if (fs::exists(tmp_full_path_plus_usr_inp))
+			input_path = tmp_full_path_plus_usr_inp;
 
 		std::cout << "are you sure? (Y/N) >> ";
 		std::cin >> choice;
@@ -52,55 +52,43 @@ void FILED::delete_file_or_folder(std::string user_input, std::string &path) {
 		{
 			if (fs::is_regular_file(input_path))
 			{
-
-				if (fs::remove(input_path.c_str()) == 0)
+				if (std::remove(input_path.c_str()) == 0)
 				{
-					std::cout << "File or Empty folder deleted successfully!" << std::endl;
+					std::cout << "File deleted successfully!" << std::endl;
 
-					if (input_path == input_path) {
-						if (!input_path.empty() && input_path != "/") {
-							fs::path current_path(input_path);
-							input_path = current_path.parent_path().string();
+					// we remove the file from the path, if it was
+					std::cout << "folder deleted successfully!" << std::endl;
+					if (!path.empty() && path != "/") {
+						if (!path.empty() && path != "/") {
+							fs::path current_path(path);
+							path = current_path.parent_path().string();
 							return;
 						}
 					}
+					return;
 				}
 				else
 				{
-					if  (fs::remove_all(input_path.c_str()) == 0) {
-						std::cout << "Folder deleted successfully!" << std::endl;
-						if (input_path == input_path) {
-							if (!input_path.empty() && input_path != "/") {
-								fs::path current_path(input_path);
-								input_path = current_path.parent_path().string();
-								return;
-							}
-						}
-					}
-					else {
-						std::cerr << "Error: failed to delete file (" << errno << ") - "
+					std::cerr << "Error: failed to delete file (" << errno << ") - "
 						<< input_path << std::endl;
-						perror("Reason");
-						return;
-					}
-
+					perror("Reason");
+					return;
 				}
 			}
 			else if (fs::is_directory(input_path))
 			{
 				try
 				{
-					if (fs::remove(input_path))
-					{
-						std::cout << "Empty folder deleted successfully!" << std::endl;
-						if (input_path == input_path) {
-							if (!input_path.empty() && input_path != "/") {
-								fs::path current_path(input_path);
-								input_path = current_path.parent_path().string();
-								return;
-							}
-						}
-						return;
+					 if (fs::remove_all(input_path)) {
+					 	std::cout << "folder deleted successfully!" << std::endl;
+					 	if (!path.empty() && path != "/") {
+					 		if (!path.empty() && path != "/") {
+					 			fs::path current_path(path);
+					 			path = current_path.parent_path().string();
+					 			return;
+					 		}
+					 	}
+					 	return;
 					}
 				}
 				catch (const std::filesystem::filesystem_error& fs_err)
@@ -191,14 +179,16 @@ void FILED::delete_file_or_folder(std::string user_input, std::string &path) {
 			{
 				try
 				{
-					if (fs::remove(path))
-					{
-						std::cout << "Empty folder deleted successfully!" << std::endl;
+					if (fs::remove_all(path)) {
+						std::cout << "folder deleted successfully!" << std::endl;
 						if (!path.empty() && path != "/") {
-							fs::path current_path(path);
-							path = current_path.parent_path().string();
-							return;
+							if (!path.empty() && path != "/") {
+								fs::path current_path(path);
+								path = current_path.parent_path().string();
+								return;
+							}
 						}
+						return;
 					}
 				}
 				catch (const fs::filesystem_error& fs_err)
@@ -233,13 +223,12 @@ void FILED::delete_file_or_folder(std::string user_input, std::string &path) {
 		catch (const fs::filesystem_error& e)
 		{
 			std::cerr << "FILESYSTEM ERROR: " << e.what() << std::endl;
+			return;
 		}
 		catch (const std::exception& e)
 		{
 			std::cerr << "[ERROR] " << e.what() << std::endl;
+			return;
 		}
 	}
-    } catch (const std::exception & e) {
-    	std::cerr << "[ERROR] " << e.what() << std::endl;
-    }
 }

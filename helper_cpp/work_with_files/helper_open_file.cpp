@@ -16,48 +16,44 @@
 //
 void FILEO::set_path_in_cd(std::string user_input, std::string & path)
 {
-    try {
-        std::string tmp_path;
-        std::string path_f = user_input.substr(3);
+    std::string tmp_path;
+    std::string path_f = user_input.substr(3);
 
-        if (user_input[user_input.size()] != '\\' && !path.ends_with("\\"))
-            tmp_path = path + '\\' + path_f;
-        else
-            tmp_path = path + path_f;
+    if (user_input[user_input.size()] != '\\' && !path.ends_with("\\"))
+        tmp_path = path + '\\' + path_f;
+    else
+        tmp_path = path + path_f;
 
-        if (path_f == "..") {
-            if (!path.empty() && path != "/") {
-                fs::path current_path(path);
-                path = current_path.parent_path().string();
-            }
-            return;
-
+    if (path_f == "..") {
+        if (!path.empty() && path != "/") {
+            fs::path current_path(path);
+            path = current_path.parent_path().string();
         }
+        return;
 
-
-        if (!fs::exists(path_f))
-        {
-            if (fs::exists(tmp_path))
-            {
-                path = tmp_path;
-                return;
-            }
-
-            std::cout << "Folder is not found!" << std::endl;
-            return;
-        }
-
-        // changing '/' -> '\'
-        int tmp_count_symbols = path_f.length();
-        for (int i = 0; i <= tmp_count_symbols; i++) {
-            if (path_f[i] == '/')
-                path_f[i] = '\\';
-        }
-
-        path = path_f;
-    } catch (const std::exception & e) {
-        std::cerr << "[ERROR] " << e.what() << std::endl;
     }
+
+
+    if (!fs::exists(path_f))
+    {
+        if (fs::exists(tmp_path))
+        {
+            path = tmp_path;
+            return;
+        }
+
+        std::cout << "Folder is not found!" << std::endl;
+        return;
+    }
+
+    // changing '/' -> '\'
+    int tmp_count_symbols = path_f.length();
+    for (int i = 0; i <= tmp_count_symbols; i++) {
+        if (path_f[i] == '/')
+            path_f[i] = '\\';
+    }
+
+    path = path_f;
 }
 
 //
