@@ -37,4 +37,6 @@ add_executable(MiniCommanderConsole main.cpp
         helper_cpp/console/CMDCOMMAND.cpp
         helper_cpp/work_with_files/free_space.cpp
         helper_header/work_with_files/free_space.h
+        helper_cpp/work_with_files/reading_file.cpp
+        helper_header/work_with_files/reading_file.h
 )

@@ -5,10 +5,7 @@
 #include "../../helper_header/work_with_txt/helper_txt.h"
 
 void FILETxt::save_text_in_file(std::string text, std::string path) {
-    if (!path.ends_with(".txt")) {
-        std::cerr << "ERROR: The file is not txt" << std::endl;
-        return;
-    }
+
     // for clear text file
     if (text == "clear") {
         std::ofstream out;

@@ -4,10 +4,6 @@
 // date
 #include <chrono>
 #include <format>
-#include <iomanip>
-
-#include <locale>
-#include <codecvt>
 
 //
 // console
@@ -29,6 +25,9 @@
 #include "helper_header/helper_for_find_folder_file/helper_for_find_FF.h"
 #include "helper_header/work_with_files/helper_create_file.h"
 #include "helper_header/work_with_files/helper_delete_file.h"
+
+// new
+#include "helper_header//work_with_files/reading_file.h"
 
 int main()
 {
@@ -171,6 +170,15 @@ int main()
         //
         // End color
         //
+
+        //
+        // read file
+        //
+        else if (user_input.substr(0, 4) == "cat ")
+            reading_file::command_cat(path, user_input.substr(5));
+
+        else if (user_input == "cat")
+            reading_file::command_cat(path);
 
         //
         // echo and read
