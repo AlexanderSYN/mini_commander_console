@@ -58,7 +58,8 @@ void helper_for_help::get_help_file() {
 void helper_for_help::get_help_txt() {
     std::cout << "echo ... <- (here text to you want to write) - first you need to write path in cd ..." << std::endl;
     std::cout << "echo clear - for clear text in text file" << std::endl;
-    std::cout << "read - for read txt file (first you need to write path in cd ...)" << std::endl;
+    std::cout << "read - for read txt file (first you need to write path in cd ...) [old do not recommended]" << std::endl;
+    std::cout << "cat / cat ... <- path to file / name file in current path to read file" << std::endl;
 }
 
 //===================================
@@ -118,7 +119,8 @@ void helper_for_help::get_help_full() {
 
     std::cout << "echo ... <- (here text to you want to write) - first you need to write path in cd ..." << std::endl;
     std::cout << "echo clear - for clear text in text file" << std::endl;
-    std::cout << "read - for read txt file (first you need to write path in cd ...)" << std::endl;
+    std::cout << "read - for read txt file (first you need to write path in cd ...) [old command]" << std::endl;
+    std::cout << "cat / cat ... <- path to file / name file in current path to read file" << std::endl;
     std::cout << std::endl;
 
     std::cout << "[HINT] to get started, you need to specify the disk via cd (or directory)" << std::endl;

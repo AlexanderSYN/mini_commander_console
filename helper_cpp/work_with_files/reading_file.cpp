@@ -24,7 +24,7 @@ void reading_file::command_cat(const std::string &path) {
 
 void reading_file::command_cat(const std::string &path, const std::string name_file) {
     try {
-        std::string full_path = path + "\\" + name_file;
+        std::string full_path = name_file;
         std::ifstream file(full_path);
 
         if (file.is_open()) {
@@ -34,7 +34,18 @@ void reading_file::command_cat(const std::string &path, const std::string name_f
             }
             file.close();
         } else {
-            std::cerr << "[ERROR] couldn't open the file" << std::endl;
+            std::string full_path = path + "\\" + name_file;
+            std::ifstream file(full_path);
+
+            if (file.is_open()) {
+                std::string line;
+                while (std::getline(file, line)) {
+                    std::cout << line << std::endl;
+                }
+                file.close();
+            } else {
+                std::cerr << "[ERROR] couldn't open the file" << std::endl;
+            }
         }
     } catch (const std::exception& e) {
         std::cerr << "[ERROR_reding_file] " << e.what() << std::endl;
