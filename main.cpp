@@ -287,8 +287,10 @@ int main()
         //
         // find
         //
-        else if (user_input.substr(0, 5) == "find ")
+        else if (user_input.substr(0, 5) == "find ") {
             FILEF::findFF(user_input.substr(5), path);
+
+        }
 	    else if (user_input == "find")
 	        std::cout << "you need to write like this find ... <- here name file \nor find (name file) (path)!" << std::endl;
 
@@ -318,6 +320,13 @@ int main()
         //
         // End create / cr
         //
+
+        //
+        // touch
+        //
+        else if (user_input.substr(0, 6) == "touch ") {
+            FILEC::touch_file(user_input, path.substr(6));
+        }
 
         //
         // delete

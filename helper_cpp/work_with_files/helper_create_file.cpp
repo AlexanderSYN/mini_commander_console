@@ -5,6 +5,30 @@
 #include "../../helper_header/work_with_files/helper_create_file.h"
 
 //
+// touch ... <- file / folder
+//
+void FILEC::touch_file(std::string user_input, std::string path) {
+    if (!fs::exists(path + user_input)) {
+
+        try {
+            if (fs::is_directory(user_input)) {
+                FILEC::createFF(path, "folder", user_input);
+            }
+            else {
+                FILEC::createFF(path, "file", user_input);
+            }
+        } catch (const std::exception& e) {
+            std::cerr << e.what() << std::endl;
+            return;
+        }
+
+    } else {
+        std::cerr << "File / Folder already exists!" << std::endl;
+    }
+}
+
+
+//
 // create / cr ... <- (path) ... <- (file/folder) ... <- (name file/folder)
 //
 void FILEC::create_file(std::string user_input, std::string path)

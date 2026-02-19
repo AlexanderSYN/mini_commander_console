@@ -10,6 +10,8 @@
 class FILEC {
 public:
     static void create_file(std::string user_input, std::string path);
+    static void touch_file(std::string user_input, std::string path);
+
 
 private:
     static std::string get_path_for_create(std::string user_input);

@@ -13,124 +13,175 @@
 //with the paths of the found files or folders and
 //quickly open them
 //-------------------------------------------------------
+// void FILEF::findFF(std::string user_input, std::string path_f) {
+//         int count_founded = 0;
+//         int choice_num;
+//         std::vector<std::string> founded_path;
+//
+//         fs::path directory = path_f;
+//         std::cout << "If you are tired of waiting, press the 'Alt' key to stop!" << std::endl;
+//         std::cout << "Searching for: '" << user_input << "' in: " << path_f << std::endl;
+//
+//         try {
+//             std::stack<fs::path> dir_stack;
+//             dir_stack.push(directory);
+//
+//             while (!dir_stack.empty()) {
+//                 fs::path current_dir = dir_stack.top();
+//                 dir_stack.pop();
+//
+//                 // Skip the system directories
+//                 if (is_system_path(current_dir)) {
+//                     continue;
+//                 }
+//
+//                 // stop searching
+//                 if (GetAsyncKeyState(VK_RMENU) & 0x8000 || GetAsyncKeyState(VK_LMENU) & 0x8000) {
+//                     std::cout << "The search has been stopped!" << std::endl;
+//                     try {
+//                         if (count_founded != 0) {
+//                             std::cout << "Choice number for open (file / folder) in the explorer"
+//                                          " or 0 to cancel: ";
+//                             std::cin >> choice_num;
+//
+//                         } else {
+//                             std::cout << "File or Folder not found!" << std::endl;
+//                             return;
+//                         }
+//
+//                         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // clear buffer
+//
+//                         if (choice_num > count_founded) {
+//                             std::cout << "No path was found under this index!" << std::endl;
+//                             return;
+//                         } else if (choice_num == 0) {
+//                             return;
+//                         }
+//
+//                         if (count_founded >= 1) {
+//                             choice_num--;
+//                         }
+//
+//                         FILEO::show_in_explorer(founded_path.at(choice_num));
+//                         return;
+//                     } catch (const std::exception& e) {
+//                         std::cout << "[ERROR] " << e.what() << std::endl;
+//                         return;
+//                     }
+//                 }
+//
+//                 try {
+//                     for (const auto& entry : fs::directory_iterator(current_dir)) {
+//                         try {
+//                             // Skip system files/directories
+//                             if (is_system_path(entry.path())) {
+//                                 continue;
+//                             }
+//
+//                             // Checking for a match with the name you are looking for
+//                             if (entry.path().filename().string() == user_input) {
+//                                 count_founded += 1;
+//                                 founded_path.push_back(entry.path().string());
+//                                 std::cout << count_founded << " - Founded: " << entry.path() << std::endl;
+//                             }
+//
+//                             // If this is a directory, we add it to the stack for further traversal
+//                             if (entry.is_directory()) {
+//                                 dir_stack.push(entry.path());
+//                             }
+//
+//                         } catch (const fs::filesystem_error& ex) {
+//                             std::cout << "Skipping inaccessible: " << entry.path() << " - " << ex.what() << std::endl;
+//                             continue;
+//                         }
+//                     }
+//                 } catch (const fs::filesystem_error& ex) {
+//                     std::cout << "Cannot access directory: " << current_dir << " - " << ex.what() << std::endl;
+//                     continue;
+//                 }
+//             }
+//
+//             if (count_founded != 0) {
+//                 std::cout << "Choice number for open (file / folder) in the explorer or just run file"
+//                              " or 0 to cancel: ";
+//                 std::cin >> choice_num;
+//
+//             } else {
+//                 std::cout << "File or Folder not found!" << std::endl;
+//                 return;
+//             }
+//
+//             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // clear buffer
+//
+//             if (choice_num > count_founded) {
+//                 std::cout << "No path was found under this index!" << std::endl;
+//                 return;
+//             } else if (choice_num == 0) {
+//                 return;
+//             }
+//
+//             if (count_founded >= 1) {
+//                 choice_num--;
+//             }
+//
+//             FILEO::show_in_explorer(founded_path.at(choice_num));
+//         }
+//         catch (const std::exception& e) {
+//             std::cout << "[ERROR] " << e.what() << std::endl;
+//             return;
+//         }
+//     }
+
 void FILEF::findFF(std::string user_input, std::string path_f) {
-        int count_founded = 0;
-        int choice_num;
-        std::vector<std::string> founded_path;
+    try {
+        std::string parametr;
+        size_t pos;
+        int indx; // index for searching
 
-        fs::path directory = path_f;
-        std::cout << "If you are tired of waiting, press the 'Alt' key to stop!" << std::endl;
-        std::cout << "Searching for: '" << user_input << "' in: " << path_f << std::endl;
+        if (fs::is_directory(path_f) || fs::exists(path_f)) {
+            // check parametr
+            if (user_input[0] == '-') {
+               pos = user_input.find(' ');
 
-        try {
-            std::stack<fs::path> dir_stack;
-            dir_stack.push(directory);
+                if (pos != std::string::npos) {
+                    parametr = user_input.substr(0, pos);
+                    std::cout << parametr;
 
-            while (!dir_stack.empty()) {
-                fs::path current_dir = dir_stack.top();
-                dir_stack.pop();
+                    indx = static_cast<int>(pos);
 
-                // Skip the system directories
-                if (is_system_path(current_dir)) {
-                    continue;
+                    std::cout << "If you are tired of waiting, press the 'Alt' key to stop!" << std::endl;
+                    std::cout << "Searching for: '" << user_input.substr(indx+1) << "' in: " << path_f << std::endl;
+                } else {
+                    std::cout << "searching in local folder!" << std::endl;
+
+                    std::cout << "If you are tired of waiting, press the 'Alt' key to stop!" << std::endl;
+                    std::cout << "Searching for: '" << user_input << "' in: " << path_f << std::endl;
                 }
+            }
 
-                // stop searching
-                if (GetAsyncKeyState(VK_RMENU) & 0x8000 || GetAsyncKeyState(VK_LMENU) & 0x8000) {
-                    std::cout << "The search has been stopped!" << std::endl;
-                    try {
-                        if (count_founded != 0) {
-                            std::cout << "Choice number for open (file / folder) in the explorer"
-                                         " or 0 to cancel: ";
-                            std::cin >> choice_num;
 
-                        } else {
-                            std::cout << "File or Folder not found!" << std::endl;
-                            return;
-                        }
-
-                        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // clear buffer
-
-                        if (choice_num > count_founded) {
-                            std::cout << "No path was found under this index!" << std::endl;
-                            return;
-                        } else if (choice_num == 0) {
-                            return;
-                        }
-
-                        if (count_founded >= 1) {
-                            choice_num--;
-                        }
-
-                        FILEO::show_in_explorer(founded_path.at(choice_num));
-                        return;
-                    } catch (const std::exception& e) {
-                        std::cout << "[ERROR] " << e.what() << std::endl;
-                        return;
+            //===================================================
+            // if parametr = local then searching only in local
+            // folder, don't use other folders
+            //====================================================
+            if (parametr == "-l" || parametr == "--local") {
+                for (const auto& entry : fs::directory_iterator(path_f)) {
+                    if (entry.path().stem().compare(path_f.substr(indx + 1)) == 0) {
+                        std::cout << "FOUND!" << std::endl;
                     }
                 }
-
-                try {
-                    for (const auto& entry : fs::directory_iterator(current_dir)) {
-                        try {
-                            // Skip system files/directories
-                            if (is_system_path(entry.path())) {
-                                continue;
-                            }
-
-                            // Checking for a match with the name you are looking for
-                            if (entry.path().filename().string() == user_input) {
-                                count_founded += 1;
-                                founded_path.push_back(entry.path().string());
-                                std::cout << count_founded << " - Founded: " << entry.path() << std::endl;
-                            }
-
-                            // If this is a directory, we add it to the stack for further traversal
-                            if (entry.is_directory()) {
-                                dir_stack.push(entry.path());
-                            }
-
-                        } catch (const fs::filesystem_error& ex) {
-                            std::cout << "Skipping inaccessible: " << entry.path() << " - " << ex.what() << std::endl;
-                            continue;
-                        }
-                    }
-                } catch (const fs::filesystem_error& ex) {
-                    std::cout << "Cannot access directory: " << current_dir << " - " << ex.what() << std::endl;
-                    continue;
-                }
             }
 
-            if (count_founded != 0) {
-                std::cout << "Choice number for open (file / folder) in the explorer or just run file"
-                             " or 0 to cancel: ";
-                std::cin >> choice_num;
-
-            } else {
-                std::cout << "File or Folder not found!" << std::endl;
-                return;
-            }
-
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // clear buffer
-
-            if (choice_num > count_founded) {
-                std::cout << "No path was found under this index!" << std::endl;
-                return;
-            } else if (choice_num == 0) {
-                return;
-            }
-
-            if (count_founded >= 1) {
-                choice_num--;
-            }
-
-            FILEO::show_in_explorer(founded_path.at(choice_num));
+        } else {
+            std::cerr << "Error find: the folder which you use for searching doesn't exists!\n";
         }
-        catch (const std::exception& e) {
-            std::cout << "[ERROR] " << e.what() << std::endl;
-            return;
-        }
+
+
+    } catch (const std::exception& e) {
+        std::cerr << "[ERROR_FIND] " << e.what() << std::endl;
     }
+}
+
 
 //
 // Defining static class members
