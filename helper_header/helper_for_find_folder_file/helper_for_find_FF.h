@@ -20,6 +20,8 @@ public:
 
 private:
 
+    static void open_file_folder_with_choice(std::vector<std::string> paths_founded_ff, int choice);
+
     //
     // The list of system directories to skip (can be expanded)
     //
