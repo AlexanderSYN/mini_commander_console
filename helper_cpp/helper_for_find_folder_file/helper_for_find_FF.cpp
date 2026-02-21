@@ -5,133 +5,6 @@
 #include "../../helper_header/helper_for_find_folder_file/helper_for_find_FF.h"
 #include "../../helper_header/work_with_files/helper_open_file.h"
 
-//-------------------------------------------------------
-// find (name file / folder)
-//
-//search for files or folders and add count_founded
-//by 1 each time you find them to access the array
-//with the paths of the found files or folders and
-//quickly open them
-//-------------------------------------------------------
-// void FILEF::findFF(std::string user_input, std::string path_f) {
-//         int count_founded = 0;
-//         int choice_num;
-//         std::vector<std::string> founded_path;
-//
-//         fs::path directory = path_f;
-//         std::cout << "If you are tired of waiting, press the 'Alt' key to stop!" << std::endl;
-//         std::cout << "Searching for: '" << user_input << "' in: " << path_f << std::endl;
-//
-//         try {
-//             std::stack<fs::path> dir_stack;
-//             dir_stack.push(directory);
-//
-//             while (!dir_stack.empty()) {
-//                 fs::path current_dir = dir_stack.top();
-//                 dir_stack.pop();
-//
-//                 // Skip the system directories
-//                 if (is_system_path(current_dir)) {
-//                     continue;
-//                 }
-//
-//                 // stop searching
-//                 if (GetAsyncKeyState(VK_RMENU) & 0x8000 || GetAsyncKeyState(VK_LMENU) & 0x8000) {
-//                     std::cout << "The search has been stopped!" << std::endl;
-//                     try {
-//                         if (count_founded != 0) {
-//                             std::cout << "Choice number for open (file / folder) in the explorer"
-//                                          " or 0 to cancel: ";
-//                             std::cin >> choice_num;
-//
-//                         } else {
-//                             std::cout << "File or Folder not found!" << std::endl;
-//                             return;
-//                         }
-//
-//                         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // clear buffer
-//
-//                         if (choice_num > count_founded) {
-//                             std::cout << "No path was found under this index!" << std::endl;
-//                             return;
-//                         } else if (choice_num == 0) {
-//                             return;
-//                         }
-//
-//                         if (count_founded >= 1) {
-//                             choice_num--;
-//                         }
-//
-//                         FILEO::show_in_explorer(founded_path.at(choice_num));
-//                         return;
-//                     } catch (const std::exception& e) {
-//                         std::cout << "[ERROR] " << e.what() << std::endl;
-//                         return;
-//                     }
-//                 }
-//
-//                 try {
-//                     for (const auto& entry : fs::directory_iterator(current_dir)) {
-//                         try {
-//                             // Skip system files/directories
-//                             if (is_system_path(entry.path())) {
-//                                 continue;
-//                             }
-//
-//                             // Checking for a match with the name you are looking for
-//                             if (entry.path().filename().string() == user_input) {
-//                                 count_founded += 1;
-//                                 founded_path.push_back(entry.path().string());
-//                                 std::cout << count_founded << " - Founded: " << entry.path() << std::endl;
-//                             }
-//
-//                             // If this is a directory, we add it to the stack for further traversal
-//                             if (entry.is_directory()) {
-//                                 dir_stack.push(entry.path());
-//                             }
-//
-//                         } catch (const fs::filesystem_error& ex) {
-//                             std::cout << "Skipping inaccessible: " << entry.path() << " - " << ex.what() << std::endl;
-//                             continue;
-//                         }
-//                     }
-//                 } catch (const fs::filesystem_error& ex) {
-//                     std::cout << "Cannot access directory: " << current_dir << " - " << ex.what() << std::endl;
-//                     continue;
-//                 }
-//             }
-//
-//             if (count_founded != 0) {
-//                 std::cout << "Choice number for open (file / folder) in the explorer or just run file"
-//                              " or 0 to cancel: ";
-//                 std::cin >> choice_num;
-//
-//             } else {
-//                 std::cout << "File or Folder not found!" << std::endl;
-//                 return;
-//             }
-//
-//             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // clear buffer
-//
-//             if (choice_num > count_founded) {
-//                 std::cout << "No path was found under this index!" << std::endl;
-//                 return;
-//             } else if (choice_num == 0) {
-//                 return;
-//             }
-//
-//             if (count_founded >= 1) {
-//                 choice_num--;
-//             }
-//
-//             FILEO::show_in_explorer(founded_path.at(choice_num));
-//         }
-//         catch (const std::exception& e) {
-//             std::cout << "[ERROR] " << e.what() << std::endl;
-//             return;
-//         }
-//     }
-
 void FILEF::findFF(std::string user_input, std::string path_f) {
     try {
         std::vector<std::string> paths_founded_ff; // ff - file and folder
@@ -242,6 +115,55 @@ void FILEF::findFF(std::string user_input, std::string path_f) {
                 }
             }
         }
+        //
+        // searching only directory
+        //
+        else if (parametr == "-d" || parametr == "--directory" || parametr == "-fl"
+                    || parametr == "--folders") {
+            //========================================
+            // Searching only folders
+            //========================================
+            std::cout << "Searching only folder: " << search_term << std::endl;
+            try {
+                for (const auto& entry : fs::directory_iterator(path_f)) {
+                    if (GetAsyncKeyState(VK_RMENU) & 0x8000 || GetAsyncKeyState(VK_LMENU) & 0x8000) {
+                        std::cout << "\nSearch stopped by user!" << std::endl;
+                        break;
+                    }
+
+                    if (entry.is_directory() && entry.path().filename().string() == search_term) {
+                        paths_founded_ff.push_back(entry.path().string());
+                        std::cout << paths_founded_ff.size() << " - Found: " << entry.path() << std::endl;
+                    }
+                }
+            } catch (const std::exception &e) {
+                std::cerr << "[ERROR_FIND_FOLDER] " << e.what() << std::endl;
+            }
+        }
+        //
+        // global searching (don't finished)
+        //
+        else if (parametr == "-g" || parametr == "--global") {
+            //========================================
+            // Searching all
+            //========================================
+            std::cout << "Searching: " << search_term << std::endl;
+            try {
+                for (const auto& entry : fs::directory_iterator(path_f)) {
+                    if (GetAsyncKeyState(VK_RMENU) & 0x8000 || GetAsyncKeyState(VK_LMENU) & 0x8000) {
+                        std::cout << "\nSearch stopped by user!" << std::endl;
+                        break;
+                    }
+
+                    if (entry.is_directory() && entry.path().filename().string() == search_term) {
+                        paths_founded_ff.push_back(entry.path().string());
+                        std::cout << paths_founded_ff.size() << " - Found: " << entry.path() << std::endl;
+                    }
+                }
+            } catch (const std::exception &e) {
+                std::cerr << "[ERROR_FIND_FOLDER] " << e.what() << std::endl;
+            }
+        }
 
 
 
@@ -263,6 +185,7 @@ void FILEF::findFF(std::string user_input, std::string path_f) {
     } catch (const std::exception& e) {
         std::cerr << "[ERROR_FIND] " << e.what() << std::endl;
     }
+
 }
 
 void FILEF::open_file_folder_with_choice(std::vector<std::string> paths_founded_ff, int choice) {
