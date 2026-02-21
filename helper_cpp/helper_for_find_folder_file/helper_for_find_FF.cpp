@@ -161,6 +161,9 @@ void FILEF::findFF(std::string user_input, std::string path_f) {
         // folder
         //====================================================
         if (parametr == "-l" || parametr == "--local") {
+            //========================================
+            // Searching so -> find (filename/folder)
+            //========================================
             for (const auto& entry : fs::directory_iterator(path_f)) {
                 if (GetAsyncKeyState(VK_RMENU) & 0x8000 || GetAsyncKeyState(VK_LMENU) & 0x8000) {
                     std::cout << "\nSearch stopped by user!" << std::endl;
@@ -181,55 +184,66 @@ void FILEF::findFF(std::string user_input, std::string path_f) {
                 }
             }
         }
-        else {
-            // recursive search - through all subdirectories (like original code)
-            std::stack<fs::path> dir_stack;
-            dir_stack.push(path_f);
+        else if (parametr == "-lf" || parametr == "--local-file") {
+            //========================================
+            // Searching so -> *.(extension)
+            //========================================
+            if (search_term.substr(0, 2) == "*.") {
+                std::string target_extension = search_term.substr(1);
 
-            while (!dir_stack.empty()) {
-                //Check for Alt key press to stop
-                if (GetAsyncKeyState(VK_RMENU) & 0x8000 || GetAsyncKeyState(VK_LMENU) & 0x8000) {
-                    std::cout << "\nSearch stopped by user!" << std::endl;
-                    break;
-                }
-
-                fs::path current_dir = dir_stack.top();
-                dir_stack.pop();
-
-                if (is_system_path(current_dir)) {
-                    continue;
-                }
-
-                 try {
-                    for (const auto& entry : fs::directory_iterator(current_dir)) {
-                        if (is_system_path(entry.path())) {
-                            continue;
+                std::cout << "Searching only files with extension: " << search_term.substr(2) << std::endl;
+                try {
+                    for (const auto& entry : fs::directory_iterator(path_f)) {
+                        if (GetAsyncKeyState(VK_RMENU) & 0x8000 || GetAsyncKeyState(VK_LMENU) & 0x8000) {
+                            std::cout << "\nSearch stopped by user!" << std::endl;
+                            break;
                         }
 
-                        // Check if filename contains search term (case-insensitive)
-                        std::string filename = entry.path().filename().string();
-                        std::string search_lower = search_term;
-                        std::string filename_lower = filename;
-
-                        std::transform(search_lower.begin(), search_lower.end(), search_lower.begin(), ::tolower);
-                        std::transform(filename_lower.begin(), filename_lower.end(), filename_lower.begin(), ::tolower);
-
-                        if (filename_lower.find(search_lower) != std::string::npos) {
+                        if (entry.is_regular_file() && entry.path().extension().string() == target_extension) {
                             paths_founded_ff.push_back(entry.path().string());
                             std::cout << paths_founded_ff.size() << " - Found: " << entry.path() << std::endl;
                         }
+                    }
+                } catch (const std::exception &e) {
+                    std::cerr << "[ERROR_FIND_FILE] " << e.what() << std::endl;
+                }
+            }
+            //========================================
+            // Searching so -> (filename).(extension)
+            //========================================
+            else {
+                std::string target_extension = search_term.substr(1);
 
-                        // Add subdirectories to stack
-                        if (entry.is_directory()) {
-                            dir_stack.push(entry.path());
+                std::cout << "Searching only files with extension: " << search_term.substr(2) << std::endl;
+                try {
+                    for (const auto& entry : fs::directory_iterator(path_f)) {
+                        if (GetAsyncKeyState(VK_RMENU) & 0x8000 || GetAsyncKeyState(VK_LMENU) & 0x8000) {
+                            std::cout << "\nSearch stopped by user!" << std::endl;
+                            break;
+                        }
+                        // if you write extension
+                        if (!entry.path().filename().string().ends_with(".*") && entry.is_regular_file()
+                            && entry.path().extension().string() == target_extension
+                            && entry.path().filename().string() == search_term) {
+
+                            paths_founded_ff.push_back(entry.path().string());
+                            std::cout << paths_founded_ff.size() << " - Found: " << entry.path() << std::endl;
+                        }
+                        // if you write (filename).*
+                        else {
+                            if (entry.is_regular_file() && entry.path().stem().string() == search_term.substr(0, search_term.size() - 2)) {
+                                paths_founded_ff.push_back(entry.path().string());
+                                std::cout << paths_founded_ff.size() << " - Found: " << entry.path() << std::endl;
+                            }
                         }
                     }
-                } catch (const fs::filesystem_error& e) {
-                    std::cout << "Cannot access: " << current_dir << std::endl;
-                    continue;
+                } catch (const std::exception &e) {
+                    std::cerr << "[ERROR_FIND_FILE] " << e.what() << std::endl;
                 }
             }
         }
+
+
 
         // Handle results
         if (!paths_founded_ff.empty()) {
