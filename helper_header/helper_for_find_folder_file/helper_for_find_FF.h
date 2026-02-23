@@ -19,8 +19,9 @@ public:
     static void findFF(std::string user_input, std::string path_f);
 
 private:
-
     static void open_file_folder_with_choice(std::vector<std::string> paths_founded_ff, int choice);
+    static void recurs_search(std::string search_term);
+    static void search(const fs::path& dir,const std::string& search_term,std::vector<std::string>& results);
 
     //
     // The list of system directories to skip (can be expanded)

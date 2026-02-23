@@ -325,7 +325,7 @@ int main()
         // touch
         //
         else if (user_input.substr(0, 6) == "touch ") {
-            FILEC::touch_file(user_input, path.substr(6));
+            FILEC::touch_file(user_input.substr(6), path);
         }
 
         //

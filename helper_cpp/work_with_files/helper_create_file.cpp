@@ -8,10 +8,11 @@
 // touch ... <- file / folder
 //
 void FILEC::touch_file(std::string user_input, std::string path) {
+    fs::path user_inp = user_input;
     if (!fs::exists(path + user_input)) {
 
         try {
-            if (fs::is_directory(user_input)) {
+            if (!user_inp.has_extension()) {
                 FILEC::createFF(path, "folder", user_input);
             }
             else {

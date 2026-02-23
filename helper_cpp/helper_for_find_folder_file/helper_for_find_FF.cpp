@@ -5,6 +5,8 @@
 #include "../../helper_header/helper_for_find_folder_file/helper_for_find_FF.h"
 #include "../../helper_header/work_with_files/helper_open_file.h"
 
+std::vector<std::string> directories_for_recurs_search;
+
 void FILEF::findFF(std::string user_input, std::string path_f) {
     try {
         std::vector<std::string> paths_founded_ff; // ff - file and folder
@@ -120,6 +122,7 @@ void FILEF::findFF(std::string user_input, std::string path_f) {
         //
         else if (parametr == "-d" || parametr == "--directory" || parametr == "-fl"
                     || parametr == "--folders") {
+
             //========================================
             // Searching only folders
             //========================================
@@ -143,29 +146,57 @@ void FILEF::findFF(std::string user_input, std::string path_f) {
         //
         // global searching (don't finished)
         //
-        else if (parametr == "-g" || parametr == "--global") {
+        else if (parametr == "-g" || parametr == "--global"
+             || parametr == "-r" || parametr == "--recursive") {
+            std::error_code ec;
+
             //========================================
             // Searching all
             //========================================
             std::cout << "Searching: " << search_term << std::endl;
-            try {
-                for (const auto& entry : fs::directory_iterator(path_f)) {
-                    if (GetAsyncKeyState(VK_RMENU) & 0x8000 || GetAsyncKeyState(VK_LMENU) & 0x8000) {
-                        std::cout << "\nSearch stopped by user!" << std::endl;
-                        break;
-                    }
+            fs::recursive_directory_iterator it(
+                path_f, fs::directory_options::skip_permission_denied,
+                ec);
 
-                    if (entry.is_directory() && entry.path().filename().string() == search_term) {
-                        paths_founded_ff.push_back(entry.path().string());
-                        std::cout << paths_founded_ff.size() << " - Found: " << entry.path() << std::endl;
-                    }
+            fs::recursive_directory_iterator end;
+
+            for (; it != end; it.increment(ec)) {
+                if (GetAsyncKeyState(VK_RMENU) & 0x8000 || GetAsyncKeyState(VK_LMENU) & 0x8000) {
+                    std::cout << "\nSearch stopped by user!" << std::endl;
+                    break;
                 }
-            } catch (const std::exception &e) {
-                std::cerr << "[ERROR_FIND_FOLDER] " << e.what() << std::endl;
+
+                if (ec) {
+                    it.disable_recursion_pending();
+                    ec.clear();
+                    continue;
+                }
+
+                const auto& entry = *it;
+
+                std::string filename = entry.path().filename().string();
+
+                std::string filename_lower = filename;
+                std::string search_lower = search_term;
+
+                std::transform(filename_lower.begin(), filename_lower.end(), filename_lower.begin(), ::tolower);
+                std::transform(search_lower.begin(), search_lower.end(), search_lower.begin(), ::tolower);
+
+                if (entry.is_symlink()) {
+                    it.disable_recursion_pending();
+                    return;
+                }
+                if (is_system_path(entry.path())) {
+                    it.disable_recursion_pending();
+                }
+
+
+                if (filename_lower.find(search_lower) != std::string::npos) {
+                    paths_founded_ff.push_back(entry.path().string());
+                    std::cout << paths_founded_ff.size() << " - Found: " << entry.path() << std::endl;
+                }
             }
         }
-
-
 
         // Handle results
         if (!paths_founded_ff.empty()) {
@@ -186,6 +217,73 @@ void FILEF::findFF(std::string user_input, std::string path_f) {
         std::cerr << "[ERROR_FIND] " << e.what() << std::endl;
     }
 
+}
+
+void FILEF::search(const fs::path& dir,
+            const std::string& search_term,
+            std::vector<std::string>& results)
+{
+    std::error_code ec;
+
+    if (!fs::is_directory(dir, ec))
+        return;
+
+    std::vector<fs::path> subdirs;
+
+    // 1️⃣ Сначала проходим файлы
+    for (const auto& entry : fs::directory_iterator(dir, fs::directory_options::skip_permission_denied, ec))
+    {
+        if (ec) { ec.clear(); continue; }
+
+        if (entry.is_regular_file())
+        {
+            std::string name = entry.path().filename().string();
+
+            std::string lower_name = name;
+            std::string lower_search = search_term;
+
+            std::transform(lower_name.begin(), lower_name.end(), lower_name.begin(), ::tolower);
+            std::transform(lower_search.begin(), lower_search.end(), lower_search.begin(), ::tolower);
+
+            if (lower_name.find(lower_search) != std::string::npos)
+            {
+                results.push_back(entry.path().string());
+                std::cout << results.size()
+                          << " - Found file: "
+                          << entry.path() << std::endl;
+            }
+        }
+        else if (entry.is_directory())
+        {
+            subdirs.push_back(entry.path());
+        }
+    }
+
+    // 2️⃣ Потом проверяем папки по имени
+    for (const auto& folder : subdirs)
+    {
+        std::string name = folder.filename().string();
+
+        std::string lower_name = name;
+        std::string lower_search = search_term;
+
+        std::transform(lower_name.begin(), lower_name.end(), lower_name.begin(), ::tolower);
+        std::transform(lower_search.begin(), lower_search.end(), lower_search.begin(), ::tolower);
+
+        if (lower_name.find(lower_search) != std::string::npos)
+        {
+            results.push_back(folder.string());
+            std::cout << results.size()
+                      << " - Found folder: "
+                      << folder << std::endl;
+        }
+    }
+
+    // 3️⃣ Теперь заходим по одной папке (DFS)
+    for (const auto& folder : subdirs)
+    {
+        search(folder, search_term, results);
+    }
 }
 
 void FILEF::open_file_folder_with_choice(std::vector<std::string> paths_founded_ff, int choice) {
@@ -213,15 +311,14 @@ void FILEF::open_file_folder_with_choice(std::vector<std::string> paths_founded_
     }
 }
 
-
-
 //
 // Defining static class members
 //
 const std::vector<std::string> FILEF::SYSTEM_DIRECTORIES = {
     "System32", "System64", "Windows", "Program Files", "ProgramData",
     "AppData", "Temp", "tmp", "Recycle.Bin", "Recovery",
-    "$Recycle.Bin", "System Volume Information", "Windows.old"
+    "$Recycle.Bin", "System Volume Information", "Windows.old",
+    "$RECYCLE.BIN", "D:\\DrWeb Quarantine"
 };
 
 const std::vector<std::string> FILEF::SYSTEM_EXTENSIONS = {
