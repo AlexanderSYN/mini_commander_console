@@ -118,32 +118,6 @@ void FILEF::findFF(std::string user_input, std::string path_f) {
             }
         }
         //
-        // searching only directory
-        //
-        else if (parametr == "-d" || parametr == "--directory" || parametr == "-fl"
-                    || parametr == "--folders") {
-
-            //========================================
-            // Searching only folders
-            //========================================
-            std::cout << "Searching only folder: " << search_term << std::endl;
-            try {
-                for (const auto& entry : fs::directory_iterator(path_f)) {
-                    if (GetAsyncKeyState(VK_RMENU) & 0x8000 || GetAsyncKeyState(VK_LMENU) & 0x8000) {
-                        std::cout << "\nSearch stopped by user!" << std::endl;
-                        break;
-                    }
-
-                    if (entry.is_directory() && entry.path().filename().string() == search_term) {
-                        paths_founded_ff.push_back(entry.path().string());
-                        std::cout << paths_founded_ff.size() << " - Found: " << entry.path() << std::endl;
-                    }
-                }
-            } catch (const std::exception &e) {
-                std::cerr << "[ERROR_FIND_FOLDER] " << e.what() << std::endl;
-            }
-        }
-        //
         // global searching (don't finished)
         //
         else if (parametr == "-g" || parametr == "--global"
@@ -155,7 +129,7 @@ void FILEF::findFF(std::string user_input, std::string path_f) {
             //========================================
             std::cout << "Searching: " << search_term << std::endl;
             fs::recursive_directory_iterator it(
-                path_f, fs::directory_options::skip_permission_denied,
+                path_f,
                 ec);
 
             fs::recursive_directory_iterator end;
@@ -205,6 +179,7 @@ void FILEF::findFF(std::string user_input, std::string path_f) {
                       << ") or -1 to exit: ";
             int choice;
             std::cin >> choice;
+		    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // clear buffer
 
             if (choice >= 0 && choice < paths_founded_ff.size()) {
                 open_file_folder_with_choice(paths_founded_ff, choice);
