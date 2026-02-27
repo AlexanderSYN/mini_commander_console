@@ -13,6 +13,7 @@ public:
     static void open_folder_use_dir(const std::string path);
     static void open_file(const std::string path);
     static void output_all_files_command_open(const fs::path path_f);
+    static void output_all_from_folder_ls(const std::string path_f);
     static void show_in_explorer(const fs::path path);
 };
 

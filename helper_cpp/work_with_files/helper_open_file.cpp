@@ -113,6 +113,28 @@ void FILEO::open_file(const std::string path)
 }
 
 //
+// output all files from folder (command ls)
+//
+void FILEO::output_all_from_folder_ls(const std::string path_f) {
+    try {
+
+        if (!fs::exists(path_f) && std::filesystem::is_directory(path_f)) {
+            std::cout << "Folder not found or change path!" << std::endl;
+        }
+
+        for (const auto& entry : fs::directory_iterator(path_f)) {
+            std::cout << entry.path().filename() << "\t";
+        }
+
+        std::cout << std::endl;
+
+    } catch (const std::exception& e) {
+        std::cout << "[ERROR_LS] " << e.what() << std::endl;
+    }
+}
+
+
+//
 // out all files for all OS (work like dir)
 //
 void FILEO::output_all_files_command_open(const fs::path path_f) {

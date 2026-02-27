@@ -23,7 +23,6 @@ void FILED::delete_file_or_folder(std::string user_input, std::string &path) {
 			input_path = user_input.substr(4);
 
 
-
 		if (input_path.ends_with('\\'))
 			tmp_full_path_plus_usr_inp += input_path;
 		else {
@@ -53,26 +52,13 @@ void FILED::delete_file_or_folder(std::string user_input, std::string &path) {
 			if (fs::is_regular_file(input_path))
 			{
 				if (std::remove(input_path.c_str()) == 0)
-				{
 					std::cout << "File deleted successfully!" << std::endl;
 
-					// we remove the file from the path, if it was
-					std::cout << "folder deleted successfully!" << std::endl;
-					if (!path.empty() && path != "/") {
-						if (!path.empty() && path != "/") {
-							fs::path current_path(path);
-							path = current_path.parent_path().string();
-							return;
-						}
-					}
-					return;
-				}
 				else
 				{
 					std::cerr << "Error: failed to delete file (" << errno << ") - "
 						<< input_path << std::endl;
 					perror("Reason");
-					return;
 				}
 			}
 			else if (fs::is_directory(input_path))
@@ -81,11 +67,13 @@ void FILED::delete_file_or_folder(std::string user_input, std::string &path) {
 				{
 					 if (fs::remove_all(input_path)) {
 					 	std::cout << "folder deleted successfully!" << std::endl;
-					 	if (!path.empty() && path != "/") {
+					 	if (path == input_path) {
 					 		if (!path.empty() && path != "/") {
-					 			fs::path current_path(path);
-					 			path = current_path.parent_path().string();
-					 			return;
+					 			if (!path.empty() && path != "/") {
+					 				fs::path current_path(path);
+					 				path = current_path.parent_path().string();
+					 				return;
+					 			}
 					 		}
 					 	}
 					 	return;
