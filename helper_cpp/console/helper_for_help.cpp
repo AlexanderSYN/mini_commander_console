@@ -26,6 +26,18 @@ void helper_for_help::get_help_disk() {
     std::cout << "free -> outputs the free space on your disk" << std::endl;
 }
 
+/*
+ *
+ * output help for find
+ *
+*/
+void helper_for_help::get_help_find() {
+    std::cout << "find ... <- (parameter) ... <- (name file / folder) - first you need to specify "
+    std::cout << "all parameters:\n"
+                 "-l, --local - for searching in local folder \n"
+                "-lf, --local-file - for searching file in local folder (alse you can use -> *.extension, (name).*) \n"
+                "-g, --global, -r, --recursive - for globalizing searching file/folder" << std::endl;
+ }
 
 
 //===================================
@@ -41,15 +53,17 @@ void helper_for_help::get_help_file() {
                  "(first, enter the path to the cd, only then you can change the name of the "
                  "file or folder)" << std::endl;
     std::cout << std::endl;
-    std::cout << "find ... <- (name file / folder) - first you need to specify "
+    std::cout << "find ... <- (parameter) ... <- (name file / folder) - first you need to specify "
                  "the path via cd, then you can search for a file / folder" << std::endl;
     std::cout << std::endl;
     std::cout << "create / cr ... <- (path) ... <- (file or folder) ... <- "
                  "(name file / folder) - the command to create a file or folder" << std::endl;
+    std::cout << "touch (name file/folder) - the command to create a file or folder" << std::endl;
     std::cout << std::endl;
     std::cout << "delete / del ... <- (1 option: name file / folder or 2 option: "
                  "first you need to specify the path via cd, then just write delete) - "
                  "delete file / folder" << std::endl;
+    std::cout << "cat / cat ... <- path to file / name file in current path to read file" << std::endl;
 }
 
 //===================================
@@ -138,12 +152,13 @@ void helper_for_help::get_help_full() {
                  "file or folder)" << std::endl;
     std::cout << std::endl;
 
-    std::cout << "find ... <- (name file / folder) - first you need to specify "
+    std::cout << "find ... <- (parametr) ... <- (name file / folder) - first you need to specify "
              "the path via cd, then you can search for a file / folder" << std::endl;
     std::cout << std::endl;
 
     std::cout << "create / cr ... <- (path) ... <- (file or folder) ... <- "
              "(name file / folder) - the command to create a file or folder" << std::endl;
+    std::cout << "touch (name file/folder) - the command to create a file or folder" << std::endl;
     std::cout << std::endl;
 
     std::cout << "delete / del ... <- (1 option: name file / folder or 2 option: "

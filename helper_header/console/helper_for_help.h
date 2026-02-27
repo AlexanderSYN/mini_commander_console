@@ -13,6 +13,7 @@ public:
     static void get_help_disk();
     static void get_help_txt();
     static void get_help_console();
+    static void get_help_find();
 };
 
 

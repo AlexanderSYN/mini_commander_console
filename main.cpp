@@ -142,7 +142,7 @@ int main()
         else if (user_input == "info")
         {
             std::cout << "___MINI_COMMANDER_CONSOLE___" << std::endl;
-            std::cout << "_________VERSION_8__________" << std::endl;
+            std::cout << "_________VERSION_9__________" << std::endl;
             std::cout << "______AUTHOR: ALEXANDER_____" << std::endl;
             std::cout << "_____GIT_HUB: SYNEATION_____" << std::endl;
             std::cout << "____GIT-HUB: ALEXANDERSYN___" << std::endl;

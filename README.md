@@ -77,10 +77,18 @@ dir
 ls
 ```
 ## I do not recommend using the search in a regular disk, because the search will take longer. I advise you to look for a file or folders in at least one folder.
+find ... <- parametr (-l, -lf, -g) ... <- (name file/folder)
 find ... <- (name file / folder) - first you need to specify the path via cd, then you can search for a file / folder
 ```
 find ...
 ```
+>[!TIP]
+> parameters
+> 1) -l - searching in local folder  
+> 2) -lf - searching only files in local folder    
+> (there are also ways to search with this parameter: *.extension, name.*)
+> 3) -g - search through all folders that are in the current path
+
 ## I do not recommend using the search in a regular disk, because the search will take longer. I advise you to look for a file or folders in at least one folder.
 ## The search skips
 ### folders
@@ -122,6 +130,11 @@ create ... ... ...
 cr ... ... ...
 ```
 
+touch (name file/folder) - creating a folder or file in the current directory
+```
+touch ...
+```
+
 delete / del ... <- (1 option: name file / folder or 2 option: first you need to specify the path via cd, then just write delete) - delete file / folder
 ```
 delete ...
@@ -142,6 +155,14 @@ echo clear
 read - for read txt file (first you need to write path in cd ...)
 ```
 read
+```
+
+cat - reading file
+```
+cat
+```
+```
+cat (name file)
 ```
 
 exit / ex -> to exit the program
@@ -222,16 +243,23 @@ dir
 ```
 ls
 ```
-
-find ... < - (имя / папка) - сначала вам нужно указать путь к компакт-диску, затем вы можете выполнить поиск файла / папки
-
 >[!TIP]
 > Я не рекомендую использовать поиск на обычном диске, так как поиск займет больше времени. Я советую вам искать файл или папки хотя бы в одной папке.
-find ... < - (имя / папка) - сначала вам нужно указать путь к компакт-диску, затем вы можете выполнить поиск файла / папки
 
+find ... < - 
+find ... <- параметр (-l, -lf, -g) ... <- (имя файла / папки)
+find ... <-(имя / папка) - сначала вам нужно указать путь к компакт-диску, затем вы можете выполнить поиск файла / папки
 ```
 find ...
 ```
+>[!TIP]
+> параметры
+> 1) -l - поиск в локальной папке
+> 2) -lf - поиск только файлов которые в локальной папке 
+> (также есть способы поиска с этим параметром: *.расширение, название.*)
+> 3) -g - поиск по всем папкам, которые есть в текущей папки
+
+
 ## Я не рекомендую использовать поиск на обычном диске, потому что поиск займет больше времени. Я советую вам искать файл или папки хотя бы в одной папке.
 ## поиск пропускает
 ### папки
@@ -273,6 +301,11 @@ create ... ... ...
 cr ... ... ...
 ```
 
+touch (название файла / папки) - создание папки или файла в текущем каталоге
+```
+touch ...
+```
+
 delete / del ... < - (1 вариант: введите файл/папку или 2 вариант: сначала нужно указать путь через cd, затем просто удалите его) - удалить файл / папку
 ```
 delete ...
@@ -293,6 +326,14 @@ echo clear
 read - чтения текстового файла (сначала вам нужно написать путь в cd ...)
 ```
 read
+```
+
+cat - чтение файла
+```
+cat
+```
+```
+cat (названия файла)
 ```
 
 exit / ex - > для выхода из программы
