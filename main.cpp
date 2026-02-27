@@ -80,6 +80,7 @@ int main()
             std::cout << "help disk / -ds / --disk - help for disk command" << std::endl;
             std::cout << "help txt / text / -t / --txt - help for text command" << std::endl;
             std::cout << "help console / cons / -cons / --console - help for console command" << std::endl;
+            std::cout << "help find / -fnd / --find - help for find command" << std::endl;
         }
 
         else if (user_input.substr(0, 5) == "help ")
@@ -116,6 +117,10 @@ int main()
                 || user_input.substr(5) == "-cons" || user_input.substr(5) == "--console") {
                 helper_for_help::get_help_console();
                 }
+            // find
+            else if (user_input.substr(5) == "find" || user_input.substr(5) == "--find"
+                || user_input.substr(5) == "-fnd")
+                helper_for_help::get_help_find();
             //error
             else
                 std::cout << "you entered it incorrectly, look here by writing -> help" << std::endl;
