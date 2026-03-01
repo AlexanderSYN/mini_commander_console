@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.31)
 project(MiniCommanderConsole)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(CMAKE_EXE_LINKER_FLAGS "-static")
 
@@ -39,4 +40,8 @@ add_executable(MiniCommanderConsole main.cpp
         helper_header/work_with_files/free_space.h
         helper_cpp/work_with_files/reading_file.cpp
         helper_header/work_with_files/reading_file.h
+        helper_cpp/helper/print.cpp
+        helper_header/helper/print.h
+        helper_header/helper/debug.h
+        helper_cpp/helper/debug.cpp
 )

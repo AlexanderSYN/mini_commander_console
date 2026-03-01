@@ -32,11 +32,14 @@ void helper_for_help::get_help_disk() {
  *
 */
 void helper_for_help::get_help_find() {
-    std::cout << "find ... <- (parameter) ... <- (name file / folder) - first you need to specify "
+    std::cout << "find ... <- (parameter) ... <- (name file / folder) - first you need to specify \n";
     std::cout << "all parameters:\n"
                  "-l, --local - for searching in local folder \n"
                 "-lf, --local-file - for searching file in local folder (alse you can use -> *.extension, (name).*) \n"
-                "-g, --global, -r, --recursive - for globalizing searching file/folder" << std::endl;
+                "-g, --global, -r, --recursive - for globalizing searching file/folder\n"
+                "-gf, --global-file - for searching only files in globalizing\n"
+                "-gd, --global-directory - for searching only folder in globalizing" << std::endl;
+
  }
 
 

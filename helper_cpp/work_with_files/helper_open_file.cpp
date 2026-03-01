@@ -153,11 +153,16 @@ void FILEO::output_all_files_command_open(const fs::path path_f) {
             auto ftime = entry.last_write_time();
             std::string hidden_marker = "";
 
+            if (is_symlink(entry.path())) {
+                hidden_marker += " [LINK]";
+            }
+
+
 #ifdef _WIN32
             DWORD attrs = GetFileAttributesA(entry.path().string().c_str());
             if (attrs != INVALID_FILE_ATTRIBUTES && (attrs & FILE_ATTRIBUTE_HIDDEN))
             {
-                hidden_marker = " [HIDDEN]";
+                hidden_marker += " [HIDDEN]";
             }
 #else // for MacOS / Linux
             if (entry.path().filename().string()[0] == ".")

@@ -77,7 +77,7 @@ dir
 ls
 ```
 ## I do not recommend using the search in a regular disk, because the search will take longer. I advise you to look for a file or folders in at least one folder.
-find ... <- parametr (-l, -lf, -g) ... <- (name file/folder)
+find ... <- parametr (-l, -lf, -g, -gf, -gd and etc.) ... <- (name file/folder)
 find ... <- (name file / folder) - first you need to specify the path via cd, then you can search for a file / folder
 ```
 find ...

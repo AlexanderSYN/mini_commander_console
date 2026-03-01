@@ -20,8 +20,12 @@ public:
 
 private:
     static void open_file_folder_with_choice(std::vector<std::string> paths_founded_ff, int choice);
-    static void recurs_search(std::string search_term);
-    static void search(const fs::path& dir,const std::string& search_term,std::vector<std::string>& results);
+    // for global searching
+    static void recurs_search(std::string search_term, std::string path_f,
+                                std::vector<std::string>& paths_founded_ff, std::string param);
+
+    static void search(const fs::path& dir,const std::string& search_term,
+                        std::vector<std::string>& results);
 
     //
     // The list of system directories to skip (can be expanded)
