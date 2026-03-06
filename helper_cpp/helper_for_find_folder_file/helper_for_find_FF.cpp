@@ -339,6 +339,5 @@ bool FILEF::is_system_path(const fs::path &path) {
         filename.find("temp") != std::string::npos) {
         return true;
     }
-
     return false;
 }
