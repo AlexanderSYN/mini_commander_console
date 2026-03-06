@@ -60,3 +60,12 @@
 4915	6044	7940971691068873	MiniCommanderConsole.exe	b56975951af2faed
 16	6001	7940975969894519	CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper_for_find_folder_file/helper_for_find_FF.cpp.obj	ec93811c225696e
 6002	7451	7940976029756737	MiniCommanderConsole.exe	b56975951af2faed
+1138	4000	7945303906064407	CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/helper_for_help.cpp.obj	b7de0320c81fbc87
+1153	4919	7945303906204318	CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/print.cpp.obj	43fe10990991b716
+685	10791	7945303901535932	CMakeFiles/MiniCommanderConsole.dir/main.cpp.obj	636f9ee79a8e495b
+30	2451	7945305057062461	CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/print.cpp.obj	43fe10990991b716
+26	2338	7945306019536626	CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/print.cpp.obj	43fe10990991b716
+26	2484	7945306630091962	CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/print.cpp.obj	43fe10990991b716
+23	1798	7945307760271845	CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/print.cpp.obj	43fe10990991b716
+14	7243	7945307760171912	CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper_for_find_folder_file/helper_for_find_FF.cpp.obj	ec93811c225696e
+7243	9776	7945307832467821	MiniCommanderConsole.exe	b56975951af2faed

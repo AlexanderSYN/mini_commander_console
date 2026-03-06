@@ -75,6 +75,7 @@ int main()
             std::cout << "help / -h / --help - just help" << std::endl;
             std::cout << "help date / -d / help --date" << std::endl;
             std::cout << "help full / -fll / --full - for advanced help" << std::endl;
+            std::cout << "help all / --all - for advanced help" << std::endl;
             std::cout << "help color / col / -col / --color - help for change color" << std::endl;
             std::cout << "help file / -f / --file - help for file command" << std::endl;
             std::cout << "help disk / -ds / --disk - help for disk command" << std::endl;
@@ -87,7 +88,8 @@ int main()
         {
             //full
             if (user_input.substr(5) == "full" || user_input.substr(5) == "-fll"
-                || user_input.substr(5) == "--full") {
+                || user_input.substr(5) == "--full" || user_input.substr(5) == "all"
+                || user_input.substr(5) == "--all") {
                 helper_for_help::get_help_full();
                 }
             //date
