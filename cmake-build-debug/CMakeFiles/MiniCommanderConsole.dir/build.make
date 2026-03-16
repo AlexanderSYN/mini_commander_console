@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = D:\CLIon\bin\cmake\win\x64\bin\cmake.exe
+CMAKE_COMMAND = D:\IDEs\CLIon\bin\cmake\win\x64\bin\cmake.exe
 
 # The command to remove a file.
-RM = D:\CLIon\bin\cmake\win\x64\bin\cmake.exe -E rm -f
+RM = D:\IDEs\CLIon\bin\cmake\win\x64\bin\cmake.exe -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\mini_commander_console-main
+CMAKE_SOURCE_DIR = D:\mini_commander_console
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\mini_commander_console-main\cmake-build-debug
+CMAKE_BINARY_DIR = D:\mini_commander_console\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/MiniCommanderConsole.dir/depend.make
@@ -72,270 +72,270 @@ CMakeFiles/MiniCommanderConsole.dir/codegen:
 .PHONY : CMakeFiles/MiniCommanderConsole.dir/codegen
 
 CMakeFiles/MiniCommanderConsole.dir/main.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/flags.make
-CMakeFiles/MiniCommanderConsole.dir/main.cpp.obj: D:/mini_commander_console-main/main.cpp
+CMakeFiles/MiniCommanderConsole.dir/main.cpp.obj: D:/mini_commander_console/main.cpp
 CMakeFiles/MiniCommanderConsole.dir/main.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/main.cpp.obj"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/main.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\main.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\main.cpp.obj -c D:\mini_commander_console-main\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/main.cpp.obj"
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/main.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\main.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\main.cpp.obj -c D:\mini_commander_console\main.cpp
 
 CMakeFiles/MiniCommanderConsole.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MiniCommanderConsole.dir/main.cpp.i"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console-main\main.cpp > CMakeFiles\MiniCommanderConsole.dir\main.cpp.i
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console\main.cpp > CMakeFiles\MiniCommanderConsole.dir\main.cpp.i
 
 CMakeFiles/MiniCommanderConsole.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MiniCommanderConsole.dir/main.cpp.s"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console-main\main.cpp -o CMakeFiles\MiniCommanderConsole.dir\main.cpp.s
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console\main.cpp -o CMakeFiles\MiniCommanderConsole.dir\main.cpp.s
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper_text.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/flags.make
-CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper_text.cpp.obj: D:/mini_commander_console-main/helper_cpp/helper_text.cpp
+CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper_text.cpp.obj: D:/mini_commander_console/helper_cpp/helper_text.cpp
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper_text.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper_text.cpp.obj"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper_text.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper_text.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper_text.cpp.obj -c D:\mini_commander_console-main\helper_cpp\helper_text.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper_text.cpp.obj"
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper_text.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper_text.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper_text.cpp.obj -c D:\mini_commander_console\helper_cpp\helper_text.cpp
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper_text.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper_text.cpp.i"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console-main\helper_cpp\helper_text.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper_text.cpp.i
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console\helper_cpp\helper_text.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper_text.cpp.i
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper_text.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper_text.cpp.s"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console-main\helper_cpp\helper_text.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper_text.cpp.s
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console\helper_cpp\helper_text.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper_text.cpp.s
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/helper_clear_console.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/flags.make
-CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/helper_clear_console.cpp.obj: D:/mini_commander_console-main/helper_cpp/console/helper_clear_console.cpp
+CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/helper_clear_console.cpp.obj: D:/mini_commander_console/helper_cpp/console/helper_clear_console.cpp
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/helper_clear_console.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/helper_clear_console.cpp.obj"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/helper_clear_console.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\helper_clear_console.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\helper_clear_console.cpp.obj -c D:\mini_commander_console-main\helper_cpp\console\helper_clear_console.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/helper_clear_console.cpp.obj"
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/helper_clear_console.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\helper_clear_console.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\helper_clear_console.cpp.obj -c D:\mini_commander_console\helper_cpp\console\helper_clear_console.cpp
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/helper_clear_console.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/helper_clear_console.cpp.i"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console-main\helper_cpp\console\helper_clear_console.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\helper_clear_console.cpp.i
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console\helper_cpp\console\helper_clear_console.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\helper_clear_console.cpp.i
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/helper_clear_console.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/helper_clear_console.cpp.s"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console-main\helper_cpp\console\helper_clear_console.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\helper_clear_console.cpp.s
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console\helper_cpp\console\helper_clear_console.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\helper_clear_console.cpp.s
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/debug_some_command.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/flags.make
-CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/debug_some_command.cpp.obj: D:/mini_commander_console-main/helper_cpp/console/debug_some_command.cpp
+CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/debug_some_command.cpp.obj: D:/mini_commander_console/helper_cpp/console/debug_some_command.cpp
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/debug_some_command.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/debug_some_command.cpp.obj"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/debug_some_command.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\debug_some_command.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\debug_some_command.cpp.obj -c D:\mini_commander_console-main\helper_cpp\console\debug_some_command.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/debug_some_command.cpp.obj"
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/debug_some_command.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\debug_some_command.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\debug_some_command.cpp.obj -c D:\mini_commander_console\helper_cpp\console\debug_some_command.cpp
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/debug_some_command.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/debug_some_command.cpp.i"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console-main\helper_cpp\console\debug_some_command.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\debug_some_command.cpp.i
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console\helper_cpp\console\debug_some_command.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\debug_some_command.cpp.i
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/debug_some_command.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/debug_some_command.cpp.s"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console-main\helper_cpp\console\debug_some_command.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\debug_some_command.cpp.s
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console\helper_cpp\console\debug_some_command.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\debug_some_command.cpp.s
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/color_console.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/flags.make
-CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/color_console.cpp.obj: D:/mini_commander_console-main/helper_cpp/console/color_console.cpp
+CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/color_console.cpp.obj: D:/mini_commander_console/helper_cpp/console/color_console.cpp
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/color_console.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/color_console.cpp.obj"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/color_console.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\color_console.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\color_console.cpp.obj -c D:\mini_commander_console-main\helper_cpp\console\color_console.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/color_console.cpp.obj"
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/color_console.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\color_console.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\color_console.cpp.obj -c D:\mini_commander_console\helper_cpp\console\color_console.cpp
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/color_console.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/color_console.cpp.i"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console-main\helper_cpp\console\color_console.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\color_console.cpp.i
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console\helper_cpp\console\color_console.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\color_console.cpp.i
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/color_console.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/color_console.cpp.s"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console-main\helper_cpp\console\color_console.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\color_console.cpp.s
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console\helper_cpp\console\color_console.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\color_console.cpp.s
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_open_file.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/flags.make
-CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_open_file.cpp.obj: D:/mini_commander_console-main/helper_cpp/work_with_files/helper_open_file.cpp
+CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_open_file.cpp.obj: D:/mini_commander_console/helper_cpp/work_with_files/helper_open_file.cpp
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_open_file.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_open_file.cpp.obj"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_open_file.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_open_file.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_open_file.cpp.obj -c D:\mini_commander_console-main\helper_cpp\work_with_files\helper_open_file.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_open_file.cpp.obj"
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_open_file.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_open_file.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_open_file.cpp.obj -c D:\mini_commander_console\helper_cpp\work_with_files\helper_open_file.cpp
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_open_file.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_open_file.cpp.i"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console-main\helper_cpp\work_with_files\helper_open_file.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_open_file.cpp.i
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console\helper_cpp\work_with_files\helper_open_file.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_open_file.cpp.i
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_open_file.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_open_file.cpp.s"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console-main\helper_cpp\work_with_files\helper_open_file.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_open_file.cpp.s
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console\helper_cpp\work_with_files\helper_open_file.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_open_file.cpp.s
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_create_file.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/flags.make
-CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_create_file.cpp.obj: D:/mini_commander_console-main/helper_cpp/work_with_files/helper_create_file.cpp
+CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_create_file.cpp.obj: D:/mini_commander_console/helper_cpp/work_with_files/helper_create_file.cpp
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_create_file.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_create_file.cpp.obj"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_create_file.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_create_file.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_create_file.cpp.obj -c D:\mini_commander_console-main\helper_cpp\work_with_files\helper_create_file.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_create_file.cpp.obj"
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_create_file.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_create_file.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_create_file.cpp.obj -c D:\mini_commander_console\helper_cpp\work_with_files\helper_create_file.cpp
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_create_file.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_create_file.cpp.i"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console-main\helper_cpp\work_with_files\helper_create_file.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_create_file.cpp.i
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console\helper_cpp\work_with_files\helper_create_file.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_create_file.cpp.i
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_create_file.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_create_file.cpp.s"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console-main\helper_cpp\work_with_files\helper_create_file.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_create_file.cpp.s
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console\helper_cpp\work_with_files\helper_create_file.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_create_file.cpp.s
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/for_time.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/flags.make
-CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/for_time.cpp.obj: D:/mini_commander_console-main/helper_cpp/work_with_files/for_time.cpp
+CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/for_time.cpp.obj: D:/mini_commander_console/helper_cpp/work_with_files/for_time.cpp
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/for_time.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/for_time.cpp.obj"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/for_time.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\for_time.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\for_time.cpp.obj -c D:\mini_commander_console-main\helper_cpp\work_with_files\for_time.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/for_time.cpp.obj"
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/for_time.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\for_time.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\for_time.cpp.obj -c D:\mini_commander_console\helper_cpp\work_with_files\for_time.cpp
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/for_time.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/for_time.cpp.i"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console-main\helper_cpp\work_with_files\for_time.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\for_time.cpp.i
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console\helper_cpp\work_with_files\for_time.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\for_time.cpp.i
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/for_time.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/for_time.cpp.s"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console-main\helper_cpp\work_with_files\for_time.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\for_time.cpp.s
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console\helper_cpp\work_with_files\for_time.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\for_time.cpp.s
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_delete_file.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/flags.make
-CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_delete_file.cpp.obj: D:/mini_commander_console-main/helper_cpp/work_with_files/helper_delete_file.cpp
+CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_delete_file.cpp.obj: D:/mini_commander_console/helper_cpp/work_with_files/helper_delete_file.cpp
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_delete_file.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_delete_file.cpp.obj"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_delete_file.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_delete_file.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_delete_file.cpp.obj -c D:\mini_commander_console-main\helper_cpp\work_with_files\helper_delete_file.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_delete_file.cpp.obj"
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_delete_file.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_delete_file.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_delete_file.cpp.obj -c D:\mini_commander_console\helper_cpp\work_with_files\helper_delete_file.cpp
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_delete_file.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_delete_file.cpp.i"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console-main\helper_cpp\work_with_files\helper_delete_file.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_delete_file.cpp.i
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console\helper_cpp\work_with_files\helper_delete_file.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_delete_file.cpp.i
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_delete_file.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_delete_file.cpp.s"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console-main\helper_cpp\work_with_files\helper_delete_file.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_delete_file.cpp.s
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console\helper_cpp\work_with_files\helper_delete_file.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_delete_file.cpp.s
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper_for_find_folder_file/helper_for_find_FF.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/flags.make
-CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper_for_find_folder_file/helper_for_find_FF.cpp.obj: D:/mini_commander_console-main/helper_cpp/helper_for_find_folder_file/helper_for_find_FF.cpp
+CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper_for_find_folder_file/helper_for_find_FF.cpp.obj: D:/mini_commander_console/helper_cpp/helper_for_find_folder_file/helper_for_find_FF.cpp
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper_for_find_folder_file/helper_for_find_FF.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper_for_find_folder_file/helper_for_find_FF.cpp.obj"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper_for_find_folder_file/helper_for_find_FF.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper_for_find_folder_file\helper_for_find_FF.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper_for_find_folder_file\helper_for_find_FF.cpp.obj -c D:\mini_commander_console-main\helper_cpp\helper_for_find_folder_file\helper_for_find_FF.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper_for_find_folder_file/helper_for_find_FF.cpp.obj"
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper_for_find_folder_file/helper_for_find_FF.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper_for_find_folder_file\helper_for_find_FF.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper_for_find_folder_file\helper_for_find_FF.cpp.obj -c D:\mini_commander_console\helper_cpp\helper_for_find_folder_file\helper_for_find_FF.cpp
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper_for_find_folder_file/helper_for_find_FF.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper_for_find_folder_file/helper_for_find_FF.cpp.i"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console-main\helper_cpp\helper_for_find_folder_file\helper_for_find_FF.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper_for_find_folder_file\helper_for_find_FF.cpp.i
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console\helper_cpp\helper_for_find_folder_file\helper_for_find_FF.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper_for_find_folder_file\helper_for_find_FF.cpp.i
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper_for_find_folder_file/helper_for_find_FF.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper_for_find_folder_file/helper_for_find_FF.cpp.s"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console-main\helper_cpp\helper_for_find_folder_file\helper_for_find_FF.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper_for_find_folder_file\helper_for_find_FF.cpp.s
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console\helper_cpp\helper_for_find_folder_file\helper_for_find_FF.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper_for_find_folder_file\helper_for_find_FF.cpp.s
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_txt/helper_txt.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/flags.make
-CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_txt/helper_txt.cpp.obj: D:/mini_commander_console-main/helper_cpp/work_with_txt/helper_txt.cpp
+CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_txt/helper_txt.cpp.obj: D:/mini_commander_console/helper_cpp/work_with_txt/helper_txt.cpp
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_txt/helper_txt.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_txt/helper_txt.cpp.obj"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_txt/helper_txt.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_txt\helper_txt.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_txt\helper_txt.cpp.obj -c D:\mini_commander_console-main\helper_cpp\work_with_txt\helper_txt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_txt/helper_txt.cpp.obj"
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_txt/helper_txt.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_txt\helper_txt.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_txt\helper_txt.cpp.obj -c D:\mini_commander_console\helper_cpp\work_with_txt\helper_txt.cpp
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_txt/helper_txt.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_txt/helper_txt.cpp.i"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console-main\helper_cpp\work_with_txt\helper_txt.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_txt\helper_txt.cpp.i
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console\helper_cpp\work_with_txt\helper_txt.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_txt\helper_txt.cpp.i
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_txt/helper_txt.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_txt/helper_txt.cpp.s"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console-main\helper_cpp\work_with_txt\helper_txt.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_txt\helper_txt.cpp.s
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console\helper_cpp\work_with_txt\helper_txt.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_txt\helper_txt.cpp.s
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_rename_files.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/flags.make
-CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_rename_files.cpp.obj: D:/mini_commander_console-main/helper_cpp/work_with_files/helper_rename_files.cpp
+CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_rename_files.cpp.obj: D:/mini_commander_console/helper_cpp/work_with_files/helper_rename_files.cpp
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_rename_files.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_rename_files.cpp.obj"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_rename_files.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_rename_files.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_rename_files.cpp.obj -c D:\mini_commander_console-main\helper_cpp\work_with_files\helper_rename_files.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_rename_files.cpp.obj"
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_rename_files.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_rename_files.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_rename_files.cpp.obj -c D:\mini_commander_console\helper_cpp\work_with_files\helper_rename_files.cpp
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_rename_files.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_rename_files.cpp.i"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console-main\helper_cpp\work_with_files\helper_rename_files.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_rename_files.cpp.i
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console\helper_cpp\work_with_files\helper_rename_files.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_rename_files.cpp.i
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_rename_files.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/helper_rename_files.cpp.s"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console-main\helper_cpp\work_with_files\helper_rename_files.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_rename_files.cpp.s
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console\helper_cpp\work_with_files\helper_rename_files.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\helper_rename_files.cpp.s
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/helper_for_help.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/flags.make
-CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/helper_for_help.cpp.obj: D:/mini_commander_console-main/helper_cpp/console/helper_for_help.cpp
+CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/helper_for_help.cpp.obj: D:/mini_commander_console/helper_cpp/console/helper_for_help.cpp
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/helper_for_help.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/helper_for_help.cpp.obj"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/helper_for_help.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\helper_for_help.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\helper_for_help.cpp.obj -c D:\mini_commander_console-main\helper_cpp\console\helper_for_help.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/helper_for_help.cpp.obj"
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/helper_for_help.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\helper_for_help.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\helper_for_help.cpp.obj -c D:\mini_commander_console\helper_cpp\console\helper_for_help.cpp
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/helper_for_help.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/helper_for_help.cpp.i"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console-main\helper_cpp\console\helper_for_help.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\helper_for_help.cpp.i
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console\helper_cpp\console\helper_for_help.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\helper_for_help.cpp.i
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/helper_for_help.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/helper_for_help.cpp.s"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console-main\helper_cpp\console\helper_for_help.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\helper_for_help.cpp.s
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console\helper_cpp\console\helper_for_help.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\helper_for_help.cpp.s
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/date_and_time.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/flags.make
-CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/date_and_time.cpp.obj: D:/mini_commander_console-main/helper_cpp/console/date_and_time.cpp
+CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/date_and_time.cpp.obj: D:/mini_commander_console/helper_cpp/console/date_and_time.cpp
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/date_and_time.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/date_and_time.cpp.obj"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/date_and_time.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\date_and_time.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\date_and_time.cpp.obj -c D:\mini_commander_console-main\helper_cpp\console\date_and_time.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/date_and_time.cpp.obj"
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/date_and_time.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\date_and_time.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\date_and_time.cpp.obj -c D:\mini_commander_console\helper_cpp\console\date_and_time.cpp
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/date_and_time.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/date_and_time.cpp.i"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console-main\helper_cpp\console\date_and_time.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\date_and_time.cpp.i
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console\helper_cpp\console\date_and_time.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\date_and_time.cpp.i
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/date_and_time.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/date_and_time.cpp.s"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console-main\helper_cpp\console\date_and_time.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\date_and_time.cpp.s
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console\helper_cpp\console\date_and_time.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\date_and_time.cpp.s
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/CMDCOMMAND.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/flags.make
-CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/CMDCOMMAND.cpp.obj: D:/mini_commander_console-main/helper_cpp/console/CMDCOMMAND.cpp
+CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/CMDCOMMAND.cpp.obj: D:/mini_commander_console/helper_cpp/console/CMDCOMMAND.cpp
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/CMDCOMMAND.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/CMDCOMMAND.cpp.obj"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/CMDCOMMAND.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\CMDCOMMAND.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\CMDCOMMAND.cpp.obj -c D:\mini_commander_console-main\helper_cpp\console\CMDCOMMAND.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/CMDCOMMAND.cpp.obj"
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/CMDCOMMAND.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\CMDCOMMAND.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\CMDCOMMAND.cpp.obj -c D:\mini_commander_console\helper_cpp\console\CMDCOMMAND.cpp
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/CMDCOMMAND.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/CMDCOMMAND.cpp.i"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console-main\helper_cpp\console\CMDCOMMAND.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\CMDCOMMAND.cpp.i
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console\helper_cpp\console\CMDCOMMAND.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\CMDCOMMAND.cpp.i
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/CMDCOMMAND.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MiniCommanderConsole.dir/helper_cpp/console/CMDCOMMAND.cpp.s"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console-main\helper_cpp\console\CMDCOMMAND.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\CMDCOMMAND.cpp.s
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console\helper_cpp\console\CMDCOMMAND.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\console\CMDCOMMAND.cpp.s
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/free_space.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/flags.make
-CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/free_space.cpp.obj: D:/mini_commander_console-main/helper_cpp/work_with_files/free_space.cpp
+CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/free_space.cpp.obj: D:/mini_commander_console/helper_cpp/work_with_files/free_space.cpp
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/free_space.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/free_space.cpp.obj"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/free_space.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\free_space.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\free_space.cpp.obj -c D:\mini_commander_console-main\helper_cpp\work_with_files\free_space.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/free_space.cpp.obj"
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/free_space.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\free_space.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\free_space.cpp.obj -c D:\mini_commander_console\helper_cpp\work_with_files\free_space.cpp
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/free_space.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/free_space.cpp.i"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console-main\helper_cpp\work_with_files\free_space.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\free_space.cpp.i
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console\helper_cpp\work_with_files\free_space.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\free_space.cpp.i
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/free_space.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/free_space.cpp.s"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console-main\helper_cpp\work_with_files\free_space.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\free_space.cpp.s
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console\helper_cpp\work_with_files\free_space.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\free_space.cpp.s
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/reading_file.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/flags.make
-CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/reading_file.cpp.obj: D:/mini_commander_console-main/helper_cpp/work_with_files/reading_file.cpp
+CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/reading_file.cpp.obj: D:/mini_commander_console/helper_cpp/work_with_files/reading_file.cpp
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/reading_file.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/reading_file.cpp.obj"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/reading_file.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\reading_file.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\reading_file.cpp.obj -c D:\mini_commander_console-main\helper_cpp\work_with_files\reading_file.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/reading_file.cpp.obj"
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/reading_file.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\reading_file.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\reading_file.cpp.obj -c D:\mini_commander_console\helper_cpp\work_with_files\reading_file.cpp
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/reading_file.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/reading_file.cpp.i"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console-main\helper_cpp\work_with_files\reading_file.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\reading_file.cpp.i
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console\helper_cpp\work_with_files\reading_file.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\reading_file.cpp.i
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/reading_file.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MiniCommanderConsole.dir/helper_cpp/work_with_files/reading_file.cpp.s"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console-main\helper_cpp\work_with_files\reading_file.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\reading_file.cpp.s
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console\helper_cpp\work_with_files\reading_file.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\work_with_files\reading_file.cpp.s
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/print.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/flags.make
-CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/print.cpp.obj: D:/mini_commander_console-main/helper_cpp/helper/print.cpp
+CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/print.cpp.obj: D:/mini_commander_console/helper_cpp/helper/print.cpp
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/print.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/print.cpp.obj"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/print.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper\print.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper\print.cpp.obj -c D:\mini_commander_console-main\helper_cpp\helper\print.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/print.cpp.obj"
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/print.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper\print.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper\print.cpp.obj -c D:\mini_commander_console\helper_cpp\helper\print.cpp
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/print.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/print.cpp.i"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console-main\helper_cpp\helper\print.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper\print.cpp.i
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console\helper_cpp\helper\print.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper\print.cpp.i
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/print.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/print.cpp.s"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console-main\helper_cpp\helper\print.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper\print.cpp.s
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console\helper_cpp\helper\print.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper\print.cpp.s
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/debug.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/flags.make
-CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/debug.cpp.obj: D:/mini_commander_console-main/helper_cpp/helper/debug.cpp
+CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/debug.cpp.obj: D:/mini_commander_console/helper_cpp/helper/debug.cpp
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/debug.cpp.obj: CMakeFiles/MiniCommanderConsole.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/debug.cpp.obj"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/debug.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper\debug.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper\debug.cpp.obj -c D:\mini_commander_console-main\helper_cpp\helper\debug.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\mini_commander_console\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/debug.cpp.obj"
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/debug.cpp.obj -MF CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper\debug.cpp.obj.d -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper\debug.cpp.obj -c D:\mini_commander_console\helper_cpp\helper\debug.cpp
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/debug.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/debug.cpp.i"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console-main\helper_cpp\helper\debug.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper\debug.cpp.i
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\mini_commander_console\helper_cpp\helper\debug.cpp > CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper\debug.cpp.i
 
 CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/debug.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MiniCommanderConsole.dir/helper_cpp/helper/debug.cpp.s"
-	D:\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console-main\helper_cpp\helper\debug.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper\debug.cpp.s
+	D:\IDEs\CLIon\bin\mingw\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\mini_commander_console\helper_cpp\helper\debug.cpp -o CMakeFiles\MiniCommanderConsole.dir\helper_cpp\helper\debug.cpp.s
 
 # Object files for target MiniCommanderConsole
 MiniCommanderConsole_OBJECTS = \
@@ -385,7 +385,7 @@ MiniCommanderConsole.exe: CMakeFiles/MiniCommanderConsole.dir/build.make
 MiniCommanderConsole.exe: CMakeFiles/MiniCommanderConsole.dir/linkLibs.rsp
 MiniCommanderConsole.exe: CMakeFiles/MiniCommanderConsole.dir/objects1.rsp
 MiniCommanderConsole.exe: CMakeFiles/MiniCommanderConsole.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\mini_commander_console-main\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable MiniCommanderConsole.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\mini_commander_console\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable MiniCommanderConsole.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\MiniCommanderConsole.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -397,6 +397,6 @@ CMakeFiles/MiniCommanderConsole.dir/clean:
 .PHONY : CMakeFiles/MiniCommanderConsole.dir/clean
 
 CMakeFiles/MiniCommanderConsole.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\mini_commander_console-main D:\mini_commander_console-main D:\mini_commander_console-main\cmake-build-debug D:\mini_commander_console-main\cmake-build-debug D:\mini_commander_console-main\cmake-build-debug\CMakeFiles\MiniCommanderConsole.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\mini_commander_console D:\mini_commander_console D:\mini_commander_console\cmake-build-debug D:\mini_commander_console\cmake-build-debug D:\mini_commander_console\cmake-build-debug\CMakeFiles\MiniCommanderConsole.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/MiniCommanderConsole.dir/depend
 

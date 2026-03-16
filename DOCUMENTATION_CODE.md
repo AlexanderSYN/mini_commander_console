@@ -112,6 +112,13 @@ dir / ls-> to display all files and folders (but first you need to specify the p
 ```
 dir
 ```
+ls - displaying a list of files or folders in current path
+also you can use this is param:
+- ls --d - outputs only directories
+- ls --f - outputs only files
+- ls -... <- displays files and folders using the search letter\letters at the beginning
+- ls -f-... <- displays only files using the search letter\letters at the beginning
+- ls -d-... <- displays only folders using the search letter\letters at the beginning
 ```
 ls
 ```
@@ -123,11 +130,13 @@ find ...
 ```
 >[!TIP]
 > parameters
-> 1) -l - searching in local folder
-> 2) -lf - searching only files in local folder    
+> 1) -l / --local - searching in local folder
+> 2) -lf / --local-file - searching only files in local folder    
      > (there are also ways to search with this parameter: *.extension, name.*)
-> 3) -g - search through all folders that are in the current path
-
+> 3) -ld / --local-directory - searching only folders in local folder
+> 4) -g / --global - search through all folders that are in the current path
+> 5) -gd / --global-directory - search through all folders that are in the current path (only searches for folders)
+> 6) -gf / --global-file - search through all folders that are in the current path (only searches for files)
 ## I do not recommend using the search in a regular disk, because the search will take longer. I advise you to look for a file or folders in at least one folder.
 ## The search skips
 ### folders
@@ -279,6 +288,13 @@ dir / ls -> для отображения всех файлов и папок (�
 ```
 dir
 ```
+ls - отображение списка файлов или папок по текущему пути
+также вы можете использовать параметры:
+- ls --d - выводит только каталоги
+- ls --f - выводит только файлы
+- ls -... <- отображает файлы и папки, используя поисковую букву\буквы в начале
+- ls -f-... <- отображает только файлы, используя поисковую букву\буквы в начале
+- ls -d-... <- отображает только папки, используя поисковую букву\буквы в начале
 ```
 ls
 ```
@@ -293,10 +309,14 @@ find ...
 ```
 >[!TIP]
 > параметры
-> 1) -l - поиск в локальной папке
-> 2) -lf - поиск только файлов которые в локальной папке
+> 1) -l / --local - поиск в локальной папке
+> 2) -lf / --local-file - поиск только файлов которые в локальной папке
      > (также есть способы поиска с этим параметром: *.расширение, название.*)
-> 3) -g - поиск по всем папкам, которые есть в текущей папки
+> 3) -ld / --local-directory - поиск только папок которые в локальной папке
+> 4) -g / --global - поиск по всем папкам, которые есть в текущей папки
+> 5) -gd / --global-directory - поиск по всем папкам, которые есть в текущей папки (ищет только папки)
+> 6) 4) -gf / --global-file - поиск по всем папкам, которые есть в текущей папки (ищет только файлы)
+        > (также есть способы поиска с этим параметром: *.расширение, название.*)
 
 
 ## Я не рекомендую использовать поиск на обычном диске, потому что поиск займет больше времени. Я советую вам искать файл или папки хотя бы в одной папке.
@@ -381,4 +401,5 @@ exit
 ```
 ```
 ex
+
 ```

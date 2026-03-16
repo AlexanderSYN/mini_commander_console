@@ -1,5 +1,5 @@
-ToolSet: 11.0 w64 (local)@D:\CLIon\bin\mingw
-Ninja: 1.12.1@D:\CLIon\bin\ninja\win\x64\ninja.exe
+ToolSet: 11.0 w64 (local)@D:\IDEs\CLIon\bin\mingw
+Ninja: 1.12.1@D:\IDEs\CLIon\bin\ninja\win\x64\ninja.exe
 Options: 
 
 Options:
