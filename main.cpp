@@ -284,6 +284,8 @@ int main()
             FILEO::output_all_files_command_open(path);
         else if (user_input == "ls")
             FILEO::output_all_from_folder_ls(path);
+        else if (user_input.substr(0, 3) == "ls ")
+            FILEO::output_all_from_folder_ls(path, user_input.substr(3));
 
         else if (user_input.substr(0, 6) == "openf ")
             FILEO::open_file(user_input.substr(6));

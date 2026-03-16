@@ -1,0 +1,3 @@
+D:\CLIon\bin\cmake\win\x64\bin\cmake.exe -E rm -f CMakeFiles\MiniCommanderConsole.dir/objects.a
+D:\CLIon\bin\mingw\bin\ar.exe qc CMakeFiles\MiniCommanderConsole.dir/objects.a @CMakeFiles\MiniCommanderConsole.dir\objects1.rsp
+D:\CLIon\bin\mingw\bin\g++.exe -g -static -Wl,--whole-archive CMakeFiles\MiniCommanderConsole.dir/objects.a -Wl,--no-whole-archive -o MiniCommanderConsole.exe -Wl,--out-implib,libMiniCommanderConsole.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\MiniCommanderConsole.dir\linkLibs.rsp

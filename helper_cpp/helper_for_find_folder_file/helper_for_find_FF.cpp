@@ -185,7 +185,7 @@ void FILEF::recurs_search(std::string search_term, std::string path_f,
         search_lower.begin(), ::tolower);
 
     const bool only_files = (param == "-gf" || param == "--global-file");
-    const bool only_dirs = (param == "-gd" || param == "--global-directory");
+    const bool only_dirs = (param == "-gd" || param == "-Flobal-directory");
     // search only extension file
     const bool special_search_file_ext = search_term.substr(0, 2) == "*.";
     // search only name file

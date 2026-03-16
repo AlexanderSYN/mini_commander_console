@@ -5,11 +5,14 @@
 #include "../../helper_header/work_with_files/helper_open_file.h"
 
 #include "../../helper_header/work_with_files/for_time.h"
+#include  "../../helper_header/helper/print.hpp"
 
 #include <codecvt>
 #include <format>
 #include <locale>
 #include <windows.h>
+
+using namespace print;
 
 //
 // for cd to check path before writing (cd ... <-)
@@ -124,6 +127,67 @@ void FILEO::output_all_from_folder_ls(const std::string path_f) {
 
         for (const auto& entry : fs::directory_iterator(path_f)) {
             std::cout << entry.path().filename() << "\t";
+            std::cout.width(10);
+        }
+        std::cout.width(0);
+        std::cout << std::endl;
+
+    } catch (const std::exception& e) {
+        std::cout << "[ERROR_LS] " << e.what() << std::endl;
+    }
+}
+// with parametr
+void FILEO::output_all_from_folder_ls(const std::string path_f, std::string param) {
+    try {
+
+        if (!fs::exists(path_f) && std::filesystem::is_directory(path_f)) {
+            std::cout << "Folder not found or change path!" << std::endl;
+        }
+
+        if (param.empty()) {
+            println("You need to write a parametr!");
+            return;
+        }
+
+        std::transform(param.begin(), param.end(), param.begin(), ::tolower);
+
+        for (const auto& entry : fs::directory_iterator(path_f)) {
+            std::string fdname = entry.path().filename().string(); // file or directory name
+            std::transform(fdname.begin(), fdname.end(), fdname.begin(), ::tolower);
+
+            // only files
+            if (param == "--f" || param == "--files"
+                || param == "--file") {
+                if (is_regular_file(entry)) {
+                    println(entry.path().filename().string());
+                }
+            }
+            // only directory
+            if (param == "--d" || param == "--directories"
+                || param == "--directory") {
+                if (entry.is_directory()) {
+                    println(entry.path().filename().string());
+                }
+            }
+            // only directory with words
+            else if (param.substr(0, 3) == "-d-") {
+                if (entry.is_directory()) {
+                    if (!param.substr(3).empty())
+                        if (fdname.starts_with(param.substr(3)))
+                            println(entry.path().filename().string());
+                }
+            }
+            // only files with words
+            else if (param.substr(0, 3) == "-f-") {
+                if (is_regular_file(entry)) {
+                    if (!param.substr(3).empty())
+                        if (fdname.starts_with(param.substr(3)))
+                            println(entry.path().filename().string());
+                }
+            }
+            else if (fdname.starts_with(param.substr(1))) {
+                println(entry.path().filename().string());
+            }
         }
 
         std::cout << std::endl;

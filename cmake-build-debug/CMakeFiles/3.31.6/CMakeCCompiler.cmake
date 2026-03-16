@@ -1,4 +1,4 @@
-set(CMAKE_C_COMPILER "D:/IDEs/CLIon/bin/mingw/bin/gcc.exe")
+set(CMAKE_C_COMPILER "D:/CLIon/bin/mingw/bin/gcc.exe")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_COMPILER_VERSION "13.1.0")
@@ -22,14 +22,14 @@ set(CMAKE_C_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "D:/IDEs/CLIon/bin/mingw/bin/ar.exe")
-set(CMAKE_C_COMPILER_AR "D:/IDEs/CLIon/bin/mingw/bin/gcc-ar.exe")
-set(CMAKE_RANLIB "D:/IDEs/CLIon/bin/mingw/bin/ranlib.exe")
-set(CMAKE_C_COMPILER_RANLIB "D:/IDEs/CLIon/bin/mingw/bin/gcc-ranlib.exe")
-set(CMAKE_LINKER "D:/IDEs/CLIon/bin/mingw/bin/ld.exe")
+set(CMAKE_AR "D:/CLIon/bin/mingw/bin/ar.exe")
+set(CMAKE_C_COMPILER_AR "D:/CLIon/bin/mingw/bin/gcc-ar.exe")
+set(CMAKE_RANLIB "D:/CLIon/bin/mingw/bin/ranlib.exe")
+set(CMAKE_C_COMPILER_RANLIB "D:/CLIon/bin/mingw/bin/gcc-ranlib.exe")
+set(CMAKE_LINKER "D:/CLIon/bin/mingw/bin/ld.exe")
 set(CMAKE_LINKER_LINK "")
 set(CMAKE_LINKER_LLD "")
-set(CMAKE_C_COMPILER_LINKER "D:/IDEs/CLIon/bin/mingw/bin/ld.exe")
+set(CMAKE_C_COMPILER_LINKER "D:/CLIon/bin/mingw/bin/ld.exe")
 set(CMAKE_C_COMPILER_LINKER_ID "GNU")
 set(CMAKE_C_COMPILER_LINKER_VERSION 2.40)
 set(CMAKE_C_COMPILER_LINKER_FRONTEND_VARIANT GNU)
@@ -75,7 +75,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "D:/IDEs/CLIon/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include;D:/IDEs/CLIon/bin/mingw/include;D:/IDEs/CLIon/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed;D:/IDEs/CLIon/bin/mingw/x86_64-w64-mingw32/include")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "D:/CLIon/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include;D:/CLIon/bin/mingw/include;D:/CLIon/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed;D:/CLIon/bin/mingw/x86_64-w64-mingw32/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "mingw32;gcc;moldname;mingwex;kernel32;pthread;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc;moldname;mingwex;kernel32")
-set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "D:/IDEs/CLIon/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0;D:/IDEs/CLIon/bin/mingw/lib/gcc;D:/IDEs/CLIon/bin/mingw/x86_64-w64-mingw32/lib;D:/IDEs/CLIon/bin/mingw/lib")
+set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "D:/CLIon/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0;D:/CLIon/bin/mingw/lib/gcc;D:/CLIon/bin/mingw/x86_64-w64-mingw32/lib;D:/CLIon/bin/mingw/lib")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

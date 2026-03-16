@@ -73,6 +73,13 @@ dir / ls-> to display all files and folders (but first you need to specify the p
 ```
 dir
 ```
+ls - displaying a list of files or folders in current path
+also you can use this is param:
+- ls --d - outputs only directories
+- ls --f - outputs only files
+- ls -... <- displays files and folders using the search letter\letters at the beginning
+- ls -f-... <- displays only files using the search letter\letters at the beginning 
+- ls -d-... <- displays only folders using the search letter\letters at the beginning
 ```
 ls
 ```

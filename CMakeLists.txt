@@ -41,7 +41,7 @@ add_executable(MiniCommanderConsole main.cpp
         helper_cpp/work_with_files/reading_file.cpp
         helper_header/work_with_files/reading_file.h
         helper_cpp/helper/print.cpp
-        helper_header/helper/print.h
+        helper_header/helper/print.hpp
         helper_header/helper/debug.h
         helper_cpp/helper/debug.cpp
 )
