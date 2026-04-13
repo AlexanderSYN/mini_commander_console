@@ -1,9 +1,9 @@
 # EN
 
-//
+
 // ColCons - Color Console (file color_console)
 // FILEO - File Open (file help_open_file)
-// 
+ 
 
 # Folder Structure Description
 ## helper_cpp folder
