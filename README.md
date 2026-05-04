@@ -364,4 +364,4 @@ exit
 ex
 
 ```
-remaster soon
+remaster soon SMC
